@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B93B385364D75D7AB95B4BE /* InputTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B93B32761510EE9EAE476B3 /* InputTextView.swift */; };
+		1B93B46466E160C3B17C6FFF /* HomeScreenEquationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B93BDFED1FDDD406181D6C0 /* HomeScreenEquationCell.swift */; };
+		1B93B5C7072429215CD47FE7 /* HomeScreenEquationCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B93B58FA920392051E231F4 /* HomeScreenEquationCellViewModel.swift */; };
+		1B93B903FA4AFCAC0064DACA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B93B20034F3B54D044532E8 /* Extensions.swift */; };
+		1B93BC490273194FBFD51A3B /* Equation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B93B30864EC4E50C2DB00FC /* Equation.swift */; };
+		1B93BCFC5F388BA92C30F708 /* FieldValidInvalidProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B93B83DE18BB6502E396EA1 /* FieldValidInvalidProtocol.swift */; };
+		1B93BECFBF3400790B3A3302 /* CalculationFunctionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B93BC9FE5E3E64F87EB6324 /* CalculationFunctionProtocol.swift */; };
 		7801EC212A11F671008DE671 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7801EC202A11F671008DE671 /* AppDelegate.swift */; };
 		7801EC232A11F671008DE671 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7801EC222A11F671008DE671 /* SceneDelegate.swift */; };
 		7801EC252A11F671008DE671 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7801EC242A11F671008DE671 /* ViewController.swift */; };
@@ -16,6 +23,7 @@
 		7801EC382A11F672008DE671 /* RadioEquationsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7801EC372A11F672008DE671 /* RadioEquationsAppTests.swift */; };
 		7801EC422A11F672008DE671 /* RadioEquationsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7801EC412A11F672008DE671 /* RadioEquationsAppUITests.swift */; };
 		7801EC442A11F672008DE671 /* RadioEquationsAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7801EC432A11F672008DE671 /* RadioEquationsAppUITestsLaunchTests.swift */; };
+		78E6B2592A13257800581D06 /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 78E6B2582A13257800581D06 /* JGProgressHUD */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +44,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B93B20034F3B54D044532E8 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		1B93B30864EC4E50C2DB00FC /* Equation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Equation.swift; sourceTree = "<group>"; };
+		1B93B32761510EE9EAE476B3 /* InputTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputTextView.swift; sourceTree = "<group>"; };
+		1B93B58FA920392051E231F4 /* HomeScreenEquationCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenEquationCellViewModel.swift; sourceTree = "<group>"; };
+		1B93B83DE18BB6502E396EA1 /* FieldValidInvalidProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldValidInvalidProtocol.swift; sourceTree = "<group>"; };
+		1B93BC9FE5E3E64F87EB6324 /* CalculationFunctionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculationFunctionProtocol.swift; sourceTree = "<group>"; };
+		1B93BDFED1FDDD406181D6C0 /* HomeScreenEquationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenEquationCell.swift; sourceTree = "<group>"; };
 		7801EC1D2A11F671008DE671 /* RadioEquationsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RadioEquationsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7801EC202A11F671008DE671 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7801EC222A11F671008DE671 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78E6B2592A13257800581D06 /* JGProgressHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +92,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B93B783A62CAA6D59FDBE77 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				1B93BDFED1FDDD406181D6C0 /* HomeScreenEquationCell.swift */,
+				1B93B58FA920392051E231F4 /* HomeScreenEquationCellViewModel.swift */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		1B93BB91AA052624D305900B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1B93B30864EC4E50C2DB00FC /* Equation.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1B93BF855CE2A3CE55D8D873 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1B93B20034F3B54D044532E8 /* Extensions.swift */,
+				1B93B32761510EE9EAE476B3 /* InputTextView.swift */,
+				1B93BFC198F1074F741CBB5B /* Protocols */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		1B93BFC198F1074F741CBB5B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				1B93B83DE18BB6502E396EA1 /* FieldValidInvalidProtocol.swift */,
+				1B93BC9FE5E3E64F87EB6324 /* CalculationFunctionProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		7801EC142A11F671008DE671 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +158,9 @@
 				7801EC292A11F672008DE671 /* Assets.xcassets */,
 				7801EC2B2A11F672008DE671 /* LaunchScreen.storyboard */,
 				7801EC2E2A11F672008DE671 /* Info.plist */,
+				1B93BF855CE2A3CE55D8D873 /* Utils */,
+				1B93B783A62CAA6D59FDBE77 /* HomeScreen */,
+				1B93BB91AA052624D305900B /* Models */,
 			);
 			path = RadioEquationsApp;
 			sourceTree = "<group>";
@@ -143,6 +198,9 @@
 			dependencies = (
 			);
 			name = RadioEquationsApp;
+			packageProductDependencies = (
+				78E6B2582A13257800581D06 /* JGProgressHUD */,
+			);
 			productName = RadioEquationsApp;
 			productReference = 7801EC1D2A11F671008DE671 /* RadioEquationsApp.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +273,9 @@
 				Base,
 			);
 			mainGroup = 7801EC142A11F671008DE671;
+			packageReferences = (
+				78E6B2572A13257800581D06 /* XCRemoteSwiftPackageReference "JGProgressHUD" */,
+			);
 			productRefGroup = 7801EC1E2A11F671008DE671 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -261,6 +322,13 @@
 				7801EC252A11F671008DE671 /* ViewController.swift in Sources */,
 				7801EC212A11F671008DE671 /* AppDelegate.swift in Sources */,
 				7801EC232A11F671008DE671 /* SceneDelegate.swift in Sources */,
+				1B93B903FA4AFCAC0064DACA /* Extensions.swift in Sources */,
+				1B93B385364D75D7AB95B4BE /* InputTextView.swift in Sources */,
+				1B93BCFC5F388BA92C30F708 /* FieldValidInvalidProtocol.swift in Sources */,
+				1B93B46466E160C3B17C6FFF /* HomeScreenEquationCell.swift in Sources */,
+				1B93B5C7072429215CD47FE7 /* HomeScreenEquationCellViewModel.swift in Sources */,
+				1B93BC490273194FBFD51A3B /* Equation.swift in Sources */,
+				1B93BECFBF3400790B3A3302 /* CalculationFunctionProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,6 +670,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		78E6B2572A13257800581D06 /* XCRemoteSwiftPackageReference "JGProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JonasGessner/JGProgressHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		78E6B2582A13257800581D06 /* JGProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 78E6B2572A13257800581D06 /* XCRemoteSwiftPackageReference "JGProgressHUD" */;
+			productName = JGProgressHUD;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7801EC152A11F671008DE671 /* Project object */;
 }
