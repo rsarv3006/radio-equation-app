@@ -29,22 +29,26 @@ class ViewController: UIViewController {
         tableView.fillSuperview()
     }
 
-
 }
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return EquationList.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "equationCell", for: indexPath) as! HomeScreenEquationCell
-        cell.viewModel = HomeScreenEquationCellViewModel(equationTitle: "Ohm's Law", id: "ohmsLaw")
+        cell.viewModel = HomeScreenEquationCellViewModel(equation: EquationList[indexPath.row])
         return cell
     }
 
-
-}
+    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        let equationScreen = EquationScreenTabBar(viewModel: EquationScreenTabBarViewModel(equation: EquationList[indexPath.row]))
+        
+        self.navigationController?.pushViewController(equationScreen, animated: true)
+        
+        return nil
+    }}
 
 extension ViewController: UITableViewDelegate {
 

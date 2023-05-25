@@ -6,10 +6,10 @@ import Foundation
 
 class HomeScreenEquationCellViewModel {
     let equationTitle: String
-    let id: String
+    let id: EquationId
 
-    init(equationTitle: String, id: String) {
-        self.equationTitle = equationTitle
-        self.id = id
+    init(equation: Equation) {
+        self.equationTitle = equation.title
+        self.id = equation.id
     }
 }
