@@ -24,11 +24,11 @@ class OhmsLawCalculationScreen: UIViewController {
             viewModel.calculatedValue.sink { calculatedValueObj in
                 switch calculatedValueObj.fieldTag {
                 case .current:
-                    self.currentField.text = String(calculatedValueObj.calculatedValue)
+                    self.currentStack.inputField.text = String(calculatedValueObj.calculatedValue)
                 case .resistance:
-                    self.resistanceField.text = String(calculatedValueObj.calculatedValue)
+                    self.resistanceStack.inputField.text = String(calculatedValueObj.calculatedValue)
                 case .voltage:
-                    self.voltageField.text = String(calculatedValueObj.calculatedValue)
+                    self.voltageStack.inputField.text = String(calculatedValueObj.calculatedValue)
                     print("voltage: \(calculatedValueObj.calculatedValue)")
                 }
             }.store(in: &subscriptions)
@@ -43,24 +43,6 @@ class OhmsLawCalculationScreen: UIViewController {
         return label
     }()
     
-    private lazy var voltageLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Voltage (E):"
-        return label
-    }()
-    
-    private lazy var currentLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Current (I):"
-        return label
-    }()
-    
-    private lazy var resistanceLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Resistance (R):"
-        return label
-    }()
-    
     private lazy var calculateForSegmentedControl: UISegmentedControl = {
         let control = UISegmentedControl(items: calculateForPickerOptions)
         control.selectedSegmentIndex = 0
@@ -69,34 +51,22 @@ class OhmsLawCalculationScreen: UIViewController {
         return control
     }()
     
-    
-    private lazy var voltageField: UITextField = {
-        let textField = UITextField()
-        textField.borderStyle = .roundedRect
-        textField.tag = OhmsLawFieldTag.voltage.rawValue
-        textField.keyboardType = .decimalPad
-        textField.addTarget(self, action: #selector(didFieldUpdate), for: .editingChanged)
-        textField.isEnabled = false
-        textField.layer.borderColor = UIColor.green.cgColor
-        return textField
+    private lazy var voltageStack: CalculationFieldStackView = {
+        let stackView = CalculationFieldStackView(fieldTag: OhmsLawFieldTag.voltage.rawValue, fieldLabelText: "Voltage (E):")
+        stackView.inputField.addTarget(self, action: #selector(didFieldUpdate), for: .editingChanged)
+        return stackView
     }()
     
-    private lazy var currentField: UITextField = {
-        let textField = UITextField()
-        textField.borderStyle = .roundedRect
-        textField.tag = OhmsLawFieldTag.current.rawValue
-        textField.keyboardType = .decimalPad
-        textField.addTarget(self, action: #selector(didFieldUpdate), for: .editingChanged)
-        return textField
+    private lazy var currentStack: CalculationFieldStackView = {
+        let stackView = CalculationFieldStackView(fieldTag: OhmsLawFieldTag.current.rawValue, fieldLabelText: "Current (I):")
+        stackView.inputField.addTarget(self, action: #selector(didFieldUpdate), for: .editingChanged)
+        return stackView
     }()
-    
-    private lazy var resistanceField: UITextField = {
-        let textField = UITextField()
-        textField.borderStyle = .roundedRect
-        textField.tag = OhmsLawFieldTag.resistance.rawValue
-        textField.keyboardType = .decimalPad
-        textField.addTarget(self, action: #selector(didFieldUpdate), for: .editingChanged)
-        return textField
+        
+    private lazy var resistanceStack: CalculationFieldStackView = {
+        let stackView = CalculationFieldStackView(fieldTag: OhmsLawFieldTag.resistance.rawValue, fieldLabelText: "Resistance (R):")
+        stackView.inputField.addTarget(self, action: #selector(didFieldUpdate), for: .editingChanged)
+        return stackView
     }()
     
     override func viewDidLoad() {
@@ -112,27 +82,18 @@ class OhmsLawCalculationScreen: UIViewController {
         
         calculateForSegmentedControl.anchor(top: titleLabel.bottomAnchor, left: view.safeAreaLayoutGuide.leftAnchor, right: view.safeAreaLayoutGuide.rightAnchor, paddingTop: 12, paddingLeft: 12, paddingRight: 12)
         
-        let currentStack = UIStackView(arrangedSubviews: [currentLabel, currentField])
-        currentStack.axis = .horizontal
-        
         view.addSubview(currentStack)
         
         currentStack.anchor(top: calculateForSegmentedControl.bottomAnchor, left: view.safeAreaLayoutGuide.leftAnchor, right: view.safeAreaLayoutGuide.rightAnchor, paddingTop: 12, paddingLeft: 12, paddingRight: 12)
+            
+        view.addSubview(resistanceStack)
         
-        
-        let resistanceLabel = UIStackView(arrangedSubviews: [resistanceLabel, resistanceField])
-        resistanceLabel.axis = .horizontal
-        
-        view.addSubview(resistanceLabel)
-        
-        resistanceLabel.anchor(top: currentStack.bottomAnchor, left: view.safeAreaLayoutGuide.leftAnchor, right: view.safeAreaLayoutGuide.rightAnchor, paddingTop: 12, paddingLeft: 12, paddingRight: 12)
-        
-        let voltageStack = UIStackView(arrangedSubviews: [voltageLabel, voltageField])
-        voltageStack.axis = .horizontal
+        resistanceStack.anchor(top: currentStack.bottomAnchor, left: view.safeAreaLayoutGuide.leftAnchor, right: view.safeAreaLayoutGuide.rightAnchor, paddingTop: 12, paddingLeft: 12, paddingRight: 12)
         
         view.addSubview(voltageStack)
+        voltageStack.inputField.isAnswerField = true
         
-        voltageStack.anchor(top: resistanceLabel.bottomAnchor, left: view.safeAreaLayoutGuide.leftAnchor, right: view.safeAreaLayoutGuide.rightAnchor, paddingTop: 12, paddingLeft: 12, paddingRight: 12)
+        voltageStack.anchor(top: resistanceStack.bottomAnchor, left: view.safeAreaLayoutGuide.leftAnchor, right: view.safeAreaLayoutGuide.rightAnchor, paddingTop: 12, paddingLeft: 12, paddingRight: 12)
     }
 }
 
@@ -164,42 +125,30 @@ extension OhmsLawCalculationScreen {
     private func makeTextFieldAnswerBox(fieldTag: OhmsLawFieldTag) {
         switch fieldTag {
         case .current:
-            makeCurrentFieldAnswerBox()
+            makeCurrentFieldAnswerField()
         case .resistance:
-            makeResistanceFieldAnswerBox()
+            makeResistanceFieldAnswerField()
         case .voltage:
-            makeVoltageFieldAnswerBox()
+            makeVoltageFieldAnswerField()
         }
     }
     
-    private func makeCurrentFieldAnswerBox() {
-        currentField.isEnabled = false
-        currentField.layer.borderColor = UIColor.green.cgColor
-        resistanceField.isEnabled = true
-        resistanceField.layer.borderColor = UIColor.clear.cgColor
-        voltageField.isEnabled = true
-        voltageField.layer.borderColor = UIColor.clear.cgColor
+    private func makeCurrentFieldAnswerField() {
+        currentStack.inputField.isAnswerField = true
+        resistanceStack.inputField.isAnswerField = false
+        voltageStack.inputField.isAnswerField = false
     }
     
-    private func makeResistanceFieldAnswerBox() {
-        currentField.isEnabled = true
-        currentField.layer.borderColor = UIColor.clear.cgColor
-        resistanceField.isEnabled = false
-        resistanceField.layer.borderColor = UIColor.green.cgColor
-        voltageField.isEnabled = true
-        voltageField.layer.borderColor = UIColor.clear.cgColor
+    private func makeResistanceFieldAnswerField() {
+        currentStack.inputField.isAnswerField = false
+        resistanceStack.inputField.isAnswerField = true
+        voltageStack.inputField.isAnswerField = false
     }
     
-    private func makeVoltageFieldAnswerBox() {
-        currentField.isEnabled = true
-        currentField.layer.borderColor = UIColor.clear.cgColor
-        resistanceField.isEnabled = true
-        resistanceField.layer.borderColor = UIColor.clear.cgColor
-        voltageField.isEnabled = false
-        voltageField.layer.borderColor = UIColor.green.cgColor
+    private func makeVoltageFieldAnswerField() {
+        currentStack.inputField.isAnswerField = false
+        resistanceStack.inputField.isAnswerField = false
+        voltageStack.inputField.isAnswerField = true
     }
-    
-    
-    
 }
 

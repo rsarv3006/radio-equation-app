@@ -18,11 +18,11 @@ class PowerCalculationScreen: UIViewController {
             viewModel.calculatedValue.sink { calculatedValueObj in
                 switch calculatedValueObj.fieldTag {
                 case .current:
-                    self.currentField.text = String(calculatedValueObj.calculatedValue)
+                    self.currentStack.inputField.text = String(calculatedValueObj.calculatedValue)
                 case .power:
-                    self.powerField.text = String(calculatedValueObj.calculatedValue)
+                    self.powerStack.inputField.text = String(calculatedValueObj.calculatedValue)
                 case .voltage:
-                    self.voltageField.text = String(calculatedValueObj.calculatedValue)
+                    self.voltageStack.inputField.text = String(calculatedValueObj.calculatedValue)
                 }
             }.store(in: &subscriptions)
         }
@@ -36,22 +36,22 @@ class PowerCalculationScreen: UIViewController {
         return label
     }()
     
-    private lazy var voltageLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Voltage (V):"
-        return label
+    private lazy var voltageStack: CalculationFieldStackView = {
+        let stack = CalculationFieldStackView(fieldTag: PowerFieldTag.voltage.rawValue, fieldLabelText: "Voltage (V):")
+        stack.inputField.addTarget(self, action: #selector(didFieldUpdate), for: .editingChanged)
+        return stack
     }()
     
-    private lazy var currentLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Current (I):"
-        return label
+    private lazy var currentStack: CalculationFieldStackView = {
+        let stack = CalculationFieldStackView(fieldTag: PowerFieldTag.current.rawValue, fieldLabelText: "Current (I):")
+        stack.inputField.addTarget(self, action: #selector(didFieldUpdate), for: .editingChanged)
+        return stack
     }()
     
-    private lazy var powerLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Power (P):"
-        return label
+    private lazy var powerStack: CalculationFieldStackView = {
+        let stack = CalculationFieldStackView(fieldTag: PowerFieldTag.power.rawValue, fieldLabelText: "Power (P):")
+        stack.inputField.addTarget(self, action: #selector(didFieldUpdate), for: .editingChanged)
+        return stack
     }()
     
     private lazy var calculateForSegmentedControl: UISegmentedControl = {
@@ -60,36 +60,6 @@ class PowerCalculationScreen: UIViewController {
         control.addTarget(self, action: #selector(didCalculateForSegmentedControlChange), for: .valueChanged)
         
         return control
-    }()
-    
-    
-    private lazy var voltageField: UITextField = {
-        let textField = UITextField()
-        textField.borderStyle = .roundedRect
-        textField.tag = PowerFieldTag.voltage.rawValue
-        textField.keyboardType = .decimalPad
-        textField.addTarget(self, action: #selector(didFieldUpdate), for: .editingChanged)
-        return textField
-    }()
-    
-    private lazy var currentField: UITextField = {
-        let textField = UITextField()
-        textField.borderStyle = .roundedRect
-        textField.tag = PowerFieldTag.current.rawValue
-        textField.keyboardType = .decimalPad
-        textField.addTarget(self, action: #selector(didFieldUpdate), for: .editingChanged)
-        return textField
-    }()
-    
-    private lazy var powerField: UITextField = {
-        let textField = UITextField()
-        textField.borderStyle = .roundedRect
-        textField.tag = PowerFieldTag.power.rawValue
-        textField.keyboardType = .decimalPad
-        textField.addTarget(self, action: #selector(didFieldUpdate), for: .editingChanged)
-        textField.isEnabled = false
-        textField.layer.borderColor = UIColor.green.cgColor
-        return textField
     }()
     
     override func viewDidLoad() {
@@ -105,22 +75,13 @@ class PowerCalculationScreen: UIViewController {
         
         calculateForSegmentedControl.anchor(top: titleLabel.bottomAnchor, left: view.safeAreaLayoutGuide.leftAnchor, right: view.safeAreaLayoutGuide.rightAnchor, paddingTop: 12, paddingLeft: 12, paddingRight: 12)
         
-        let currentStack = UIStackView(arrangedSubviews: [currentLabel, currentField])
-        currentStack.axis = .horizontal
-        
         view.addSubview(currentStack)
         
         currentStack.anchor(top: calculateForSegmentedControl.bottomAnchor, left: view.safeAreaLayoutGuide.leftAnchor, right: view.safeAreaLayoutGuide.rightAnchor, paddingTop: 12, paddingLeft: 12, paddingRight: 12)
         
-        let voltageStack = UIStackView(arrangedSubviews: [voltageLabel, voltageField])
-        voltageStack.axis = .horizontal
-        
         view.addSubview(voltageStack)
         
         voltageStack.anchor(top: currentStack.bottomAnchor, left: view.safeAreaLayoutGuide.leftAnchor, right: view.safeAreaLayoutGuide.rightAnchor, paddingTop: 12, paddingLeft: 12, paddingRight: 12)
-        
-        let powerStack = UIStackView(arrangedSubviews: [powerLabel, powerField])
-        powerStack.axis = .horizontal
         
         view.addSubview(powerStack)
         
@@ -152,30 +113,21 @@ extension PowerCalculationScreen {
     }
     
     private func makeCurrentFieldAnswerBox() {
-        currentField.isEnabled = false
-        currentField.layer.borderColor = UIColor.green.cgColor
-        powerField.isEnabled = true
-        powerField.layer.borderColor = UIColor.clear.cgColor
-        voltageField.isEnabled = true
-        voltageField.layer.borderColor = UIColor.clear.cgColor
+        currentStack.inputField.isAnswerField = true
+        powerStack.inputField.isAnswerField = false
+        voltageStack.inputField.isAnswerField = false
     }
     
     private func makePowerFieldAnswerBox() {
-        currentField.isEnabled = true
-        currentField.layer.borderColor = UIColor.clear.cgColor
-        powerField.isEnabled = false
-        powerField.layer.borderColor = UIColor.green.cgColor
-        voltageField.isEnabled = true
-        voltageField.layer.borderColor = UIColor.clear.cgColor
+        currentStack.inputField.isAnswerField = false
+        powerStack.inputField.isAnswerField = true
+        voltageStack.inputField.isAnswerField = false
     }
     
     private func makeVoltageFieldAnswerBox() {
-        currentField.isEnabled = true
-        currentField.layer.borderColor = UIColor.clear.cgColor
-        powerField.isEnabled = true
-        powerField.layer.borderColor = UIColor.clear.cgColor
-        voltageField.isEnabled = false
-        voltageField.layer.borderColor = UIColor.green.cgColor
+        currentStack.inputField.isAnswerField = false
+        powerStack.inputField.isAnswerField = false
+        voltageStack.inputField.isAnswerField = true
     }
 }
 

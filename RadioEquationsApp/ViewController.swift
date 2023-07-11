@@ -32,13 +32,26 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return EquationsTableInfo.count
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerTitle = EquationsTableInfo[section].title
+        
+        let headerView = UILabel()
+        headerView.text = headerTitle
+        headerView.font = UIFont.boldSystemFont(ofSize: 20)
+        return headerView
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return EquationList.count
+        return EquationsTableInfo[section].equations.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "equationCell", for: indexPath) as! HomeScreenEquationCell
-        cell.viewModel = HomeScreenEquationCellViewModel(equation: EquationList[indexPath.row])
+        cell.viewModel = HomeScreenEquationCellViewModel(equation: EquationsTableInfo[indexPath.section].equations[indexPath.row])
         return cell
     }
 

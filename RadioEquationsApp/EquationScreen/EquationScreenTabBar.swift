@@ -53,6 +53,9 @@ class EquationScreenTabBar: UITabBarController {
                 return powerScreen
             case .test:
                 return EquationTab()
+            default:
+                return EquationTab()
+            
             
             }
         } else {

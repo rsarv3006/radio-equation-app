@@ -19,6 +19,7 @@ class HomeScreenEquationCell: UITableViewCell {
 
     override init(style: CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+
         addSubview(equationLabel)
         equationLabel.centerY(inView: self)
     }

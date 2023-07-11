@@ -35,6 +35,8 @@
 		78A43CC22A1EA88800293045 /* PowerCalculationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A43CC12A1EA88800293045 /* PowerCalculationScreen.swift */; };
 		78A43CC42A1EA9A700293045 /* PowerCalculationScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A43CC32A1EA9A700293045 /* PowerCalculationScreenViewModel.swift */; };
 		78A43CC62A1EBFEE00293045 /* PowerFieldTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A43CC52A1EBFEE00293045 /* PowerFieldTag.swift */; };
+		78A43CC82A20DFF600293045 /* CalculationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A43CC72A20DFF600293045 /* CalculationTextField.swift */; };
+		78A43CCA2A244EFC00293045 /* CalculationFieldStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A43CC92A244EFC00293045 /* CalculationFieldStackView.swift */; };
 		78E6B2592A13257800581D06 /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 78E6B2582A13257800581D06 /* JGProgressHUD */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +90,8 @@
 		78A43CC12A1EA88800293045 /* PowerCalculationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerCalculationScreen.swift; sourceTree = "<group>"; };
 		78A43CC32A1EA9A700293045 /* PowerCalculationScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerCalculationScreenViewModel.swift; sourceTree = "<group>"; };
 		78A43CC52A1EBFEE00293045 /* PowerFieldTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerFieldTag.swift; sourceTree = "<group>"; };
+		78A43CC72A20DFF600293045 /* CalculationTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationTextField.swift; sourceTree = "<group>"; };
+		78A43CC92A244EFC00293045 /* CalculationFieldStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationFieldStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +146,8 @@
 				1B93B20034F3B54D044532E8 /* Extensions.swift */,
 				1B93B32761510EE9EAE476B3 /* InputTextView.swift */,
 				1B93BFC198F1074F741CBB5B /* Protocols */,
+				78A43CC72A20DFF600293045 /* CalculationTextField.swift */,
+				78A43CC92A244EFC00293045 /* CalculationFieldStackView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -402,6 +408,7 @@
 				1B93B903FA4AFCAC0064DACA /* Extensions.swift in Sources */,
 				1B93B385364D75D7AB95B4BE /* InputTextView.swift in Sources */,
 				1B93BCFC5F388BA92C30F708 /* FieldValidInvalidProtocol.swift in Sources */,
+				78A43CC82A20DFF600293045 /* CalculationTextField.swift in Sources */,
 				78A43CC62A1EBFEE00293045 /* PowerFieldTag.swift in Sources */,
 				783103222A152BDA006EE253 /* EquationScreenTabBar.swift in Sources */,
 				1B93B46466E160C3B17C6FFF /* HomeScreenEquationCell.swift in Sources */,
@@ -409,6 +416,7 @@
 				1B93BC490273194FBFD51A3B /* Equation.swift in Sources */,
 				1B93BECFBF3400790B3A3302 /* CalculationFunctionProtocol.swift in Sources */,
 				7831032C2A1966A1006EE253 /* DescriptionTabViewModel.swift in Sources */,
+				78A43CCA2A244EFC00293045 /* CalculationFieldStackView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
