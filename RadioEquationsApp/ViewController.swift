@@ -56,7 +56,7 @@ extension ViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-        let equationScreen = EquationScreenTabBar(viewModel: EquationScreenTabBarViewModel(equation: EquationList[indexPath.row]))
+        let equationScreen = EquationScreenTabBar(viewModel: EquationScreenTabBarViewModel(equation: EquationsTableInfo[indexPath.section].equations[indexPath.row]))
         
         self.navigationController?.pushViewController(equationScreen, animated: true)
         

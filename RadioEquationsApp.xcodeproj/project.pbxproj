@@ -37,6 +37,8 @@
 		78A43CC62A1EBFEE00293045 /* PowerFieldTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A43CC52A1EBFEE00293045 /* PowerFieldTag.swift */; };
 		78A43CC82A20DFF600293045 /* CalculationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A43CC72A20DFF600293045 /* CalculationTextField.swift */; };
 		78A43CCA2A244EFC00293045 /* CalculationFieldStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A43CC92A244EFC00293045 /* CalculationFieldStackView.swift */; };
+		78B3C6E12A5E0848003F0FB6 /* RichTextView in Frameworks */ = {isa = PBXBuildFile; productRef = 78B3C6E02A5E0848003F0FB6 /* RichTextView */; };
+		78B3C6E32A5E0CB8003F0FB6 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B3C6E22A5E0CB8003F0FB6 /* TextView.swift */; };
 		78E6B2592A13257800581D06 /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 78E6B2582A13257800581D06 /* JGProgressHUD */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +94,7 @@
 		78A43CC52A1EBFEE00293045 /* PowerFieldTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerFieldTag.swift; sourceTree = "<group>"; };
 		78A43CC72A20DFF600293045 /* CalculationTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationTextField.swift; sourceTree = "<group>"; };
 		78A43CC92A244EFC00293045 /* CalculationFieldStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationFieldStackView.swift; sourceTree = "<group>"; };
+		78B3C6E22A5E0CB8003F0FB6 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78B3C6E12A5E0848003F0FB6 /* RichTextView in Frameworks */,
 				78E6B2592A13257800581D06 /* JGProgressHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,6 +152,7 @@
 				1B93BFC198F1074F741CBB5B /* Protocols */,
 				78A43CC72A20DFF600293045 /* CalculationTextField.swift */,
 				78A43CC92A244EFC00293045 /* CalculationFieldStackView.swift */,
+				78B3C6E22A5E0CB8003F0FB6 /* TextView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -274,6 +279,7 @@
 			name = RadioEquationsApp;
 			packageProductDependencies = (
 				78E6B2582A13257800581D06 /* JGProgressHUD */,
+				78B3C6E02A5E0848003F0FB6 /* RichTextView */,
 			);
 			productName = RadioEquationsApp;
 			productReference = 7801EC1D2A11F671008DE671 /* RadioEquationsApp.app */;
@@ -349,6 +355,7 @@
 			mainGroup = 7801EC142A11F671008DE671;
 			packageReferences = (
 				78E6B2572A13257800581D06 /* XCRemoteSwiftPackageReference "JGProgressHUD" */,
+				78B3C6DF2A5E0848003F0FB6 /* XCRemoteSwiftPackageReference "RichTextView" */,
 			);
 			productRefGroup = 7801EC1E2A11F671008DE671 /* Products */;
 			projectDirPath = "";
@@ -407,6 +414,7 @@
 				783103262A15D3C0006EE253 /* EquationTab.swift in Sources */,
 				1B93B903FA4AFCAC0064DACA /* Extensions.swift in Sources */,
 				1B93B385364D75D7AB95B4BE /* InputTextView.swift in Sources */,
+				78B3C6E32A5E0CB8003F0FB6 /* TextView.swift in Sources */,
 				1B93BCFC5F388BA92C30F708 /* FieldValidInvalidProtocol.swift in Sources */,
 				78A43CC82A20DFF600293045 /* CalculationTextField.swift in Sources */,
 				78A43CC62A1EBFEE00293045 /* PowerFieldTag.swift in Sources */,
@@ -760,6 +768,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		78B3C6DF2A5E0848003F0FB6 /* XCRemoteSwiftPackageReference "RichTextView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rsarv3006/RichTextView";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		78E6B2572A13257800581D06 /* XCRemoteSwiftPackageReference "JGProgressHUD" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/JonasGessner/JGProgressHUD.git";
@@ -771,6 +787,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		78B3C6E02A5E0848003F0FB6 /* RichTextView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 78B3C6DF2A5E0848003F0FB6 /* XCRemoteSwiftPackageReference "RichTextView" */;
+			productName = RichTextView;
+		};
 		78E6B2582A13257800581D06 /* JGProgressHUD */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 78E6B2572A13257800581D06 /* XCRemoteSwiftPackageReference "JGProgressHUD" */;

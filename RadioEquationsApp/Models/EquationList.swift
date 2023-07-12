@@ -7,13 +7,6 @@
 
 import Foundation
 
-let EquationList: [Equation] = [
-    Equation(title: "Ohm's Law", description: "Formula used to calculate voltage in a circuit. E=IxR", id: .ohmsLaw),
-    Equation(title: "Power", description: "Formula used to calculate power in watts of a circuit. P=VxI", id: .powerEquation),
-    Equation(title: "Test", description: "Formula used to calculate power in watts of a circuit. P=VxI Formula used to calculate power in watts of a circuit. P=VxI Formula used to calculate power in watts of a circuit. P=VxI Formula used to calculate power in watts of a circuit. P=VxI Formula used to calculate power in watts of a circuit. P=VxI Formula used to calculate power in watts of a circuit. P=VxI Formula used to calculate power in watts of a circuit. P=VxI Formula used to calculate power in watts of a circuit. P=VxI Formula used to calculate power in watts of a circuit. P=VxI Formula used to calculate power in watts of a circuit. P=VxI Formula used to calculate power in watts of a circuit. P=VxI Formula used to calculate power in watts of a circuit. P=VxI Formula used to calculate power in watts of a circuit. P=VxI Formula used to calculate power in watts of a circuit. P=VxI Formula used to calculate power in watts of a circuit. P=VxI Formula used to calculate power in watts of a circuit. P=VxI Formula used to calculate power in watts of a circuit. P=VxI", id: .test),
-    
-]
-
 struct EquationsTableSectionModel {
     let title: String
     let equations: [Equation]
@@ -21,7 +14,27 @@ struct EquationsTableSectionModel {
 
 let EquationsTableInfo = [
     EquationsTableSectionModel(title: "Voltage", equations: [
-        Equation(title: "E = I X R", description: "Calculate voltage in a circuit", id: .voltage1),
-        Equation(title: "E = P / I", description: "Calculate voltage in a circuit", id: .voltage2)
+        Equation(title: "[math]$E = I \\times R$[/math]", description: "Calculate voltage in a circuit", id: .voltage1),
+        Equation(title: "[math]$E = P / I$[/math]", description: "Calculate voltage in a circuit", id: .voltage2),
+        Equation(title: "[math]$E = \\sqrt{P \\times R}$[/math]", description: "Calculate voltage in a circuit", id: .voltage3)
+    ]),
+    
+    EquationsTableSectionModel(title: "Ohm's Law", equations: [
+        Equation(title: "[math]$R = E / I$[/math]", description: "Calculate resistance in a circuit.", id: .resistance1),
+        Equation(title: "[math]$R = P / I^2$[/math]", description: "Calculate resistance in a circuit.", id: .resistance2),
+        Equation(title: "[math]$R = E^2 / P$[/math]", description: "Calculate resistance in a circuit.", id: .resistance3)
+    ]),
+    
+    EquationsTableSectionModel(title: "Current", equations: [
+        Equation(title: "[math]$I = E / R$[/math]", description: "Calculate current in a circuit.", id: .current1),
+        Equation(title: "[math]$I = P / V$[/math]", description: "Calculate current in a circuit.", id: .current2),
+        Equation(title: "[math]$I = \\sqrt{P / R}$[/math]", description: "Calculate current in a circuit.", id: .current3)
+    ]),
+    
+    EquationsTableSectionModel(title: "Power", equations: [
+        Equation(title: "[math]$P = E \\times I$[/math]", description: "Calculate power in a circuit.", id: .power1),
+        Equation(title: "[math]$P = E^2 / R$[/math]", description: "Calculate power in a circuit.", id: .power2),
+        Equation(title: "[math]$P = I^2 \\times R$[/math]", description: "Calculate power in a circuit.", id: .power3)
     ])
+
 ]

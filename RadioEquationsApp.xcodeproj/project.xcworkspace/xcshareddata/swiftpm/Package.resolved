@@ -1,12 +1,57 @@
 {
   "pins" : [
     {
+      "identity" : "down",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/johnxnguyen/Down",
+      "state" : {
+        "revision" : "f34b166be1f1db4aa8f573067e901d72f2a6be57",
+        "version" : "0.11.0"
+      }
+    },
+    {
+      "identity" : "iosmath",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tophatmonocle/iosMath",
+      "state" : {
+        "revision" : "8c65dab2295100c02d9d844f6dc5646ab9d57b42",
+        "version" : "1.1.2"
+      }
+    },
+    {
       "identity" : "jgprogresshud",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/JonasGessner/JGProgressHUD.git",
       "state" : {
         "revision" : "78d7cd35f1d90ff74fd82e486f2cbe4b24be8cf9",
         "version" : "2.2.0"
+      }
+    },
+    {
+      "identity" : "richtextview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/rsarv3006/RichTextView",
+      "state" : {
+        "branch" : "master",
+        "revision" : "63de55849cbc3454c3022a146c3cc876213ba451"
+      }
+    },
+    {
+      "identity" : "snapkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SnapKit/SnapKit",
+      "state" : {
+        "revision" : "f222cbdf325885926566172f6f5f06af95473158",
+        "version" : "5.6.0"
+      }
+    },
+    {
+      "identity" : "swiftrichstring",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tophatmonocle/SwiftRichString",
+      "state" : {
+        "branch" : "master",
+        "revision" : "fa126095c626354e1c4ffdf75bc7ad54aedd6b67"
       }
     }
   ],

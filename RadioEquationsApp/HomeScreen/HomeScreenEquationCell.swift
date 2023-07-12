@@ -3,23 +3,30 @@
 //
 
 import UIKit
+import RichTextView
 
 class HomeScreenEquationCell: UITableViewCell {
     var viewModel: HomeScreenEquationCellViewModel? {
         didSet { onViewModelDidSet() }
     }
 
-    private lazy var equationLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+    private lazy var equationLabel: RichTextView = {
+        
+        let richTextView = RichTextView(
+            input: "",
+            latexParser: LatexParser(),
+            font: UIFont.systemFont(ofSize: UIFont.systemFontSize),
+            textColor: UIColor.black,
+            frame: CGRect.zero,
+            completion: nil
+        )
 
-        return label
+        return richTextView
     }()
 
     override init(style: CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-
+        
         addSubview(equationLabel)
         equationLabel.centerY(inView: self)
     }
@@ -31,6 +38,7 @@ class HomeScreenEquationCell: UITableViewCell {
 extension HomeScreenEquationCell {
     func onViewModelDidSet() {
         guard let viewModel = viewModel else { return }
-        equationLabel.text = viewModel.equationTitle
+        equationLabel.update(input: viewModel.equationTitle)
+        
     }
 }
