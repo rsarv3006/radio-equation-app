@@ -24,8 +24,6 @@ class OhmsLawCalculationScreenViewModel {
     private(set) var calculatedValue = PassthroughSubject<OhmsLawCalculatedPassthroughModel, Never>()
     
     func onUpdateValue(fieldTag: OhmsLawFieldTag, updatedValue: String) {
-        print("fieldTag: \(fieldTag), updatedValue: \(updatedValue)")
-        
         guard let value = Double(updatedValue) else {
             return
         }

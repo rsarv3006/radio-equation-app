@@ -29,7 +29,6 @@ class OhmsLawCalculationScreen: UIViewController {
                     self.resistanceStack.inputField.text = String(calculatedValueObj.calculatedValue)
                 case .voltage:
                     self.voltageStack.inputField.text = String(calculatedValueObj.calculatedValue)
-                    print("voltage: \(calculatedValueObj.calculatedValue)")
                 }
             }.store(in: &subscriptions)
         }

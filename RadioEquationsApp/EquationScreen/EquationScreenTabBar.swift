@@ -41,18 +41,42 @@ class EquationScreenTabBar: UITabBarController {
     private func createEquationCalculationScreen() -> UIViewController {
         if let equationId = viewModel?.equation.id {
             switch equationId {
-            case .ohmsLaw:
+            case .voltage1:
+                fallthrough
+            case .resistance1:
+                fallthrough
+            case .current1:
                 let ohmsLawCalculationViewModel = OhmsLawCalculationScreenViewModel()
                 let ohmsLawCalculationScreen = OhmsLawCalculationScreen()
                 ohmsLawCalculationScreen.viewModel = ohmsLawCalculationViewModel
                 return ohmsLawCalculationScreen
-            case .powerEquation:
+            case .voltage2:
+                fallthrough
+            case .current2:
+                fallthrough
+            case .power1:
                 let powerVm = PowerCalculationScreenViewModel()
                 let powerScreen = PowerCalculationScreen()
                 powerScreen.viewModel = powerVm
                 return powerScreen
-            case .test:
-                return EquationTab()
+            case .resistance2:
+                fallthrough
+            case .power3:
+                fallthrough
+            case .current3:
+                let vm = PowerCurrentResistanceViewModel()
+                let screen = PowerCurrentResistanceScreen()
+                screen.viewModel = vm
+                return screen
+            case .voltage3:
+                fallthrough
+            case .resistance3:
+                fallthrough
+            case .power2:
+                let vm = VoltagePowerResistanceViewModel()
+                let screen = VoltagePowerResistanceScreen()
+                screen.viewModel = vm
+                return screen
             default:
                 return EquationTab()
             
