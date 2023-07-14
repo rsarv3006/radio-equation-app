@@ -37,7 +37,7 @@ class PowerCalculationScreen: UIViewController {
     }()
     
     private lazy var voltageStack: CalculationFieldStackView = {
-        let stack = CalculationFieldStackView(fieldTag: PowerFieldTag.voltage.rawValue, fieldLabelText: "Voltage (V):")
+        let stack = CalculationFieldStackView(fieldTag: PowerFieldTag.voltage.rawValue, fieldLabelText: "Voltage (E):")
         stack.inputField.addTarget(self, action: #selector(didFieldUpdate), for: .editingChanged)
         return stack
     }()

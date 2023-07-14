@@ -16,7 +16,7 @@ class HomeScreenEquationCell: UITableViewCell {
             input: "",
             latexParser: LatexParser(),
             font: UIFont.systemFont(ofSize: UIFont.systemFontSize),
-            textColor: UIColor.black,
+            textColor: UIColor(named: "TextColor") ?? UIColor.black,
             frame: CGRect.zero,
             completion: nil
         )

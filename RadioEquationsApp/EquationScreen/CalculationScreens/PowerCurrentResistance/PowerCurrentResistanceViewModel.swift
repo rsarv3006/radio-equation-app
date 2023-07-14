@@ -87,7 +87,7 @@ class PowerCurrentResistanceViewModel {
         guard let current = current, let resistance = resistance else {
             return
         }
-        let calculatedPower = current * current * resistance
+        let calculatedPower = (current * current) * resistance
         power = calculatedPower
         
         sendCalculatedValue(fieldTag: .power, value: calculatedPower)
@@ -95,7 +95,7 @@ class PowerCurrentResistanceViewModel {
     
     private func calculateResistance() {
         guard let current = current, let power = power else { return }
-        let calculatedResistance = power * current * current
+        let calculatedResistance = power * (current * current)
         resistance = calculatedResistance
         sendCalculatedValue(fieldTag: .resistance, value: calculatedResistance)
     }
