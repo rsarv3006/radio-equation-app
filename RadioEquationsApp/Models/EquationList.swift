@@ -22,7 +22,7 @@ let EquationsTableInfo = [
     EquationsTableSectionModel(title: "Resistance", equations: [
         Equation(title: "[math]$R = E / I$[/math]", description: "Calculate resistance in a circuit.", id: .resistance1),
         Equation(title: "[math]$R = P / I^2$[/math]", description: "Calculate resistance in a circuit.", id: .resistance2),
-        Equation(title: "[math]$R = E^2 / P$[/math]", description: "Calculate resistance in a circuit.", id: .resistance3)
+        Equation(title: "[math]$R = E^2 / P $[/math]", description: "Calculate resistance in a circuit.", id: .resistance3)
     ]),
     
     EquationsTableSectionModel(title: "Current", equations: [

@@ -14,6 +14,7 @@ class ViewController: UIViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.register(HomeScreenEquationCell.self, forCellReuseIdentifier: "equationCell")
+        tableView.rowHeight = 44
 
         tableView.dataSource = self
         tableView.delegate = self
