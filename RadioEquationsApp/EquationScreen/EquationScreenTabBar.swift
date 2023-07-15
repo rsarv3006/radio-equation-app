@@ -35,7 +35,7 @@ class EquationScreenTabBar: UITabBarController {
         let equationTabBarItem = UITabBarItem(title: "Equation", image: UIImage(systemName: "function"), tag: 1)
         equationVC.tabBarItem = equationTabBarItem
         
-        viewControllers = [descriptionVC, equationVC]
+        viewControllers = [equationVC, descriptionVC]
     }
     
     private func createEquationCalculationScreen() -> UIViewController {
