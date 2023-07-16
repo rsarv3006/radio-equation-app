@@ -42,14 +42,20 @@ class EquationScreenTabBar: UITabBarController {
         if let equationId = viewModel?.equation.id {
             switch equationId {
             case .voltage1:
-                fallthrough
+                let vm = ResistanceCurrentVoltageViewModel(calculateFor: .voltage)
+                let screen = ResistanceCurrentVoltageScreen()
+                screen.viewModel = vm
+                return screen
             case .resistance1:
-                fallthrough
+                let vm = ResistanceCurrentVoltageViewModel(calculateFor: .resistance)
+                let screen = ResistanceCurrentVoltageScreen()
+                screen.viewModel = vm
+                return screen
             case .current1:
-                let ohmsLawCalculationViewModel = OhmsLawCalculationScreenViewModel()
-                let ohmsLawCalculationScreen = OhmsLawCalculationScreen()
-                ohmsLawCalculationScreen.viewModel = ohmsLawCalculationViewModel
-                return ohmsLawCalculationScreen
+                let vm = ResistanceCurrentVoltageViewModel(calculateFor: .current)
+                let screen = ResistanceCurrentVoltageScreen()
+                screen.viewModel = vm
+                return screen
             case .voltage2:
                 let powerVm = PowerVoltageCurrentViewModel(calculateFor: .voltage)
                 let powerScreen = PowerVoltageCurrentScreen()

@@ -29,9 +29,9 @@
 		783103282A17E9B8006EE253 /* EquationScreenTabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783103272A17E9B8006EE253 /* EquationScreenTabBarViewModel.swift */; };
 		7831032A2A17EC9E006EE253 /* EquationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783103292A17EC9E006EE253 /* EquationList.swift */; };
 		7831032C2A1966A1006EE253 /* DescriptionTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7831032B2A1966A1006EE253 /* DescriptionTabViewModel.swift */; };
-		7831032F2A196B44006EE253 /* OhmsLawCalculationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7831032E2A196B44006EE253 /* OhmsLawCalculationScreen.swift */; };
+		7831032F2A196B44006EE253 /* ResistanceCurrentVoltageScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7831032E2A196B44006EE253 /* ResistanceCurrentVoltageScreen.swift */; };
 		783103312A1970E5006EE253 /* EquationId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783103302A1970E5006EE253 /* EquationId.swift */; };
-		789FD7C42A1B9D56001E2DB8 /* OhmsLawCalculationScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789FD7C32A1B9D56001E2DB8 /* OhmsLawCalculationScreenViewModel.swift */; };
+		789FD7C42A1B9D56001E2DB8 /* ResistanceCurrentVoltageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789FD7C32A1B9D56001E2DB8 /* ResistanceCurrentVoltageViewModel.swift */; };
 		78A43CC22A1EA88800293045 /* PowerVoltageCurrentScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A43CC12A1EA88800293045 /* PowerVoltageCurrentScreen.swift */; };
 		78A43CC42A1EA9A700293045 /* PowerVoltageCurrentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A43CC32A1EA9A700293045 /* PowerVoltageCurrentViewModel.swift */; };
 		78A43CC62A1EBFEE00293045 /* PowerVoltageCurrentFieldTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A43CC52A1EBFEE00293045 /* PowerVoltageCurrentFieldTag.swift */; };
@@ -90,9 +90,9 @@
 		783103272A17E9B8006EE253 /* EquationScreenTabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquationScreenTabBarViewModel.swift; sourceTree = "<group>"; };
 		783103292A17EC9E006EE253 /* EquationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquationList.swift; sourceTree = "<group>"; };
 		7831032B2A1966A1006EE253 /* DescriptionTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTabViewModel.swift; sourceTree = "<group>"; };
-		7831032E2A196B44006EE253 /* OhmsLawCalculationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OhmsLawCalculationScreen.swift; sourceTree = "<group>"; };
+		7831032E2A196B44006EE253 /* ResistanceCurrentVoltageScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResistanceCurrentVoltageScreen.swift; sourceTree = "<group>"; };
 		783103302A1970E5006EE253 /* EquationId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquationId.swift; sourceTree = "<group>"; };
-		789FD7C32A1B9D56001E2DB8 /* OhmsLawCalculationScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OhmsLawCalculationScreenViewModel.swift; sourceTree = "<group>"; };
+		789FD7C32A1B9D56001E2DB8 /* ResistanceCurrentVoltageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResistanceCurrentVoltageViewModel.swift; sourceTree = "<group>"; };
 		78A43CC12A1EA88800293045 /* PowerVoltageCurrentScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerVoltageCurrentScreen.swift; sourceTree = "<group>"; };
 		78A43CC32A1EA9A700293045 /* PowerVoltageCurrentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerVoltageCurrentViewModel.swift; sourceTree = "<group>"; };
 		78A43CC52A1EBFEE00293045 /* PowerVoltageCurrentFieldTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerVoltageCurrentFieldTag.swift; sourceTree = "<group>"; };
@@ -247,28 +247,28 @@
 			children = (
 				78B3C6E92A5F5D93003F0FB6 /* VoltagePowerResistance */,
 				78B3C6E42A5E7BC6003F0FB6 /* PowerCurrentResistance */,
-				78A43CC02A1EA82700293045 /* Power */,
-				78A43CBF2A1EA81800293045 /* OhmsLaw */,
+				78A43CC02A1EA82700293045 /* PowerVoltageCurrent */,
+				78A43CBF2A1EA81800293045 /* ResistanceCurrentVoltage */,
 			);
 			path = CalculationScreens;
 			sourceTree = "<group>";
 		};
-		78A43CBF2A1EA81800293045 /* OhmsLaw */ = {
+		78A43CBF2A1EA81800293045 /* ResistanceCurrentVoltage */ = {
 			isa = PBXGroup;
 			children = (
-				7831032E2A196B44006EE253 /* OhmsLawCalculationScreen.swift */,
-				789FD7C32A1B9D56001E2DB8 /* OhmsLawCalculationScreenViewModel.swift */,
+				7831032E2A196B44006EE253 /* ResistanceCurrentVoltageScreen.swift */,
+				789FD7C32A1B9D56001E2DB8 /* ResistanceCurrentVoltageViewModel.swift */,
 			);
-			path = OhmsLaw;
+			path = ResistanceCurrentVoltage;
 			sourceTree = "<group>";
 		};
-		78A43CC02A1EA82700293045 /* Power */ = {
+		78A43CC02A1EA82700293045 /* PowerVoltageCurrent */ = {
 			isa = PBXGroup;
 			children = (
 				78A43CC12A1EA88800293045 /* PowerVoltageCurrentScreen.swift */,
 				78A43CC32A1EA9A700293045 /* PowerVoltageCurrentViewModel.swift */,
 			);
-			path = Power;
+			path = PowerVoltageCurrent;
 			sourceTree = "<group>";
 		};
 		78B3C6E42A5E7BC6003F0FB6 /* PowerCurrentResistance */ = {
@@ -429,7 +429,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78B3C6EB2A5FA751003F0FB6 /* VoltagePowerResistanceViewModel.swift in Sources */,
-				7831032F2A196B44006EE253 /* OhmsLawCalculationScreen.swift in Sources */,
+				7831032F2A196B44006EE253 /* ResistanceCurrentVoltageScreen.swift in Sources */,
 				7801EC252A11F671008DE671 /* ViewController.swift in Sources */,
 				78B3C6ED2A5FB53B003F0FB6 /* VoltagePowerResistanceScreen.swift in Sources */,
 				7801EC212A11F671008DE671 /* AppDelegate.swift in Sources */,
@@ -440,7 +440,7 @@
 				783103242A15D39D006EE253 /* DescriptionTab.swift in Sources */,
 				7801EC232A11F671008DE671 /* SceneDelegate.swift in Sources */,
 				78B3C6E62A5E7C54003F0FB6 /* PowerCurrentResistanceViewModel.swift in Sources */,
-				789FD7C42A1B9D56001E2DB8 /* OhmsLawCalculationScreenViewModel.swift in Sources */,
+				789FD7C42A1B9D56001E2DB8 /* ResistanceCurrentVoltageViewModel.swift in Sources */,
 				783103312A1970E5006EE253 /* EquationId.swift in Sources */,
 				783103262A15D3C0006EE253 /* EquationTab.swift in Sources */,
 				1B93B903FA4AFCAC0064DACA /* Extensions.swift in Sources */,

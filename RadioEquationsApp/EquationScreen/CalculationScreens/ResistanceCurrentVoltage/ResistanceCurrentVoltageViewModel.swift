@@ -8,22 +8,26 @@
 import Foundation
 import Combine
 
-struct OhmsLawCalculatedPassthroughModel {
-    let fieldTag: OhmsLawFieldTag
+struct ResistanceCurrentVoltageCalculatedPassthroughModel {
+    let fieldTag: ResistanceCurrentVoltageFieldTag
     let calculatedValue: Double
 }
 
-class OhmsLawCalculationScreenViewModel {
-    private var selectedCalculateFor: OhmsLawFieldTag = .voltage
+class ResistanceCurrentVoltageViewModel {
+    private(set) var selectedCalculateFor: ResistanceCurrentVoltageFieldTag
+   
+    init(calculateFor: ResistanceCurrentVoltageFieldTag = .voltage) {
+        self.selectedCalculateFor = calculateFor
+    }
     
     private var resistance: Double? = nil
     private var current: Double? = nil
     private var voltage: Double? = nil
     
     // MARK: - Properties
-    private(set) var calculatedValue = PassthroughSubject<OhmsLawCalculatedPassthroughModel, Never>()
+    private(set) var calculatedValue = PassthroughSubject<ResistanceCurrentVoltageCalculatedPassthroughModel, Never>()
     
-    func onUpdateValue(fieldTag: OhmsLawFieldTag, updatedValue: String) {
+    func onUpdateValue(fieldTag: ResistanceCurrentVoltageFieldTag, updatedValue: String) {
         guard let value = Double(updatedValue) else {
             return
         }
@@ -41,7 +45,7 @@ class OhmsLawCalculationScreenViewModel {
     }
     
     func onUpdatedCalculateFor(selectedIndex: Int) {
-        selectedCalculateFor = OhmsLawFieldTag(rawValue: selectedIndex) ?? .voltage
+        selectedCalculateFor = ResistanceCurrentVoltageFieldTag(rawValue: selectedIndex) ?? .voltage
     }
     
     private func attemptCalculation() {
@@ -85,7 +89,7 @@ class OhmsLawCalculationScreenViewModel {
         sendCalculatedValue(fieldTag: .voltage, value: current * resistance)
     }
     
-    private func clearValueForTag(fieldTag: OhmsLawFieldTag) {
+    private func clearValueForTag(fieldTag: ResistanceCurrentVoltageFieldTag) {
         switch fieldTag {
         case .current:
             current = nil
@@ -96,8 +100,8 @@ class OhmsLawCalculationScreenViewModel {
         }
     }
     
-    private func sendCalculatedValue(fieldTag: OhmsLawFieldTag, value: Double) {
-        calculatedValue.send(OhmsLawCalculatedPassthroughModel(fieldTag: fieldTag, calculatedValue: value))
+    private func sendCalculatedValue(fieldTag: ResistanceCurrentVoltageFieldTag, value: Double) {
+        calculatedValue.send(ResistanceCurrentVoltageCalculatedPassthroughModel(fieldTag: fieldTag, calculatedValue: value))
     }
     
     

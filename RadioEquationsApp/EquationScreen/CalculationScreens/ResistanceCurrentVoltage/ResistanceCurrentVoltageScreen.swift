@@ -8,16 +8,16 @@
 import UIKit
 import Combine
 
-enum OhmsLawFieldTag: Int {
+enum ResistanceCurrentVoltageFieldTag: Int {
     case current = 2
     case resistance = 1
     case voltage = 0
 }
 
-class OhmsLawCalculationScreen: UIViewController {
+class ResistanceCurrentVoltageScreen: UIViewController {
     private var subscriptions = Set<AnyCancellable>()
     
-    var viewModel: OhmsLawCalculationScreenViewModel? {
+    var viewModel: ResistanceCurrentVoltageViewModel? {
         didSet {
             guard let viewModel = viewModel else { return }
             
@@ -31,6 +31,18 @@ class OhmsLawCalculationScreen: UIViewController {
                     self.voltageStack.inputField.text = String(calculatedValueObj.calculatedValue)
                 }
             }.store(in: &subscriptions)
+            
+            switch viewModel.selectedCalculateFor {
+            case .voltage:
+                calculateForSegmentedControl.selectedSegmentIndex = 0
+                makeVoltageFieldAnswerField()
+            case .resistance:
+                calculateForSegmentedControl.selectedSegmentIndex = 1
+                makeResistanceFieldAnswerField()
+            case .current:
+                calculateForSegmentedControl.selectedSegmentIndex = 2
+                makeCurrentFieldAnswerField()
+            }
         }
     }
     
@@ -51,19 +63,19 @@ class OhmsLawCalculationScreen: UIViewController {
     }()
     
     private lazy var voltageStack: CalculationFieldStackView = {
-        let stackView = CalculationFieldStackView(fieldTag: OhmsLawFieldTag.voltage.rawValue, fieldLabelText: "Voltage (E):")
+        let stackView = CalculationFieldStackView(fieldTag: ResistanceCurrentVoltageFieldTag.voltage.rawValue, fieldLabelText: "Voltage (E):")
         stackView.inputField.addTarget(self, action: #selector(didFieldUpdate), for: .editingChanged)
         return stackView
     }()
     
     private lazy var currentStack: CalculationFieldStackView = {
-        let stackView = CalculationFieldStackView(fieldTag: OhmsLawFieldTag.current.rawValue, fieldLabelText: "Current (I):")
+        let stackView = CalculationFieldStackView(fieldTag: ResistanceCurrentVoltageFieldTag.current.rawValue, fieldLabelText: "Current (I):")
         stackView.inputField.addTarget(self, action: #selector(didFieldUpdate), for: .editingChanged)
         return stackView
     }()
         
     private lazy var resistanceStack: CalculationFieldStackView = {
-        let stackView = CalculationFieldStackView(fieldTag: OhmsLawFieldTag.resistance.rawValue, fieldLabelText: "Resistance (R):")
+        let stackView = CalculationFieldStackView(fieldTag: ResistanceCurrentVoltageFieldTag.resistance.rawValue, fieldLabelText: "Resistance (R):")
         stackView.inputField.addTarget(self, action: #selector(didFieldUpdate), for: .editingChanged)
         return stackView
     }()
@@ -90,13 +102,12 @@ class OhmsLawCalculationScreen: UIViewController {
         resistanceStack.anchor(top: currentStack.bottomAnchor, left: view.safeAreaLayoutGuide.leftAnchor, right: view.safeAreaLayoutGuide.rightAnchor, paddingTop: 12, paddingLeft: 12, paddingRight: 12)
         
         view.addSubview(voltageStack)
-        voltageStack.inputField.isAnswerField = true
         
         voltageStack.anchor(top: resistanceStack.bottomAnchor, left: view.safeAreaLayoutGuide.leftAnchor, right: view.safeAreaLayoutGuide.rightAnchor, paddingTop: 12, paddingLeft: 12, paddingRight: 12)
     }
 }
 
-extension OhmsLawCalculationScreen {
+extension ResistanceCurrentVoltageScreen {
     @objc func didFieldUpdate(_ textField: UITextField) {
         guard let fieldTag = findFieldTagFromInt(fieldTag: textField.tag), let fieldText = textField.text else { return }
         viewModel?.onUpdateValue(fieldTag: fieldTag, updatedValue: fieldText)
@@ -108,7 +119,7 @@ extension OhmsLawCalculationScreen {
         makeTextFieldAnswerBox(fieldTag: fieldTag)
     }
     
-    private func findFieldTagFromInt(fieldTag: Int) -> OhmsLawFieldTag? {
+    private func findFieldTagFromInt(fieldTag: Int) -> ResistanceCurrentVoltageFieldTag? {
         switch fieldTag {
         case 0:
             return .voltage
@@ -121,7 +132,7 @@ extension OhmsLawCalculationScreen {
         }
     }
     
-    private func makeTextFieldAnswerBox(fieldTag: OhmsLawFieldTag) {
+    private func makeTextFieldAnswerBox(fieldTag: ResistanceCurrentVoltageFieldTag) {
         switch fieldTag {
         case .current:
             makeCurrentFieldAnswerField()
