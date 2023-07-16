@@ -51,29 +51,47 @@ class EquationScreenTabBar: UITabBarController {
                 ohmsLawCalculationScreen.viewModel = ohmsLawCalculationViewModel
                 return ohmsLawCalculationScreen
             case .voltage2:
-                fallthrough
+                let powerVm = PowerVoltageCurrentViewModel(calculateFor: .voltage)
+                let powerScreen = PowerVoltageCurrentScreen()
+                powerScreen.viewModel = powerVm
+                return powerScreen
             case .current2:
-                fallthrough
+                let powerVm = PowerVoltageCurrentViewModel(calculateFor: .current)
+                let powerScreen = PowerVoltageCurrentScreen()
+                powerScreen.viewModel = powerVm
+                return powerScreen
             case .power1:
-                let powerVm = PowerCalculationScreenViewModel()
-                let powerScreen = PowerCalculationScreen()
+                let powerVm = PowerVoltageCurrentViewModel(calculateFor: .power)
+                let powerScreen = PowerVoltageCurrentScreen()
                 powerScreen.viewModel = powerVm
                 return powerScreen
             case .resistance2:
-                fallthrough
+                let vm = PowerCurrentResistanceViewModel(calculateFor: .resistance)
+                let screen = PowerCurrentResistanceScreen()
+                screen.viewModel = vm
+                return screen
             case .power3:
-                fallthrough
+                let vm = PowerCurrentResistanceViewModel(calculateFor: .power)
+                let screen = PowerCurrentResistanceScreen()
+                screen.viewModel = vm
+                return screen
             case .current3:
-                let vm = PowerCurrentResistanceViewModel()
+                let vm = PowerCurrentResistanceViewModel(calculateFor: .current)
                 let screen = PowerCurrentResistanceScreen()
                 screen.viewModel = vm
                 return screen
             case .voltage3:
-                fallthrough
+                let vm = VoltagePowerResistanceViewModel(calculateFor: .voltage)
+                let screen = VoltagePowerResistanceScreen()
+                screen.viewModel = vm
+                return screen
             case .resistance3:
-                fallthrough
+                let vm = VoltagePowerResistanceViewModel(calculateFor: .resistance)
+                let screen = VoltagePowerResistanceScreen()
+                screen.viewModel = vm
+                return screen
             case .power2:
-                let vm = VoltagePowerResistanceViewModel()
+                let vm = VoltagePowerResistanceViewModel(calculateFor: .power)
                 let screen = VoltagePowerResistanceScreen()
                 screen.viewModel = vm
                 return screen

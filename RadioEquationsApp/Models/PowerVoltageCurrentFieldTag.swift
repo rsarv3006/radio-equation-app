@@ -7,18 +7,18 @@
 
 import Foundation
 
-enum PowerFieldTag: Int {
+enum PowerVoltageCurrentFieldTag: Int {
     case voltage = 2
     case current = 1
     case power = 0
     
-    static func getFieldTagFromInt(fieldTagInt: Int) -> PowerFieldTag? {
+    static func getFieldTagFromInt(fieldTagInt: Int) -> PowerVoltageCurrentFieldTag? {
         switch fieldTagInt {
-        case PowerFieldTag.voltage.rawValue:
+        case PowerVoltageCurrentFieldTag.voltage.rawValue:
             return .voltage
-        case PowerFieldTag.power.rawValue:
+        case PowerVoltageCurrentFieldTag.power.rawValue:
             return .power
-        case PowerFieldTag.current.rawValue:
+        case PowerVoltageCurrentFieldTag.current.rawValue:
             return .current
         default:
             return nil

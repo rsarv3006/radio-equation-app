@@ -8,10 +8,10 @@
 import UIKit
 import Combine
 
-class PowerCalculationScreen: UIViewController {
+class PowerVoltageCurrentScreen: UIViewController {
     private var subscriptions = Set<AnyCancellable>()
     
-    var viewModel: PowerCalculationScreenViewModel? {
+    var viewModel: PowerVoltageCurrentViewModel? {
         didSet {
             guard let viewModel = viewModel else { return }
             
@@ -25,6 +25,18 @@ class PowerCalculationScreen: UIViewController {
                     self.voltageStack.inputField.text = String(calculatedValueObj.calculatedValue)
                 }
             }.store(in: &subscriptions)
+            
+            switch viewModel.selectedCalculateFor {
+            case .power:
+                calculateForSegmentedControl.selectedSegmentIndex = 0
+                makePowerFieldAnswerBox()
+            case .current:
+                calculateForSegmentedControl.selectedSegmentIndex = 1
+                makeCurrentFieldAnswerBox()
+            case .voltage:
+                calculateForSegmentedControl.selectedSegmentIndex = 2
+                makeVoltageFieldAnswerBox()
+            }
         }
     }
     
@@ -37,19 +49,19 @@ class PowerCalculationScreen: UIViewController {
     }()
     
     private lazy var voltageStack: CalculationFieldStackView = {
-        let stack = CalculationFieldStackView(fieldTag: PowerFieldTag.voltage.rawValue, fieldLabelText: "Voltage (E):")
+        let stack = CalculationFieldStackView(fieldTag: PowerVoltageCurrentFieldTag.voltage.rawValue, fieldLabelText: "Voltage (E):")
         stack.inputField.addTarget(self, action: #selector(didFieldUpdate), for: .editingChanged)
         return stack
     }()
     
     private lazy var currentStack: CalculationFieldStackView = {
-        let stack = CalculationFieldStackView(fieldTag: PowerFieldTag.current.rawValue, fieldLabelText: "Current (I):")
+        let stack = CalculationFieldStackView(fieldTag: PowerVoltageCurrentFieldTag.current.rawValue, fieldLabelText: "Current (I):")
         stack.inputField.addTarget(self, action: #selector(didFieldUpdate), for: .editingChanged)
         return stack
     }()
     
     private lazy var powerStack: CalculationFieldStackView = {
-        let stack = CalculationFieldStackView(fieldTag: PowerFieldTag.power.rawValue, fieldLabelText: "Power (P):")
+        let stack = CalculationFieldStackView(fieldTag: PowerVoltageCurrentFieldTag.power.rawValue, fieldLabelText: "Power (P):")
         stack.inputField.addTarget(self, action: #selector(didFieldUpdate), for: .editingChanged)
         return stack
     }()
@@ -89,19 +101,19 @@ class PowerCalculationScreen: UIViewController {
     }
 }
 
-extension PowerCalculationScreen {
+extension PowerVoltageCurrentScreen {
     @objc func didFieldUpdate(_ textField: UITextField) {
-        guard let fieldTag = PowerFieldTag.getFieldTagFromInt(fieldTagInt: textField.tag), let fieldText = textField.text else { return }
+        guard let fieldTag = PowerVoltageCurrentFieldTag.getFieldTagFromInt(fieldTagInt: textField.tag), let fieldText = textField.text else { return }
         viewModel?.onUpdateValue(fieldTag: fieldTag, updatedValue: fieldText)
     }
     
     @objc func didCalculateForSegmentedControlChange(_ segmentedControl: UISegmentedControl) {
-        guard let fieldTag = PowerFieldTag.getFieldTagFromInt(fieldTagInt: segmentedControl.selectedSegmentIndex) else { return }
+        guard let fieldTag = PowerVoltageCurrentFieldTag.getFieldTagFromInt(fieldTagInt: segmentedControl.selectedSegmentIndex) else { return }
         viewModel?.onUpdatedCalculateFor(selectedIndex: segmentedControl.selectedSegmentIndex)
         makeTextFieldAnswerBox(fieldTag: fieldTag)
     }
     
-    private func makeTextFieldAnswerBox(fieldTag: PowerFieldTag) {
+    private func makeTextFieldAnswerBox(fieldTag: PowerVoltageCurrentFieldTag) {
         switch fieldTag {
         case .current:
             makeCurrentFieldAnswerBox()

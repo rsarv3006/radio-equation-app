@@ -25,6 +25,19 @@ class PowerCurrentResistanceScreen: UIViewController {
                     self.resistanceStack.inputField.text = String(calculatedValueObj.calculatedValue)
                 }
             }.store(in: &subscriptions)
+            
+            switch viewModel.selectedCalculateFor {
+            case .power:
+                calculateForSegmentedControl.selectedSegmentIndex = 0
+                makePowerFieldAnswerBox()
+            case .current:
+                calculateForSegmentedControl.selectedSegmentIndex = 1
+                makeCurrentFieldAnswerBox()
+            case .resistance:
+                calculateForSegmentedControl.selectedSegmentIndex = 2
+                makeResistanceFieldAnswerBox()
+                
+            }
         }
     }
     

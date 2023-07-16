@@ -8,22 +8,28 @@
 import Foundation
 import Combine
 
-struct PowerCalculatedPassthroughModel {
-    let fieldTag: PowerFieldTag
+struct PowerVoltageCurrentPassthroughModel {
+    let fieldTag: PowerVoltageCurrentFieldTag
     let calculatedValue: Double
 }
 
-class PowerCalculationScreenViewModel {
-    private var selectedCalculateFor: PowerFieldTag = .power
+class PowerVoltageCurrentViewModel {
+    private(set) var selectedCalculateFor: PowerVoltageCurrentFieldTag
+   
+    init(calculateFor: PowerVoltageCurrentFieldTag = .power) {
+        self.selectedCalculateFor = calculateFor
+    }
+    
+    
     
     private var current: Double? = nil
     private var voltage: Double? = nil
     private var power: Double? = nil
     
     // MARK: - Properties
-    private(set) var calculatedValue = PassthroughSubject<PowerCalculatedPassthroughModel, Never>()
+    private(set) var calculatedValue = PassthroughSubject<PowerVoltageCurrentPassthroughModel, Never>()
     
-    func onUpdateValue(fieldTag: PowerFieldTag, updatedValue: String) {
+    func onUpdateValue(fieldTag: PowerVoltageCurrentFieldTag, updatedValue: String) {
         guard let value = Double(updatedValue) else {
             return
         }
@@ -41,7 +47,7 @@ class PowerCalculationScreenViewModel {
     }
     
     func onUpdatedCalculateFor(selectedIndex: Int) {
-        selectedCalculateFor = PowerFieldTag(rawValue: selectedIndex) ?? .power
+        selectedCalculateFor = PowerVoltageCurrentFieldTag(rawValue: selectedIndex) ?? .power
     }
     
     private func attemptCalculation() {
@@ -82,7 +88,7 @@ class PowerCalculationScreenViewModel {
         sendCalculatedValue(fieldTag: .voltage, value: calculatedVoltage)
     }
     
-    private func clearValueForTag(fieldTag: PowerFieldTag) {
+    private func clearValueForTag(fieldTag: PowerVoltageCurrentFieldTag) {
         switch fieldTag {
         case .current:
             current = nil
@@ -93,8 +99,8 @@ class PowerCalculationScreenViewModel {
         }
     }
     
-    private func sendCalculatedValue(fieldTag: PowerFieldTag, value: Double) {
-        calculatedValue.send(PowerCalculatedPassthroughModel(fieldTag: fieldTag, calculatedValue: value))
+    private func sendCalculatedValue(fieldTag: PowerVoltageCurrentFieldTag, value: Double) {
+        calculatedValue.send(PowerVoltageCurrentPassthroughModel(fieldTag: fieldTag, calculatedValue: value))
     }
     
     

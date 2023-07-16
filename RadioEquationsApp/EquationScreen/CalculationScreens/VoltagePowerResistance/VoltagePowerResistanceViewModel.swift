@@ -33,7 +33,11 @@ struct VoltagePowerResistanceCalculatedPassthroughModel {
 }
 
 class VoltagePowerResistanceViewModel {
-    private var selectedCalculateFor: VoltagePowerResistanceFieldTag = .voltage
+    private(set) var selectedCalculateFor: VoltagePowerResistanceFieldTag
+    
+    init(calculateFor: VoltagePowerResistanceFieldTag = .voltage) {
+        self.selectedCalculateFor = calculateFor
+    }
     
     private var voltage: Double? = nil
     private var resistance: Double? = nil
