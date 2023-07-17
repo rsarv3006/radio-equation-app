@@ -43,6 +43,9 @@
 		78B3C6E82A5F55D7003F0FB6 /* PowerCurrentResistanceScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B3C6E72A5F55D7003F0FB6 /* PowerCurrentResistanceScreen.swift */; };
 		78B3C6EB2A5FA751003F0FB6 /* VoltagePowerResistanceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B3C6EA2A5FA751003F0FB6 /* VoltagePowerResistanceViewModel.swift */; };
 		78B3C6ED2A5FB53B003F0FB6 /* VoltagePowerResistanceScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B3C6EC2A5FB53B003F0FB6 /* VoltagePowerResistanceScreen.swift */; };
+		78B3C6F02A649DD9003F0FB6 /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B3C6EF2A649DD9003F0FB6 /* SettingsScreen.swift */; };
+		78B3C6F22A649E4B003F0FB6 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B3C6F12A649E4B003F0FB6 /* SettingsViewModel.swift */; };
+		78B3C6F42A64F365003F0FB6 /* ObfuscateSupportEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B3C6F32A64F365003F0FB6 /* ObfuscateSupportEmail.swift */; };
 		78E6B2592A13257800581D06 /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 78E6B2582A13257800581D06 /* JGProgressHUD */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +106,9 @@
 		78B3C6E72A5F55D7003F0FB6 /* PowerCurrentResistanceScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerCurrentResistanceScreen.swift; sourceTree = "<group>"; };
 		78B3C6EA2A5FA751003F0FB6 /* VoltagePowerResistanceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoltagePowerResistanceViewModel.swift; sourceTree = "<group>"; };
 		78B3C6EC2A5FB53B003F0FB6 /* VoltagePowerResistanceScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoltagePowerResistanceScreen.swift; sourceTree = "<group>"; };
+		78B3C6EF2A649DD9003F0FB6 /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
+		78B3C6F12A649E4B003F0FB6 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		78B3C6F32A64F365003F0FB6 /* ObfuscateSupportEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObfuscateSupportEmail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +203,7 @@
 		7801EC1F2A11F671008DE671 /* RadioEquationsApp */ = {
 			isa = PBXGroup;
 			children = (
+				78B3C6EE2A649DC8003F0FB6 /* SettingsScreen */,
 				783103202A15293A006EE253 /* EquationScreen */,
 				7801EC202A11F671008DE671 /* AppDelegate.swift */,
 				7801EC222A11F671008DE671 /* SceneDelegate.swift */,
@@ -287,6 +294,16 @@
 				78B3C6EC2A5FB53B003F0FB6 /* VoltagePowerResistanceScreen.swift */,
 			);
 			path = VoltagePowerResistance;
+			sourceTree = "<group>";
+		};
+		78B3C6EE2A649DC8003F0FB6 /* SettingsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				78B3C6EF2A649DD9003F0FB6 /* SettingsScreen.swift */,
+				78B3C6F12A649E4B003F0FB6 /* SettingsViewModel.swift */,
+				78B3C6F32A64F365003F0FB6 /* ObfuscateSupportEmail.swift */,
+			);
+			path = SettingsScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -446,16 +463,19 @@
 				1B93B903FA4AFCAC0064DACA /* Extensions.swift in Sources */,
 				1B93B385364D75D7AB95B4BE /* InputTextView.swift in Sources */,
 				78B3C6E32A5E0CB8003F0FB6 /* TextView.swift in Sources */,
+				78B3C6F22A649E4B003F0FB6 /* SettingsViewModel.swift in Sources */,
 				1B93BCFC5F388BA92C30F708 /* FieldValidInvalidProtocol.swift in Sources */,
 				78A43CC82A20DFF600293045 /* CalculationTextField.swift in Sources */,
 				78A43CC62A1EBFEE00293045 /* PowerVoltageCurrentFieldTag.swift in Sources */,
 				783103222A152BDA006EE253 /* EquationScreenTabBar.swift in Sources */,
+				78B3C6F42A64F365003F0FB6 /* ObfuscateSupportEmail.swift in Sources */,
 				1B93B46466E160C3B17C6FFF /* HomeScreenEquationCell.swift in Sources */,
 				1B93B5C7072429215CD47FE7 /* HomeScreenEquationCellViewModel.swift in Sources */,
 				78B3C6E82A5F55D7003F0FB6 /* PowerCurrentResistanceScreen.swift in Sources */,
 				1B93BC490273194FBFD51A3B /* Equation.swift in Sources */,
 				1B93BECFBF3400790B3A3302 /* CalculationFunctionProtocol.swift in Sources */,
 				7831032C2A1966A1006EE253 /* DescriptionTabViewModel.swift in Sources */,
+				78B3C6F02A649DD9003F0FB6 /* SettingsScreen.swift in Sources */,
 				78A43CCA2A244EFC00293045 /* CalculationFieldStackView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

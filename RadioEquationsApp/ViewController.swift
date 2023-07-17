@@ -28,6 +28,16 @@ class ViewController: UIViewController {
         self.navigationItem.title = "Radio Equations"
         view.addSubview(tableView)
         tableView.fillSuperview()
+
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "gear.circle"), style: .plain, target: self, action: #selector(onSettingsTapped))
+    }
+    
+    @objc func onSettingsTapped() {
+        let settingsVc = SettingsScreen()
+        let vm = SettingsViewModel()
+        settingsVc.viewModel = vm
+        
+        navigationController?.pushViewController(settingsVc, animated: true)
     }
 
 }
