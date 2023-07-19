@@ -75,7 +75,7 @@ class VoltagePowerResistanceScreen: UIViewController {
     }()
     
     override func viewDidLoad() {
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = .Theme.backgroundColor
         configureView()
     }
     

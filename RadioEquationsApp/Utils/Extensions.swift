@@ -157,7 +157,6 @@ extension UITextView {
 
 extension UIColor {
     static let tomato = UIColor(red: 1.00, green: 0.39, blue: 0.28, alpha: 1.00)
-    static let buttonText = UIColor(named: "ButtonText")
 }
 
 

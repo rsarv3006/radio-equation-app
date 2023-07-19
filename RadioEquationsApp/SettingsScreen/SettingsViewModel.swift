@@ -21,4 +21,6 @@ class SettingsViewModel {
         
         return returnValue
     }
+    
+    let goToLegalButtonTitle = "Legal"
 }

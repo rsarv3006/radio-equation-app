@@ -13,7 +13,6 @@ class DescriptionTab: UIViewController {
     var viewModel: DescriptionTabViewModel? {
         didSet {
             descriptionTextView.update(input: viewModel?.equation.description)
-            
         }
     }
     
@@ -22,7 +21,7 @@ class DescriptionTab: UIViewController {
             input: "",
             latexParser: LatexParser(),
             font: UIFont.systemFont(ofSize: 16),
-            textColor: UIColor(named: "TextColor") ?? UIColor.black,
+            textColor: UIColor.Theme.textColor,
             frame: CGRect.zero,
             completion: nil
         )
@@ -33,6 +32,7 @@ class DescriptionTab: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .Theme.backgroundColor
         view.addSubview(descriptionTextView)
         descriptionTextView.anchor(top: self.view.safeAreaLayoutGuide.topAnchor, left: self.view.leftAnchor, right: self.view.rightAnchor, paddingLeft: 8, paddingRight: 8)
     }

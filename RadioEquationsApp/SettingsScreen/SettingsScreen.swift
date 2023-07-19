@@ -8,7 +8,7 @@
 import UIKit
 
 class SettingsScreen: UIViewController {
-   
+    
     var viewModel: SettingsViewModel? {
         didSet {
             guard let viewModel = viewModel else { return }
@@ -16,23 +16,34 @@ class SettingsScreen: UIViewController {
             self.appVersionLabel.text = viewModel.appVersion
         }
     }
-   
+    
     private lazy var contactSupportButton: UIButton = {
         let button = UIButton(type: .roundedRect)
         button.setTitle("Contact Support", for: .normal)
         button.addTarget(self, action: #selector(onContactSupportTapped), for: .touchUpInside)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 24)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
+        button.titleLabel?.textColor = .Theme.altColor
         return button
     }()
     
     private lazy var appVersionLabel: UILabel = {
         let label = UILabel()
+        label.textColor = .Theme.textColor
         return label
+    }()
+    
+    private lazy var legalButton: UIButton = {
+        let button = UIButton(type: .roundedRect)
+        button.setTitle("Legal", for: .normal)
+        button.addTarget(self, action: #selector(onLegalButtonTapped), for: .touchUpInside)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
+        button.titleLabel?.textColor = .Theme.altColor
+        return button
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = .Theme.backgroundColor
         configureView()
     }
     
@@ -44,14 +55,29 @@ class SettingsScreen: UIViewController {
         view.addSubview(appVersionLabel)
         appVersionLabel.centerX(inView: self.view)
         appVersionLabel.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor)
+        
+        view.addSubview(legalButton)
+        legalButton.centerX(inView: self.view)
+        legalButton.anchor(top: contactSupportButton.bottomAnchor, paddingBottom: 20)
+        
     }
     
     @objc func onContactSupportTapped() {
         let urlString = "mailto:\(supportEmail)?subject=Support Request"
-        let url = URL(string: urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)!
+        
+        guard let urlStringPercentEncoded = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
+                let url = URL(string: urlStringPercentEncoded) else { return }
         
         if UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.open(url)
         }
+    }
+    
+    @objc func onLegalButtonTapped() {
+        let screen = LegalScreen()
+        let vm = LegalScreenVM()
+        screen.viewModel = vm
+        
+        self.navigationController?.pushViewController(screen, animated: true)
     }
 }

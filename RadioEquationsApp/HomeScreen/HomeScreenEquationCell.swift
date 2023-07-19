@@ -15,8 +15,8 @@ class HomeScreenEquationCell: UITableViewCell {
         let richTextView = RichTextView(
             input: "",
             latexParser: LatexParser(),
-            font: UIFont.systemFont(ofSize: UIFont.systemFontSize),
-            textColor: UIColor(named: "TextColor") ?? UIColor.black,
+            font: UIFont.systemFont(ofSize: 18),
+            textColor: UIColor.Theme.textColor,
             frame: CGRect.zero,
             completion: nil
         )
@@ -26,6 +26,8 @@ class HomeScreenEquationCell: UITableViewCell {
 
     override init(style: CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        self.backgroundColor = .Theme.backgroundColor
         
         addSubview(equationLabel)
         equationLabel.centerY(inView: self)
