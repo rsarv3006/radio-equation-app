@@ -27,12 +27,12 @@ class EquationScreenTabBar: UITabBarController {
         let descriptionVC = DescriptionTab()
         descriptionVC.viewModel = DescriptionTabViewModel(equation: equation)
         descriptionVC.title = "Description"
-        let descriptionTabBarItem = UITabBarItem(title: "Description", image: UIImage(systemName: "doc.plaintext"), tag: 0)
+        let descriptionTabBarItem = UITabBarItem(title: "Description", image: UIImage(systemName: "doc.plaintext")?.withTintColor(.Theme.altColor, renderingMode: .alwaysOriginal), tag: 0)
         descriptionVC.tabBarItem = descriptionTabBarItem
         
         let equationVC = createEquationCalculationScreen()
         equationVC.title = "Equation"
-        let equationTabBarItem = UITabBarItem(title: "Equation", image: UIImage(systemName: "function"), tag: 1)
+        let equationTabBarItem = UITabBarItem(title: "Equation", image: UIImage(systemName: "function")?.withTintColor(.Theme.altColor, renderingMode: .alwaysOriginal), tag: 1)
         equationVC.tabBarItem = equationTabBarItem
         
         viewControllers = [equationVC, descriptionVC]

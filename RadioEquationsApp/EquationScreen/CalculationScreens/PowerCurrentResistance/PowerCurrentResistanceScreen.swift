@@ -46,6 +46,7 @@ class PowerCurrentResistanceScreen: UIViewController {
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Calculate for:"
+        label.textColor = .Theme.textColor
         return label
     }()
     

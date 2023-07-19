@@ -29,8 +29,10 @@ class ViewController: UIViewController {
         self.navigationItem.title = "Radio Equations"
         view.addSubview(tableView)
         tableView.fillSuperview()
+       
+        let barButtonItemImage = UIImage(systemName: "gear.circle")?.withTintColor(.Theme.altColor, renderingMode: .alwaysOriginal)
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "gear.circle"), style: .plain, target: self, action: #selector(onSettingsTapped))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: barButtonItemImage, style: .plain, target: self, action: #selector(onSettingsTapped))
     }
     
     @objc func onSettingsTapped() {

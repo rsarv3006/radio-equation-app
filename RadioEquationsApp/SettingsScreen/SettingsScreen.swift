@@ -22,7 +22,7 @@ class SettingsScreen: UIViewController {
         button.setTitle("Contact Support", for: .normal)
         button.addTarget(self, action: #selector(onContactSupportTapped), for: .touchUpInside)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
-        button.titleLabel?.textColor = .Theme.altColor
+        button.setTitleColor(.Theme.altColor, for: .normal)
         return button
     }()
     
@@ -37,13 +37,14 @@ class SettingsScreen: UIViewController {
         button.setTitle("Legal", for: .normal)
         button.addTarget(self, action: #selector(onLegalButtonTapped), for: .touchUpInside)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
-        button.titleLabel?.textColor = .Theme.altColor
+        button.setTitleColor(.Theme.altColor, for: .normal)
         return button
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .Theme.backgroundColor
+        self.navigationController?.navigationBar.tintColor = .Theme.altColor
         configureView()
     }
     

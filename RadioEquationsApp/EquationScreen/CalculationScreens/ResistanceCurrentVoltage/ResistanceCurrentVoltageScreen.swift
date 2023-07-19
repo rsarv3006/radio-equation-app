@@ -51,6 +51,7 @@ class ResistanceCurrentVoltageScreen: UIViewController {
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Calculate for:"
+        label.textColor = .Theme.textColor
         return label
     }()
     
@@ -58,7 +59,6 @@ class ResistanceCurrentVoltageScreen: UIViewController {
         let control = UISegmentedControl(items: calculateForPickerOptions)
         control.selectedSegmentIndex = 0
         control.addTarget(self, action: #selector(didCalculateForSegmentedControlChange), for: .valueChanged)
-        
         return control
     }()
     
@@ -73,7 +73,7 @@ class ResistanceCurrentVoltageScreen: UIViewController {
         stackView.inputField.addTarget(self, action: #selector(didFieldUpdate), for: .editingChanged)
         return stackView
     }()
-        
+    
     private lazy var resistanceStack: CalculationFieldStackView = {
         let stackView = CalculationFieldStackView(fieldTag: ResistanceCurrentVoltageFieldTag.resistance.rawValue, fieldLabelText: "Resistance (R):")
         stackView.inputField.addTarget(self, action: #selector(didFieldUpdate), for: .editingChanged)
@@ -96,7 +96,7 @@ class ResistanceCurrentVoltageScreen: UIViewController {
         view.addSubview(currentStack)
         
         currentStack.anchor(top: calculateForSegmentedControl.bottomAnchor, left: view.safeAreaLayoutGuide.leftAnchor, right: view.safeAreaLayoutGuide.rightAnchor, paddingTop: 12, paddingLeft: 12, paddingRight: 12)
-            
+        
         view.addSubview(resistanceStack)
         
         resistanceStack.anchor(top: currentStack.bottomAnchor, left: view.safeAreaLayoutGuide.leftAnchor, right: view.safeAreaLayoutGuide.rightAnchor, paddingTop: 12, paddingLeft: 12, paddingRight: 12)
