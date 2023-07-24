@@ -32,6 +32,10 @@
 		7831032F2A196B44006EE253 /* ResistanceCurrentVoltageScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7831032E2A196B44006EE253 /* ResistanceCurrentVoltageScreen.swift */; };
 		783103312A1970E5006EE253 /* EquationId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783103302A1970E5006EE253 /* EquationId.swift */; };
 		785B3C802A67416E000C3529 /* UIColor.extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785B3C7F2A67416E000C3529 /* UIColor.extensions.swift */; };
+		785B3C832A6A5784000C3529 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 785B3C822A6A5784000C3529 /* StoreKit.framework */; };
+		785B3C852A6A57C3000C3529 /* RadioEquations.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 785B3C842A6A57C0000C3529 /* RadioEquations.storekit */; };
+		785B3C872A6B3AAD000C3529 /* StoreKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785B3C862A6B3AAD000C3529 /* StoreKit.swift */; };
+		785B3C892A6CCDDA000C3529 /* EquationFilterVariant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785B3C882A6CCDDA000C3529 /* EquationFilterVariant.swift */; };
 		789FD7C42A1B9D56001E2DB8 /* ResistanceCurrentVoltageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789FD7C32A1B9D56001E2DB8 /* ResistanceCurrentVoltageViewModel.swift */; };
 		78A43CC22A1EA88800293045 /* PowerVoltageCurrentScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A43CC12A1EA88800293045 /* PowerVoltageCurrentScreen.swift */; };
 		78A43CC42A1EA9A700293045 /* PowerVoltageCurrentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A43CC32A1EA9A700293045 /* PowerVoltageCurrentViewModel.swift */; };
@@ -98,6 +102,10 @@
 		7831032E2A196B44006EE253 /* ResistanceCurrentVoltageScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResistanceCurrentVoltageScreen.swift; sourceTree = "<group>"; };
 		783103302A1970E5006EE253 /* EquationId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquationId.swift; sourceTree = "<group>"; };
 		785B3C7F2A67416E000C3529 /* UIColor.extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.extensions.swift; sourceTree = "<group>"; };
+		785B3C822A6A5784000C3529 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		785B3C842A6A57C0000C3529 /* RadioEquations.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = RadioEquations.storekit; sourceTree = "<group>"; };
+		785B3C862A6B3AAD000C3529 /* StoreKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKit.swift; sourceTree = "<group>"; };
+		785B3C882A6CCDDA000C3529 /* EquationFilterVariant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquationFilterVariant.swift; sourceTree = "<group>"; };
 		789FD7C32A1B9D56001E2DB8 /* ResistanceCurrentVoltageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResistanceCurrentVoltageViewModel.swift; sourceTree = "<group>"; };
 		78A43CC12A1EA88800293045 /* PowerVoltageCurrentScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerVoltageCurrentScreen.swift; sourceTree = "<group>"; };
 		78A43CC32A1EA9A700293045 /* PowerVoltageCurrentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerVoltageCurrentViewModel.swift; sourceTree = "<group>"; };
@@ -120,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				785B3C832A6A5784000C3529 /* StoreKit.framework in Frameworks */,
 				78B3C6E12A5E0848003F0FB6 /* RichTextView in Frameworks */,
 				78E6B2592A13257800581D06 /* JGProgressHUD in Frameworks */,
 			);
@@ -158,6 +167,7 @@
 				1B93B30864EC4E50C2DB00FC /* Equation.swift */,
 				783103302A1970E5006EE253 /* EquationId.swift */,
 				78A43CC52A1EBFEE00293045 /* PowerVoltageCurrentFieldTag.swift */,
+				785B3C882A6CCDDA000C3529 /* EquationFilterVariant.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -187,10 +197,13 @@
 		7801EC142A11F671008DE671 = {
 			isa = PBXGroup;
 			children = (
+				785B3C862A6B3AAD000C3529 /* StoreKit.swift */,
+				785B3C842A6A57C0000C3529 /* RadioEquations.storekit */,
 				7801EC1F2A11F671008DE671 /* RadioEquationsApp */,
 				7801EC362A11F672008DE671 /* RadioEquationsAppTests */,
 				7801EC402A11F672008DE671 /* RadioEquationsAppUITests */,
 				7801EC1E2A11F671008DE671 /* Products */,
+				785B3C812A6A5784000C3529 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -262,6 +275,14 @@
 				78A43CBF2A1EA81800293045 /* ResistanceCurrentVoltage */,
 			);
 			path = CalculationScreens;
+			sourceTree = "<group>";
+		};
+		785B3C812A6A5784000C3529 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				785B3C822A6A5784000C3529 /* StoreKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		78A43CBF2A1EA81800293045 /* ResistanceCurrentVoltage */ = {
@@ -434,6 +455,7 @@
 			files = (
 				7801EC2D2A11F672008DE671 /* LaunchScreen.storyboard in Resources */,
 				7801EC2A2A11F672008DE671 /* Assets.xcassets in Resources */,
+				785B3C852A6A57C3000C3529 /* RadioEquations.storekit in Resources */,
 				7801EC282A11F671008DE671 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -474,6 +496,7 @@
 				78B3C6E62A5E7C54003F0FB6 /* PowerCurrentResistanceViewModel.swift in Sources */,
 				789FD7C42A1B9D56001E2DB8 /* ResistanceCurrentVoltageViewModel.swift in Sources */,
 				783103312A1970E5006EE253 /* EquationId.swift in Sources */,
+				785B3C892A6CCDDA000C3529 /* EquationFilterVariant.swift in Sources */,
 				783103262A15D3C0006EE253 /* EquationTab.swift in Sources */,
 				1B93B903FA4AFCAC0064DACA /* Extensions.swift in Sources */,
 				1B93B385364D75D7AB95B4BE /* InputTextView.swift in Sources */,
@@ -483,6 +506,7 @@
 				78A43CC62A1EBFEE00293045 /* PowerVoltageCurrentFieldTag.swift in Sources */,
 				783103222A152BDA006EE253 /* EquationScreenTabBar.swift in Sources */,
 				78B3C6F42A64F365003F0FB6 /* ObfuscateSupportEmail.swift in Sources */,
+				785B3C872A6B3AAD000C3529 /* StoreKit.swift in Sources */,
 				1B93B46466E160C3B17C6FFF /* HomeScreenEquationCell.swift in Sources */,
 				1B93B5C7072429215CD47FE7 /* HomeScreenEquationCellViewModel.swift in Sources */,
 				78B3C6F92A65F2C8003F0FB6 /* LegalScreenVM.swift in Sources */,

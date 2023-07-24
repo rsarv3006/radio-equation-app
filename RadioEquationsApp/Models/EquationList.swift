@@ -73,26 +73,26 @@ In practical terms, this equation is commonly used to calculate the power dissip
 
 let EquationsTableInfo = [
     EquationsTableSectionModel(title: "Voltage", equations: [
-        Equation(title: "[math]$E = I \\times R$[/math]", description: VoltageCurrentResistanceDescriptionString, id: .voltage1),
-        Equation(title: "[math]$E = P / I$[/math]", description: PowerVoltageCurrentDescriptionString, id: .voltage2),
-        Equation(title: "[math]$E = \\sqrt{P \\times R}$[/math]", description: PowerVoltageResistanceDescriptionString, id: .voltage3)
+        Equation(title: "[math]$E = I \\times R$[/math]", description: VoltageCurrentResistanceDescriptionString, id: .voltage1, filters: []),
+        Equation(title: "[math]$E = P / I$[/math]", description: PowerVoltageCurrentDescriptionString, id: .voltage2, filters: []),
+        Equation(title: "[math]$E = \\sqrt{P \\times R}$[/math]", description: PowerVoltageResistanceDescriptionString, id: .voltage3, filters: [.advancedFunctions])
     ]),
     
     EquationsTableSectionModel(title: "Resistance", equations: [
-        Equation(title: "[math]$R = E / I$[/math]", description: VoltageCurrentResistanceDescriptionString, id: .resistance1),
-        Equation(title: "[math]$R = P / I^2$[/math]", description: PowerCurrentResistanceDescriptionString, id: .resistance2),
-        Equation(title: "[math]$R = E^2 / P $[/math]", description: PowerVoltageResistanceDescriptionString, id: .resistance3)
+        Equation(title: "[math]$R = E / I$[/math]", description: VoltageCurrentResistanceDescriptionString, id: .resistance1, filters: []),
+        Equation(title: "[math]$R = P / I^2$[/math]", description: PowerCurrentResistanceDescriptionString, id: .resistance2, filters: [.advancedFunctions]),
+        Equation(title: "[math]$R = E^2 / P $[/math]", description: PowerVoltageResistanceDescriptionString, id: .resistance3, filters: [.advancedFunctions])
     ]),
     
     EquationsTableSectionModel(title: "Current", equations: [
-        Equation(title: "[math]$I = E / R$[/math]", description: VoltageCurrentResistanceDescriptionString, id: .current1),
-        Equation(title: "[math]$I = P / E$[/math]", description: PowerVoltageCurrentDescriptionString, id: .current2),
-        Equation(title: "[math]$I = \\sqrt{P / R}$[/math]", description: PowerCurrentResistanceDescriptionString, id: .current3)
+        Equation(title: "[math]$I = E / R$[/math]", description: VoltageCurrentResistanceDescriptionString, id: .current1, filters: []),
+        Equation(title: "[math]$I = P / E$[/math]", description: PowerVoltageCurrentDescriptionString, id: .current2, filters: []),
+        Equation(title: "[math]$I = \\sqrt{P / R}$[/math]", description: PowerCurrentResistanceDescriptionString, id: .current3, filters: [.advancedFunctions])
     ]),
     
     EquationsTableSectionModel(title: "Power", equations: [
-        Equation(title: "[math]$P = E \\times I$[/math]", description: PowerVoltageCurrentDescriptionString, id: .power1),
-        Equation(title: "[math]$P = E^2 / R$[/math]", description: PowerVoltageResistanceDescriptionString, id: .power2),
-        Equation(title: "[math]$P = I^2 \\times R$[/math]", description: PowerCurrentResistanceDescriptionString, id: .power3)
+        Equation(title: "[math]$P = E \\times I$[/math]", description: PowerVoltageCurrentDescriptionString, id: .power1, filters: []),
+        Equation(title: "[math]$P = E^2 / R$[/math]", description: PowerVoltageResistanceDescriptionString, id: .power2, filters: [.advancedFunctions]),
+        Equation(title: "[math]$P = I^2 \\times R$[/math]", description: PowerCurrentResistanceDescriptionString, id: .power3, filters: [.advancedFunctions])
     ])
 ]

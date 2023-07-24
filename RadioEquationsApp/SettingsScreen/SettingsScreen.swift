@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import StoreKit
 
 class SettingsScreen: UIViewController {
     
@@ -41,6 +42,26 @@ class SettingsScreen: UIViewController {
         return button
     }()
     
+    private lazy var purchaseAdvancedEquationsButton: UIButton = {
+        let button = UIButton(type: .roundedRect)
+        button.setTitle("Purchase Advanced Equations", for: .normal)
+        button.addTarget(self, action: #selector(onPurchaseAdvancedEquationsButtonTapped), for: .touchUpInside)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
+        button.setTitleColor(.Theme.altColor, for: .normal)
+        return button
+        
+    }()
+    
+    private lazy var restorePurchasesButton: UIButton = {
+        let button = UIButton(type: .roundedRect)
+        button.setTitle("Restore Purchases", for: .normal)
+        button.addTarget(self, action: #selector(onRestorePurchasesButtonTapped), for: .touchUpInside)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
+        button.setTitleColor(.Theme.altColor, for: .normal)
+        return button
+        
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .Theme.backgroundColor
@@ -61,16 +82,40 @@ class SettingsScreen: UIViewController {
         legalButton.centerX(inView: self.view)
         legalButton.anchor(top: contactSupportButton.bottomAnchor, paddingBottom: 20)
         
+        view.addSubview(purchaseAdvancedEquationsButton)
+        purchaseAdvancedEquationsButton.centerX(inView: self.view)
+        purchaseAdvancedEquationsButton.anchor(top: legalButton.bottomAnchor, paddingBottom: 20)
+        
+        view.addSubview(restorePurchasesButton)
+        restorePurchasesButton.centerX(inView: self.view)
+        restorePurchasesButton.anchor(top: purchaseAdvancedEquationsButton.bottomAnchor, paddingBottom: 20)
+    
     }
     
     @objc func onContactSupportTapped() {
         let urlString = "mailto:\(supportEmail)?subject=Support Request"
         
         guard let urlStringPercentEncoded = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
-                let url = URL(string: urlStringPercentEncoded) else { return }
+              let url = URL(string: urlStringPercentEncoded) else { return }
         
         if UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.open(url)
+        }
+    }
+    
+    @objc func onPurchaseAdvancedEquationsButtonTapped() {
+        Task {
+            print(store.hasPurchasedUnlockAdvancedEquations)
+            
+            await store.requestProducts()
+            
+            guard let product = store.unlockAdvancedEquationsPurchase else {
+                print("product is nil")
+                return
+            }
+            
+            let _ = try? await store.purchase(product)
+            
         }
     }
     
@@ -80,5 +125,12 @@ class SettingsScreen: UIViewController {
         screen.viewModel = vm
         
         self.navigationController?.pushViewController(screen, animated: true)
+    }
+    
+    @objc func onRestorePurchasesButtonTapped() {
+        Task {
+            try? await AppStore.sync()
+        }
+        
     }
 }

@@ -6,8 +6,10 @@
 //
 
 import UIKit
+import Combine
 
 class ViewController: UIViewController {
+    private var subscriptions = Set<AnyCancellable>()
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -26,13 +28,23 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        checkIfPurchasesHaveBenMade()
+        
         self.navigationItem.title = "Radio Equations"
         view.addSubview(tableView)
         tableView.fillSuperview()
-       
+        
         let barButtonItemImage = UIImage(systemName: "gear.circle")?.withTintColor(.Theme.altColor, renderingMode: .alwaysOriginal)
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: barButtonItemImage, style: .plain, target: self, action: #selector(onSettingsTapped))
+        
+        store.$hasPurchasedUnlockAdvancedEquations.sink { [weak self] hasPurchased in
+            print("hasPurchased: \(hasPurchased) - listener")
+            if hasPurchased {
+                self?.tableView.reloadData()
+                
+            }
+        }.store(in: &subscriptions)
     }
     
     @objc func onSettingsTapped() {
@@ -42,7 +54,6 @@ class ViewController: UIViewController {
         
         navigationController?.pushViewController(settingsVc, animated: true)
     }
-    
 }
 
 extension ViewController: UITableViewDataSource {
@@ -53,12 +64,14 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerTitle = EquationsTableInfo[section].title
         
-        let headerLabel = UILabel()
-        headerLabel.text = headerTitle
-        headerLabel.font = UIFont.boldSystemFont(ofSize: 20)
-        headerLabel.textColor = .Theme.textColor
-        
-        return headerLabel
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        let label = UILabel(frame: CGRect(x: 15, y: 5, width: tableView.frame.width, height: 20))
+        label.text = headerTitle
+        label.textAlignment = .left
+        label.font = UIFont.boldSystemFont(ofSize: 20)
+        label.textColor = .Theme.textColor
+        view.addSubview(label)
+        return view
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -72,14 +85,25 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        let equationData = EquationsTableInfo[indexPath.section].equations[indexPath.row]
+        
+        if equationData.filters.contains(.advancedFunctions) && !store.hasPurchasedUnlockAdvancedEquations {
+            showMessage(withTitle: "Equation Locked", message: "Please visit the Settings Screen to unlock Advanced Functions.")
+            return nil
+        }
+        
         let equationScreen = EquationScreenTabBar(viewModel: EquationScreenTabBarViewModel(equation: EquationsTableInfo[indexPath.section].equations[indexPath.row]))
         
         self.navigationController?.pushViewController(equationScreen, animated: true)
         
         return nil
-    }}
-
-extension ViewController: UITableViewDelegate {
-    
+    }
 }
 
+extension ViewController: UITableViewDelegate {
+    private func checkIfPurchasesHaveBenMade() {
+        Task {
+            await store.updateCustomerProductStatus()
+        }
+    }
+}
