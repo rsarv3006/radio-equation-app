@@ -41,7 +41,12 @@ class HomeScreenEquationCell: UITableViewCell {
 extension HomeScreenEquationCell {
     func onViewModelDidSet() {
         guard let viewModel = viewModel else { return }
-        equationLabel.update(input: viewModel.equationTitle)
+        var textColor = UIColor.Theme.textColor
+
+        if viewModel.isLocked {
+            textColor = .systemGray3
+        }
         
+        equationLabel.update(input: viewModel.equationTitle, textColor: textColor)
     }
 }

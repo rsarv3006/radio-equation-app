@@ -80,7 +80,8 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "equationCell", for: indexPath) as! HomeScreenEquationCell
-        cell.viewModel = HomeScreenEquationCellViewModel(equation: EquationsTableInfo[indexPath.section].equations[indexPath.row])
+        
+        cell.viewModel = HomeScreenEquationCellViewModel(equation: EquationsTableInfo[indexPath.section].equations[indexPath.row], hasPurchasedUnlockAdvancedEquations: store.hasPurchasedUnlockAdvancedEquations)
         return cell
     }
     
@@ -103,7 +104,9 @@ extension ViewController: UITableViewDataSource {
 extension ViewController: UITableViewDelegate {
     private func checkIfPurchasesHaveBenMade() {
         Task {
+            showLoader(true)
             await store.updateCustomerProductStatus()
+            showLoader(false)
         }
     }
 }
