@@ -1,0 +1,35 @@
+{
+  "identifier" : "B0870905",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "6451350136",
+      "localizations" : [
+        {
+          "description" : "Unlock the current set of advanced functions",
+          "displayName" : "Unlock Advanced Functions",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "unlockAdvancedFunctions",
+      "referenceName" : "unlockAdvancedFunctions",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+    "_applicationInternalID" : "6451230870",
+    "_developerTeamID" : "4QGR522B9M",
+    "_lastSynchronizedDate" : 711612354.86154604
+  },
+  "subscriptionGroups" : [
+
+  ],
+  "version" : {
+    "major" : 2,
+    "minor" : 0
+  }
+}
