@@ -16,8 +16,11 @@ struct ResistanceCurrentVoltageCalculatedPassthroughModel {
 class ResistanceCurrentVoltageViewModel {
     private(set) var selectedCalculateFor: ResistanceCurrentVoltageFieldTag
    
-    init(calculateFor: ResistanceCurrentVoltageFieldTag = .voltage) {
+    let equationTitle: String
+    
+    init(equation: Equation, calculateFor: ResistanceCurrentVoltageFieldTag = .voltage) {
         self.selectedCalculateFor = calculateFor
+        self.equationTitle = equation.title
     }
     
     private var resistance: Double? = nil

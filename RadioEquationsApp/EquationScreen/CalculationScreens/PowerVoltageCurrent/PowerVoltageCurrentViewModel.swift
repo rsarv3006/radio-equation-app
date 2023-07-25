@@ -15,12 +15,13 @@ struct PowerVoltageCurrentPassthroughModel {
 
 class PowerVoltageCurrentViewModel {
     private(set) var selectedCalculateFor: PowerVoltageCurrentFieldTag
-   
-    init(calculateFor: PowerVoltageCurrentFieldTag = .power) {
+  
+    let equationTitle: String
+    
+    init(equation: Equation, calculateFor: PowerVoltageCurrentFieldTag = .power) {
         self.selectedCalculateFor = calculateFor
+        self.equationTitle = equation.title
     }
-    
-    
     
     private var current: Double? = nil
     private var voltage: Double? = nil

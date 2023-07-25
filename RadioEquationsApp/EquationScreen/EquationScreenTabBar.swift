@@ -39,65 +39,65 @@ class EquationScreenTabBar: UITabBarController {
     }
     
     private func createEquationCalculationScreen() -> UIViewController {
-        if let equationId = viewModel?.equation.id {
+        if let equation = viewModel?.equation, let equationId = viewModel?.equation.id {
             switch equationId {
             case .voltage1:
-                let vm = ResistanceCurrentVoltageViewModel(calculateFor: .voltage)
+                let vm = ResistanceCurrentVoltageViewModel(equation: equation, calculateFor: .voltage)
                 let screen = ResistanceCurrentVoltageScreen()
                 screen.viewModel = vm
                 return screen
             case .resistance1:
-                let vm = ResistanceCurrentVoltageViewModel(calculateFor: .resistance)
+                let vm = ResistanceCurrentVoltageViewModel(equation: equation, calculateFor: .resistance)
                 let screen = ResistanceCurrentVoltageScreen()
                 screen.viewModel = vm
                 return screen
             case .current1:
-                let vm = ResistanceCurrentVoltageViewModel(calculateFor: .current)
+                let vm = ResistanceCurrentVoltageViewModel(equation: equation, calculateFor: .current)
                 let screen = ResistanceCurrentVoltageScreen()
                 screen.viewModel = vm
                 return screen
             case .voltage2:
-                let powerVm = PowerVoltageCurrentViewModel(calculateFor: .voltage)
+                let powerVm = PowerVoltageCurrentViewModel(equation: equation, calculateFor: .voltage)
                 let powerScreen = PowerVoltageCurrentScreen()
                 powerScreen.viewModel = powerVm
                 return powerScreen
             case .current2:
-                let powerVm = PowerVoltageCurrentViewModel(calculateFor: .current)
+                let powerVm = PowerVoltageCurrentViewModel(equation: equation, calculateFor: .current)
                 let powerScreen = PowerVoltageCurrentScreen()
                 powerScreen.viewModel = powerVm
                 return powerScreen
             case .power1:
-                let powerVm = PowerVoltageCurrentViewModel(calculateFor: .power)
+                let powerVm = PowerVoltageCurrentViewModel(equation: equation, calculateFor: .power)
                 let powerScreen = PowerVoltageCurrentScreen()
                 powerScreen.viewModel = powerVm
                 return powerScreen
             case .resistance2:
-                let vm = PowerCurrentResistanceViewModel(calculateFor: .resistance)
+                let vm = PowerCurrentResistanceViewModel(equation: equation, calculateFor: .resistance)
                 let screen = PowerCurrentResistanceScreen()
                 screen.viewModel = vm
                 return screen
             case .power3:
-                let vm = PowerCurrentResistanceViewModel(calculateFor: .power)
+                let vm = PowerCurrentResistanceViewModel(equation: equation, calculateFor: .power)
                 let screen = PowerCurrentResistanceScreen()
                 screen.viewModel = vm
                 return screen
             case .current3:
-                let vm = PowerCurrentResistanceViewModel(calculateFor: .current)
+                let vm = PowerCurrentResistanceViewModel(equation: equation, calculateFor: .current)
                 let screen = PowerCurrentResistanceScreen()
                 screen.viewModel = vm
                 return screen
             case .voltage3:
-                let vm = VoltagePowerResistanceViewModel(calculateFor: .voltage)
+                let vm = VoltagePowerResistanceViewModel(equation: equation, calculateFor: .voltage)
                 let screen = VoltagePowerResistanceScreen()
                 screen.viewModel = vm
                 return screen
             case .resistance3:
-                let vm = VoltagePowerResistanceViewModel(calculateFor: .resistance)
+                let vm = VoltagePowerResistanceViewModel(equation: equation, calculateFor: .resistance)
                 let screen = VoltagePowerResistanceScreen()
                 screen.viewModel = vm
                 return screen
             case .power2:
-                let vm = VoltagePowerResistanceViewModel(calculateFor: .power)
+                let vm = VoltagePowerResistanceViewModel(equation: equation, calculateFor: .power)
                 let screen = VoltagePowerResistanceScreen()
                 screen.viewModel = vm
                 return screen

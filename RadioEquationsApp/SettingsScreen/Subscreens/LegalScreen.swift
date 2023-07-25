@@ -73,7 +73,7 @@ class LegalScreen: UIViewController {
         privacyPolicyTitleLabel.anchor(top: self.view.safeAreaLayoutGuide.topAnchor, paddingTop: 16)
         
         privacyPolicyTextView.centerX(inView: self.view)
-        privacyPolicyTextView.anchor(top: privacyPolicyTitleLabel.bottomAnchor, left: self.view.safeAreaLayoutGuide.leftAnchor, right: self.view.safeAreaLayoutGuide.rightAnchor, paddingTop: 16, paddingLeft: 8, paddingRight: 8, height: screenHeight * 0.4)
+        privacyPolicyTextView.anchor(top: privacyPolicyTitleLabel.bottomAnchor, left: self.view.safeAreaLayoutGuide.leftAnchor, right: self.view.safeAreaLayoutGuide.rightAnchor, paddingTop: 16, paddingLeft: 8, paddingRight: 8, height: screenHeight * 0.35)
         
         view.addSubview(eulaTitleLabel)
         view.addSubview(eulaTextView)

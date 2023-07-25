@@ -7,6 +7,7 @@
 
 import UIKit
 import Combine
+import RichTextView
 
 class PowerVoltageCurrentScreen: UIViewController {
     private var subscriptions = Set<AnyCancellable>()
@@ -37,8 +38,24 @@ class PowerVoltageCurrentScreen: UIViewController {
                 calculateForSegmentedControl.selectedSegmentIndex = 2
                 makeVoltageFieldAnswerBox()
             }
+        
+            equationLabel.update(input: viewModel.equationTitle)
         }
     }
+    
+    private lazy var equationLabel: RichTextView = {
+        
+        let richTextView = RichTextView(
+            input: "",
+            latexParser: LatexParser(),
+            font: UIFont.systemFont(ofSize: 18),
+            textColor: UIColor.Theme.textColor,
+            frame: CGRect.zero,
+            completion: nil
+        )
+        
+        return richTextView
+    }()
     
     private lazy var calculateForPickerOptions = ["Power", "Current", "Voltage"]
     
@@ -81,10 +98,14 @@ class PowerVoltageCurrentScreen: UIViewController {
     }
     
     private func configureView() {
+        view.addSubview(equationLabel)
+        
+        equationLabel.centerX(inView: self.view, topAnchor: view.safeAreaLayoutGuide.topAnchor, paddingTop: 12)
+        
         view.addSubview(titleLabel)
         view.addSubview(calculateForSegmentedControl)
         
-        titleLabel.centerX(inView: view, topAnchor: view.safeAreaLayoutGuide.topAnchor, paddingTop: 12)
+        titleLabel.centerX(inView: view, topAnchor: equationLabel.bottomAnchor, paddingTop: 12)
         
         calculateForSegmentedControl.anchor(top: titleLabel.bottomAnchor, left: view.safeAreaLayoutGuide.leftAnchor, right: view.safeAreaLayoutGuide.rightAnchor, paddingTop: 12, paddingLeft: 12, paddingRight: 12)
         

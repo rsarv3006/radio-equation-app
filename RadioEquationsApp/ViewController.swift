@@ -39,7 +39,6 @@ class ViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: barButtonItemImage, style: .plain, target: self, action: #selector(onSettingsTapped))
         
         store.$hasPurchasedUnlockAdvancedEquations.sink { [weak self] hasPurchased in
-            print("hasPurchased: \(hasPurchased) - listener")
             if hasPurchased {
                 self?.tableView.reloadData()
                 

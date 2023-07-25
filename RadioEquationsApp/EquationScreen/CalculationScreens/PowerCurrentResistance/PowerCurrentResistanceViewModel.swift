@@ -35,8 +35,11 @@ struct PowerCurrentResistanceCalculatedPassthroughModel {
 class PowerCurrentResistanceViewModel {
     private(set) var selectedCalculateFor: PowerCurrentResistanceFieldTag
    
-    init(calculateFor: PowerCurrentResistanceFieldTag = .power) {
+    let equationTitle: String
+    
+    init(equation: Equation, calculateFor: PowerCurrentResistanceFieldTag = .power) {
         self.selectedCalculateFor = calculateFor
+        self.equationTitle = equation.title
     }
     
     private var current: Double? = nil
