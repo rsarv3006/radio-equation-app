@@ -44,7 +44,7 @@ extension HomeScreenEquationCell {
         var textColor = UIColor.Theme.textColor
 
         if viewModel.isLocked {
-            textColor = .systemGray3
+            textColor = .systemGray
         }
         
         equationLabel.update(input: viewModel.equationTitle, textColor: textColor)

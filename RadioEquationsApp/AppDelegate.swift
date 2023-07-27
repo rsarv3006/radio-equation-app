@@ -9,12 +9,9 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.Theme.altColor] 
+        let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.Theme.altColor]
         UINavigationBar.appearance().titleTextAttributes = textAttributes
         return true
     }
