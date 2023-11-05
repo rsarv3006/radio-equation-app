@@ -95,10 +95,8 @@ class Store: ObservableObject {
         
         switch result {
         case .success(let verification):
-            print("Purchase success")
             let transaction = try checkVerified(verification)
             
-            print("waffles")
             await updateCustomerProductStatus()
             
             await transaction.finish()

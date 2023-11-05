@@ -131,6 +131,5 @@ class SettingsScreen: UIViewController {
         Task {
             try? await AppStore.sync()
         }
-        
     }
 }
