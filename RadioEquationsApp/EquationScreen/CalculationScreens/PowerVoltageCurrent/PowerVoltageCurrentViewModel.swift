@@ -66,7 +66,7 @@ class PowerVoltageCurrentViewModel {
         guard let voltage = voltage, let power = power else {
             return
         }
-        let calculatedCurrent = power / voltage
+        let calculatedCurrent = (power / voltage).rounded(toPlaces: 2)
         current = calculatedCurrent
         
         sendCalculatedValue(fieldTag: .current, value: calculatedCurrent)
@@ -76,7 +76,7 @@ class PowerVoltageCurrentViewModel {
         guard let current = current, let voltage = voltage else {
             return
         }
-        let calculatedPower = current * voltage
+        let calculatedPower = (current * voltage).rounded(toPlaces: 2)
         power = calculatedPower
         
         sendCalculatedValue(fieldTag: .power, value: calculatedPower)
@@ -84,7 +84,7 @@ class PowerVoltageCurrentViewModel {
     
     private func calculateVoltage() {
         guard let current = current, let power = power else { return }
-        let calculatedVoltage = power / current
+        let calculatedVoltage = (power / current).rounded(toPlaces: 2)
         voltage = calculatedVoltage
         sendCalculatedValue(fieldTag: .voltage, value: calculatedVoltage)
     }

@@ -36,6 +36,9 @@
 		785B3C852A6A57C3000C3529 /* RadioEquations.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 785B3C842A6A57C0000C3529 /* RadioEquations.storekit */; };
 		785B3C872A6B3AAD000C3529 /* StoreKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785B3C862A6B3AAD000C3529 /* StoreKit.swift */; };
 		785B3C892A6CCDDA000C3529 /* EquationFilterVariant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785B3C882A6CCDDA000C3529 /* EquationFilterVariant.swift */; };
+		7896CFC52AF767B000B40370 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7896CFC42AF767B000B40370 /* Double.swift */; };
+		7896CFC72AF7DDBF00B40370 /* RoundingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7896CFC62AF7DDBF00B40370 /* RoundingTests.swift */; };
+		7896CFC92AF7E2FA00B40370 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7896CFC42AF767B000B40370 /* Double.swift */; };
 		789FD7C42A1B9D56001E2DB8 /* ResistanceCurrentVoltageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789FD7C32A1B9D56001E2DB8 /* ResistanceCurrentVoltageViewModel.swift */; };
 		78A43CC22A1EA88800293045 /* PowerVoltageCurrentScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A43CC12A1EA88800293045 /* PowerVoltageCurrentScreen.swift */; };
 		78A43CC42A1EA9A700293045 /* PowerVoltageCurrentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A43CC32A1EA9A700293045 /* PowerVoltageCurrentViewModel.swift */; };
@@ -106,6 +109,9 @@
 		785B3C842A6A57C0000C3529 /* RadioEquations.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = RadioEquations.storekit; sourceTree = "<group>"; };
 		785B3C862A6B3AAD000C3529 /* StoreKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKit.swift; sourceTree = "<group>"; };
 		785B3C882A6CCDDA000C3529 /* EquationFilterVariant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquationFilterVariant.swift; sourceTree = "<group>"; };
+		7896CFC42AF767B000B40370 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		7896CFC62AF7DDBF00B40370 /* RoundingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundingTests.swift; sourceTree = "<group>"; };
+		7896CFC82AF7E27000B40370 /* RadioEquationsApp.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = RadioEquationsApp.xctestplan; sourceTree = "<group>"; };
 		789FD7C32A1B9D56001E2DB8 /* ResistanceCurrentVoltageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResistanceCurrentVoltageViewModel.swift; sourceTree = "<group>"; };
 		78A43CC12A1EA88800293045 /* PowerVoltageCurrentScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerVoltageCurrentScreen.swift; sourceTree = "<group>"; };
 		78A43CC32A1EA9A700293045 /* PowerVoltageCurrentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerVoltageCurrentViewModel.swift; sourceTree = "<group>"; };
@@ -197,6 +203,7 @@
 		7801EC142A11F671008DE671 = {
 			isa = PBXGroup;
 			children = (
+				7896CFC82AF7E27000B40370 /* RadioEquationsApp.xctestplan */,
 				785B3C862A6B3AAD000C3529 /* StoreKit.swift */,
 				785B3C842A6A57C0000C3529 /* RadioEquations.storekit */,
 				7801EC1F2A11F671008DE671 /* RadioEquationsApp */,
@@ -220,6 +227,7 @@
 		7801EC1F2A11F671008DE671 /* RadioEquationsApp */ = {
 			isa = PBXGroup;
 			children = (
+				7896CFC32AF767A100B40370 /* Extensions */,
 				78B3C6EE2A649DC8003F0FB6 /* SettingsScreen */,
 				783103202A15293A006EE253 /* EquationScreen */,
 				7801EC202A11F671008DE671 /* AppDelegate.swift */,
@@ -240,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				7801EC372A11F672008DE671 /* RadioEquationsAppTests.swift */,
+				7896CFC62AF7DDBF00B40370 /* RoundingTests.swift */,
 			);
 			path = RadioEquationsAppTests;
 			sourceTree = "<group>";
@@ -285,6 +294,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7896CFC32AF767A100B40370 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7896CFC42AF767B000B40370 /* Double.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		78A43CBF2A1EA81800293045 /* ResistanceCurrentVoltage */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,8 +323,8 @@
 		78B3C6E42A5E7BC6003F0FB6 /* PowerCurrentResistance */ = {
 			isa = PBXGroup;
 			children = (
-				78B3C6E52A5E7C54003F0FB6 /* PowerCurrentResistanceViewModel.swift */,
 				78B3C6E72A5F55D7003F0FB6 /* PowerCurrentResistanceScreen.swift */,
+				78B3C6E52A5E7C54003F0FB6 /* PowerCurrentResistanceViewModel.swift */,
 			);
 			path = PowerCurrentResistance;
 			sourceTree = "<group>";
@@ -315,8 +332,8 @@
 		78B3C6E92A5F5D93003F0FB6 /* VoltagePowerResistance */ = {
 			isa = PBXGroup;
 			children = (
-				78B3C6EA2A5FA751003F0FB6 /* VoltagePowerResistanceViewModel.swift */,
 				78B3C6EC2A5FB53B003F0FB6 /* VoltagePowerResistanceScreen.swift */,
+				78B3C6EA2A5FA751003F0FB6 /* VoltagePowerResistanceViewModel.swift */,
 			);
 			path = VoltagePowerResistance;
 			sourceTree = "<group>";
@@ -481,6 +498,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7896CFC52AF767B000B40370 /* Double.swift in Sources */,
 				785B3C802A67416E000C3529 /* UIColor.extensions.swift in Sources */,
 				78B3C6EB2A5FA751003F0FB6 /* VoltagePowerResistanceViewModel.swift in Sources */,
 				7831032F2A196B44006EE253 /* ResistanceCurrentVoltageScreen.swift in Sources */,
@@ -525,6 +543,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7801EC382A11F672008DE671 /* RadioEquationsAppTests.swift in Sources */,
+				7896CFC92AF7E2FA00B40370 /* Double.swift in Sources */,
+				7896CFC72AF7DDBF00B40370 /* RoundingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

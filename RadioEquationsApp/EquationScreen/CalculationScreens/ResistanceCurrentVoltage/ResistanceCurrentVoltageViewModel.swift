@@ -66,30 +66,31 @@ class ResistanceCurrentVoltageViewModel {
         guard let voltage = voltage, let resistance = resistance else {
             return
         }
-        let calculatedCurrent = voltage / resistance
+        let calculatedCurrent = (voltage / resistance).rounded(toPlaces: 2)
         current = calculatedCurrent
         
-        sendCalculatedValue(fieldTag: .current, value: voltage / resistance)
+        sendCalculatedValue(fieldTag: .current, value: calculatedCurrent)
     }
     
     private func calculateResistance() {
         guard let voltage = voltage, let current = current else {
             return
         }
-        let calculatedResistance = voltage / current
+        let calculatedResistance = (voltage / current).rounded(toPlaces: 2)
         resistance = calculatedResistance
         
-        sendCalculatedValue(fieldTag: .resistance, value: voltage / current)
+        sendCalculatedValue(fieldTag: .resistance, value: calculatedResistance)
     }
     
     private func calculateVoltage() {
         guard let current = current, let resistance = resistance else {
             return
         }
-        let calculatedVoltage = current * resistance
+        let calculatedVoltage = (current * resistance).rounded(toPlaces: 2)
+        
         voltage = calculatedVoltage
         
-        sendCalculatedValue(fieldTag: .voltage, value: current * resistance)
+        sendCalculatedValue(fieldTag: .voltage, value: calculatedVoltage)
     }
     
     private func clearValueForTag(fieldTag: ResistanceCurrentVoltageFieldTag) {

@@ -85,7 +85,7 @@ class VoltagePowerResistanceViewModel {
         guard let resistance = resistance, let power = power else {
             return
         }
-        let calculatedVoltage = (power * resistance).squareRoot()
+        let calculatedVoltage = ((power * resistance).squareRoot()).rounded(toPlaces: 2)
         voltage = calculatedVoltage
         
         sendCalculatedValue(fieldTag: .voltage, value: calculatedVoltage)
@@ -95,7 +95,7 @@ class VoltagePowerResistanceViewModel {
         guard let voltage = voltage, let resistance = resistance else {
             return
         }
-        let calculatedPower = (voltage * voltage) / resistance
+        let calculatedPower = ((voltage * voltage) / resistance).rounded(toPlaces: 2)
         
         power = calculatedPower
         
@@ -104,7 +104,7 @@ class VoltagePowerResistanceViewModel {
     
     private func calculateResistance() {
         guard let voltage = voltage, let power = power else { return }
-        let calculatedResistance = (voltage * voltage) / power
+        let calculatedResistance = ((voltage * voltage) / power).rounded(toPlaces: 2)
         resistance = calculatedResistance
         sendCalculatedValue(fieldTag: .resistance, value: calculatedResistance)
     }
