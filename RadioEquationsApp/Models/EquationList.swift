@@ -94,5 +94,11 @@ let EquationsTableInfo = [
         Equation(title: "[math]$P = E \\times I$[/math]", description: PowerVoltageCurrentDescriptionString, id: .power1, filters: []),
         Equation(title: "[math]$P = E^2 / R$[/math]", description: PowerVoltageResistanceDescriptionString, id: .power2, filters: [.advancedFunctions]),
         Equation(title: "[math]$P = I^2 \\times R$[/math]", description: PowerCurrentResistanceDescriptionString, id: .power3, filters: [.advancedFunctions])
-    ])
+    ]),
+    
+    EquationsTableSectionModel(title: "Antenna Gain", equations: [
+        Equation(title: "[math]$db = 10 \\times log_1_0(P2 / P1)$[/math]", description: "", id: .antennaGain1, filters: []),
+        Equation(title: "[math]$P1 = P2 / 10^(^d^b^/^1^0^)$[/math]", description: "", id: .antennaGain2, filters: []),
+        Equation(title: "[math]$P2 = P1 \\times 10^(^1^0 ^\\times ^d^b^)$[/math]", description: "", id: .antennaGain3, filters: []),
+    ]),
 ]

@@ -101,6 +101,21 @@ class EquationScreenTabBar: UITabBarController {
                 let screen = VoltagePowerResistanceScreen()
                 screen.viewModel = vm
                 return screen
+            case .antennaGain1:
+                let vm = AntennaGainViewModel(equation: equation, calculateFor: .antennaGain)
+                let screen = AntennaGainScreen()
+                screen.viewModel = vm
+                return screen
+            case .antennaGain2:
+                let vm = AntennaGainViewModel(equation: equation, calculateFor: .powerOne)
+                let screen = AntennaGainScreen()
+                screen.viewModel = vm
+                return screen
+            case .antennaGain3:
+                let vm = AntennaGainViewModel(equation: equation, calculateFor: .powerTwo)
+                let screen = AntennaGainScreen()
+                screen.viewModel = vm
+                return screen
             default:
                 return EquationTab()
             

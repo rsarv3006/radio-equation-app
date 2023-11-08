@@ -39,6 +39,11 @@
 		7896CFC52AF767B000B40370 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7896CFC42AF767B000B40370 /* Double.swift */; };
 		7896CFC72AF7DDBF00B40370 /* RoundingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7896CFC62AF7DDBF00B40370 /* RoundingTests.swift */; };
 		7896CFC92AF7E2FA00B40370 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7896CFC42AF767B000B40370 /* Double.swift */; };
+		7896CFCC2AF81CA000B40370 /* AntennaGainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7896CFCB2AF81CA000B40370 /* AntennaGainScreen.swift */; };
+		7896CFCE2AF81CAD00B40370 /* AntennaGainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7896CFCD2AF81CAD00B40370 /* AntennaGainViewModel.swift */; };
+		7896CFD02AF8935100B40370 /* AntennaGainUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7896CFCF2AF8935000B40370 /* AntennaGainUtils.swift */; };
+		7896CFD32AF8949E00B40370 /* AntennaGainUtilsTestSuite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7896CFD22AF8949E00B40370 /* AntennaGainUtilsTestSuite.swift */; };
+		7896CFD42AF894A900B40370 /* AntennaGainUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7896CFCF2AF8935000B40370 /* AntennaGainUtils.swift */; };
 		789FD7C42A1B9D56001E2DB8 /* ResistanceCurrentVoltageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789FD7C32A1B9D56001E2DB8 /* ResistanceCurrentVoltageViewModel.swift */; };
 		78A43CC22A1EA88800293045 /* PowerVoltageCurrentScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A43CC12A1EA88800293045 /* PowerVoltageCurrentScreen.swift */; };
 		78A43CC42A1EA9A700293045 /* PowerVoltageCurrentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A43CC32A1EA9A700293045 /* PowerVoltageCurrentViewModel.swift */; };
@@ -112,6 +117,10 @@
 		7896CFC42AF767B000B40370 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		7896CFC62AF7DDBF00B40370 /* RoundingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundingTests.swift; sourceTree = "<group>"; };
 		7896CFC82AF7E27000B40370 /* RadioEquationsApp.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = RadioEquationsApp.xctestplan; sourceTree = "<group>"; };
+		7896CFCB2AF81CA000B40370 /* AntennaGainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AntennaGainScreen.swift; sourceTree = "<group>"; };
+		7896CFCD2AF81CAD00B40370 /* AntennaGainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AntennaGainViewModel.swift; sourceTree = "<group>"; };
+		7896CFCF2AF8935000B40370 /* AntennaGainUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AntennaGainUtils.swift; sourceTree = "<group>"; };
+		7896CFD22AF8949E00B40370 /* AntennaGainUtilsTestSuite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AntennaGainUtilsTestSuite.swift; sourceTree = "<group>"; };
 		789FD7C32A1B9D56001E2DB8 /* ResistanceCurrentVoltageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResistanceCurrentVoltageViewModel.swift; sourceTree = "<group>"; };
 		78A43CC12A1EA88800293045 /* PowerVoltageCurrentScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerVoltageCurrentScreen.swift; sourceTree = "<group>"; };
 		78A43CC32A1EA9A700293045 /* PowerVoltageCurrentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerVoltageCurrentViewModel.swift; sourceTree = "<group>"; };
@@ -249,6 +258,7 @@
 			children = (
 				7801EC372A11F672008DE671 /* RadioEquationsAppTests.swift */,
 				7896CFC62AF7DDBF00B40370 /* RoundingTests.swift */,
+				7896CFD22AF8949E00B40370 /* AntennaGainUtilsTestSuite.swift */,
 			);
 			path = RadioEquationsAppTests;
 			sourceTree = "<group>";
@@ -266,10 +276,10 @@
 			isa = PBXGroup;
 			children = (
 				7831032D2A196B1F006EE253 /* CalculationScreens */,
-				783103212A152BDA006EE253 /* EquationScreenTabBar.swift */,
 				783103232A15D39D006EE253 /* DescriptionTab.swift */,
 				783103252A15D3C0006EE253 /* EquationTab.swift */,
 				783103272A17E9B8006EE253 /* EquationScreenTabBarViewModel.swift */,
+				783103212A152BDA006EE253 /* EquationScreenTabBar.swift */,
 				7831032B2A1966A1006EE253 /* DescriptionTabViewModel.swift */,
 			);
 			path = EquationScreen;
@@ -278,6 +288,7 @@
 		7831032D2A196B1F006EE253 /* CalculationScreens */ = {
 			isa = PBXGroup;
 			children = (
+				7896CFCA2AF81C7B00B40370 /* AntennaGain */,
 				78B3C6E92A5F5D93003F0FB6 /* VoltagePowerResistance */,
 				78B3C6E42A5E7BC6003F0FB6 /* PowerCurrentResistance */,
 				78A43CC02A1EA82700293045 /* PowerVoltageCurrent */,
@@ -300,6 +311,16 @@
 				7896CFC42AF767B000B40370 /* Double.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7896CFCA2AF81C7B00B40370 /* AntennaGain */ = {
+			isa = PBXGroup;
+			children = (
+				7896CFCB2AF81CA000B40370 /* AntennaGainScreen.swift */,
+				7896CFCD2AF81CAD00B40370 /* AntennaGainViewModel.swift */,
+				7896CFCF2AF8935000B40370 /* AntennaGainUtils.swift */,
+			);
+			path = AntennaGain;
 			sourceTree = "<group>";
 		};
 		78A43CBF2A1EA81800293045 /* ResistanceCurrentVoltage */ = {
@@ -508,8 +529,10 @@
 				78A43CC22A1EA88800293045 /* PowerVoltageCurrentScreen.swift in Sources */,
 				783103282A17E9B8006EE253 /* EquationScreenTabBarViewModel.swift in Sources */,
 				7831032A2A17EC9E006EE253 /* EquationList.swift in Sources */,
+				7896CFD02AF8935100B40370 /* AntennaGainUtils.swift in Sources */,
 				78A43CC42A1EA9A700293045 /* PowerVoltageCurrentViewModel.swift in Sources */,
 				783103242A15D39D006EE253 /* DescriptionTab.swift in Sources */,
+				7896CFCE2AF81CAD00B40370 /* AntennaGainViewModel.swift in Sources */,
 				7801EC232A11F671008DE671 /* SceneDelegate.swift in Sources */,
 				78B3C6E62A5E7C54003F0FB6 /* PowerCurrentResistanceViewModel.swift in Sources */,
 				789FD7C42A1B9D56001E2DB8 /* ResistanceCurrentVoltageViewModel.swift in Sources */,
@@ -526,6 +549,7 @@
 				78B3C6F42A64F365003F0FB6 /* ObfuscateSupportEmail.swift in Sources */,
 				785B3C872A6B3AAD000C3529 /* StoreKit.swift in Sources */,
 				1B93B46466E160C3B17C6FFF /* HomeScreenEquationCell.swift in Sources */,
+				7896CFCC2AF81CA000B40370 /* AntennaGainScreen.swift in Sources */,
 				1B93B5C7072429215CD47FE7 /* HomeScreenEquationCellViewModel.swift in Sources */,
 				78B3C6F92A65F2C8003F0FB6 /* LegalScreenVM.swift in Sources */,
 				78B3C6E82A5F55D7003F0FB6 /* PowerCurrentResistanceScreen.swift in Sources */,
@@ -543,7 +567,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7801EC382A11F672008DE671 /* RadioEquationsAppTests.swift in Sources */,
+				7896CFD42AF894A900B40370 /* AntennaGainUtils.swift in Sources */,
 				7896CFC92AF7E2FA00B40370 /* Double.swift in Sources */,
+				7896CFD32AF8949E00B40370 /* AntennaGainUtilsTestSuite.swift in Sources */,
 				7896CFC72AF7DDBF00B40370 /* RoundingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

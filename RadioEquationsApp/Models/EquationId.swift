@@ -27,5 +27,13 @@ enum EquationId: String, CaseIterable, Codable {
     case power1 = "power-1"
     case power2 = "power-2"
     case power3 = "power-3"
+    
+    case antennaGain1 = "antenna-gain-1"
+    case antennaGain2 = "antenna-gain-2"
+    case antennaGain3 = "antenna-gain-3"
+    
+    case impedance1 = "impedance-1"
+    case impedance2 = "impedance-2"
+    case impedance3 = "impedance-3"
 }
 
