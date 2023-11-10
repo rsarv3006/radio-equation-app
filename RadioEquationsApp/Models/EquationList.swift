@@ -70,6 +70,24 @@ This equation can be derived by combining Ohm's Law [math]$(I = V / R)$[/math] w
 In practical terms, this equation is commonly used to calculate the power dissipation in a circuit when the electrical energy and resistance values are known. It shows that power is inversely proportional to the resistance and that doubling the resistance will halve the power dissipation. Similarly, increasing the electrical energy will result in higher power, assuming the resistance remains constant.
 """
 
+let AntennaGainDescriptionString = """
+The antenna gain equation calculates the gain of an antenna in decibels (dB). The gain represents how much an antenna concentrates radio frequency energy in a particular direction, if the antenna is a non-omnidirectional antenna.  If it is an omni-directional antenna, then the gain or main-lobe of the radio frequency energy is assumed to radiate in a 360-degree pattern, as in a sphere-shaped pattern.
+
+The formula is:
+
+        [math]$antenna gain (in db) = 10 \\times log_1_0(P2 / P1)$[/math]
+
+Where:
+
+Output power is the power radiated by the antenna in the direction of peak radiation intensity. This is measured in watts (W).
+Input power is the power supplied to the antenna at its input terminals. This is also measured in watts.
+log10 is the base-10 logarithm function.
+10 is a constant factor to convert the logarithmic value to decibels.
+The ratio of output power to input power gives the power gain of the antenna. Taking the logarithm of this ratio gives the gain in absolute units. Multiplying by 10 converts this to decibels, which is the standard unit used to express antenna gain.
+
+So in summary, this formula takes the ratio of output to input power, takes the logarithm to get the absolute gain, and then converts to decibels to calculate the total antenna gain. The higher the gain in dB, the more intense the antenna radiation is in a particular direction (if a non-omnidirectional antenna) or not (if an omnidirectional antenna.)
+"""
+
 
 let EquationsTableInfo = [
     EquationsTableSectionModel(title: "Voltage", equations: [
@@ -97,8 +115,8 @@ let EquationsTableInfo = [
     ]),
     
     EquationsTableSectionModel(title: "Antenna Gain", equations: [
-        Equation(title: "[math]$db = 10 \\times log_1_0(P2 / P1)$[/math]", description: "", id: .antennaGain1, filters: []),
-        Equation(title: "[math]$P1 = P2 / 10^(^d^b^/^1^0^)$[/math]", description: "", id: .antennaGain2, filters: []),
-        Equation(title: "[math]$P2 = P1 \\times 10^(^1^0 ^\\times ^d^b^)$[/math]", description: "", id: .antennaGain3, filters: []),
+        Equation(title: "[math]$db = 10 \\times log_1_0(P2 / P1)$[/math]", description: AntennaGainDescriptionString, id: .antennaGain1, filters: []),
+        Equation(title: "[math]$P1 = P2 / 10^(^d^b^/^1^0^)$[/math]", description: AntennaGainDescriptionString, id: .antennaGain2, filters: [.advancedFunctions]),
+        Equation(title: "[math]$P2 = P1 \\times 10^(^1^0 ^\\times ^d^b^)$[/math]", description: AntennaGainDescriptionString, id: .antennaGain3, filters: [.advancedFunctions]),
     ]),
 ]
