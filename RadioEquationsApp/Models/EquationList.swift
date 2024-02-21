@@ -75,7 +75,10 @@ The antenna gain equation calculates the gain of an antenna in decibels (dB). Th
 
 The formula is:
 
-        [math]$antenna gain (in db) = 10 \\times log_1_0(P2 / P1)$[/math]
+[math]$antenna gain (in db)[/math]
+
+
+[math]= 10 \\times log_1_0(P2 / P1)$[/math]
 
 Where:
 

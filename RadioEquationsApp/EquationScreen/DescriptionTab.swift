@@ -29,11 +29,19 @@ class DescriptionTab: UIViewController {
         return richTextView
     }()
     
+    private lazy var descriptionScrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        return scrollView
+    }()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .Theme.backgroundColor
-        view.addSubview(descriptionTextView)
-        descriptionTextView.anchor(top: self.view.safeAreaLayoutGuide.topAnchor, left: self.view.leftAnchor, right: self.view.rightAnchor, paddingLeft: 8, paddingRight: 8)
+        descriptionScrollView.addSubview(descriptionTextView)
+        view.addSubview(descriptionScrollView)
+        descriptionTextView.anchor(top: descriptionScrollView.topAnchor, left: self.view.leftAnchor, bottom: descriptionScrollView.bottomAnchor, right: self.view.rightAnchor, paddingLeft: 8, paddingRight: 8)
+        
+        descriptionScrollView.anchor(top: self.view.safeAreaLayoutGuide.topAnchor, left: self.view.leftAnchor, bottom: self.view.safeAreaLayoutGuide.bottomAnchor, right: self.view.rightAnchor)
     }
 }
