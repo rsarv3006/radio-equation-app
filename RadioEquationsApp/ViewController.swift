@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        checkIfPurchasesHaveBenMade()
+        checkIfPurchasesHaveBeenMade()
         
         self.navigationItem.title = "Radio Equations"
         view.addSubview(tableView)
@@ -101,7 +101,7 @@ extension ViewController: UITableViewDataSource {
 }
 
 extension ViewController: UITableViewDelegate {
-    private func checkIfPurchasesHaveBenMade() {
+    private func checkIfPurchasesHaveBeenMade() {
         Task {
             showLoader(true)
             await store.updateCustomerProductStatus()
