@@ -27,6 +27,15 @@ class SettingsScreen: UIViewController {
         return button
     }()
     
+    private lazy var openRequestNewEquationsButton: UIButton = {
+        let button = UIButton(type: .roundedRect)
+        button.setTitle("Request New Equations", for: .normal)
+        button.addTarget(self, action: #selector(onRequestNewEquationsButtonTapped), for: .touchUpInside)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
+        button.setTitleColor(.Theme.altColor, for: .normal)
+        return button
+    }()
+    
     private lazy var appVersionLabel: UILabel = {
         let label = UILabel()
         label.textColor = .Theme.textColor
@@ -70,9 +79,13 @@ class SettingsScreen: UIViewController {
     }
     
     private func configureView() {
+        view.addSubview(openRequestNewEquationsButton)
+        openRequestNewEquationsButton.centerX(inView: self.view)
+        openRequestNewEquationsButton.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 20)
+        
         view.addSubview(contactSupportButton)
         contactSupportButton.centerX(inView: self.view)
-        contactSupportButton.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 20)
+        contactSupportButton.anchor(top: openRequestNewEquationsButton.bottomAnchor)
         
         view.addSubview(appVersionLabel)
         appVersionLabel.centerX(inView: self.view)
@@ -94,6 +107,17 @@ class SettingsScreen: UIViewController {
     
     @objc func onContactSupportTapped() {
         let urlString = "mailto:\(supportEmail)?subject=Support Request"
+        
+        guard let urlStringPercentEncoded = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
+              let url = URL(string: urlStringPercentEncoded) else { return }
+        
+        if UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url)
+        }
+    }
+    
+    @objc func onRequestNewEquationsButtonTapped() {
+        let urlString = "https://forms.gle/hkfRLgizENk1Gji49"
         
         guard let urlStringPercentEncoded = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
               let url = URL(string: urlStringPercentEncoded) else { return }
