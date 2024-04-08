@@ -7,8 +7,8 @@
 
 import Foundation
 
-private let supportPartOne = "incoming+donutsahoy-radio-equation-app-46014877-43alrzmo2th8bgszr6a0dh59a-issue"
-private let supportPartTwo = "incoming.gitlab.com"
+private let supportPartOne = "rjs.app.dev"
+private let supportPartTwo = "@gmail.com"
 
 
 
