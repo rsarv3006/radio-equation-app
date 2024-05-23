@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  RadioEquationsApp
-//
-//  Created by Robert J. Sarvis Jr on 5/15/23.
-//
-
 import UIKit
 import Combine
 
