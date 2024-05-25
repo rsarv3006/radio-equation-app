@@ -1,10 +1,3 @@
-//
-//  RoundingTests.swift
-//  RadioEquationsAppTests
-//
-//  Created by Robert J. Sarvis Jr on 11/5/23.
-//
-
 import XCTest
 
 final class RoundingTests: XCTestCase {

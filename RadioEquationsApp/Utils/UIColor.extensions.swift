@@ -1,10 +1,3 @@
-//
-//  UIColor.extensions.swift
-//  RadioEquationsApp
-//
-//  Created by Robert J. Sarvis Jr on 7/18/23.
-//
-
 import UIKit
 
 extension UIColor {

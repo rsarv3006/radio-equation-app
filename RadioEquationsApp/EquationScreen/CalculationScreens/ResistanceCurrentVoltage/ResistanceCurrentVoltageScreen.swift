@@ -1,10 +1,3 @@
-//
-//  OhmsLawCalculationScreen.swift
-//  RadioEquationsApp
-//
-//  Created by Robert J. Sarvis Jr on 5/20/23.
-//
-
 import UIKit
 import Combine
 import RichTextView

@@ -1,10 +1,3 @@
-//
-//  EquationScreen.swift
-//  RadioEquationsApp
-//
-//  Created by Robert J. Sarvis Jr on 5/17/23.
-//
-
 import UIKit
 
 class EquationScreenTabBar: UITabBarController {

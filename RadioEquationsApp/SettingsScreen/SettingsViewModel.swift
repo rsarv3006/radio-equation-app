@@ -1,10 +1,3 @@
-//
-//  SettingsViewModel.swift
-//  RadioEquationsApp
-//
-//  Created by Robert J. Sarvis Jr on 7/16/23.
-//
-
 import Foundation
 
 class SettingsViewModel {

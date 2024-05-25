@@ -1,10 +1,3 @@
-//
-//  EquationList.swift
-//  RadioEquationsApp
-//
-//  Created by Robert J. Sarvis Jr on 5/19/23.
-//
-
 import Foundation
 
 struct EquationsTableSectionModel {
@@ -91,6 +84,9 @@ The ratio of output power to input power gives the power gain of the antenna. Ta
 So in summary, this formula takes the ratio of output to input power, takes the logarithm to get the absolute gain, and then converts to decibels to calculate the total antenna gain. The higher the gain in dB, the more intense the antenna radiation is in a particular direction (if a non-omnidirectional antenna) or not (if an omnidirectional antenna.)
 """
 
+let ImpedanceResistanceReactanceDescriptionString = """
+TODO: Add the description
+"""
 
 let EquationsTableInfo = [
     EquationsTableSectionModel(title: "Voltage", equations: [
@@ -121,5 +117,12 @@ let EquationsTableInfo = [
         Equation(title: "[math]$db = 10 \\times log_1_0(P2 / P1)$[/math]", description: AntennaGainDescriptionString, id: .antennaGain1, filters: []),
         Equation(title: "[math]$P1 = P2 / 10^(^d^b^/^1^0^)$[/math]", description: AntennaGainDescriptionString, id: .antennaGain2, filters: [.advancedFunctions]),
         Equation(title: "[math]$P2 = P1 \\times 10^(^1^0 ^\\times ^d^b^)$[/math]", description: AntennaGainDescriptionString, id: .antennaGain3, filters: [.advancedFunctions]),
+    ]),
+
+    EquationsTableSectionModel(title: "AC Impedance", equations: [
+    Equation(title: "[math]$Z = \\sqrt{R^2 + (X_L - X_C)^2}$[/math]", description: ImpedanceResistanceReactanceDescriptionString, id: .impedance1, filters: [.alternatingCurrentFunctions]),
+    Equation(title: "[math]$Z = \\sqrt{R^2 + (X_L - X_C)^2}$[/math]", description: ImpedanceResistanceReactanceDescriptionString, id: .impedance2, filters: [.alternatingCurrentFunctions]),
+    Equation(title: "[math]$Z = \\sqrt{R^2 + (X_L - X_C)^2}$[/math]", description: ImpedanceResistanceReactanceDescriptionString, id: .impedance3, filters: [.alternatingCurrentFunctions]),
+
     ]),
 ]

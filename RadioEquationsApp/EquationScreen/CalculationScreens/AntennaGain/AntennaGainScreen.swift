@@ -1,10 +1,3 @@
-//
-//  AntennaGainScreen.swift
-//  RadioEquationsApp
-//
-//  Created by Robert J. Sarvis Jr on 11/5/23.
-//
-
 import Foundation
 import UIKit
 import Combine
@@ -20,7 +13,6 @@ class AntennaGainScreen: UIViewController {
             viewModel.calculatedValue.sink { calculatedValueObj in
                 switch calculatedValueObj.fieldTag {
                 case .antennaGain:
-                    print("antenna gain")
                     self.antennaGainStack.inputField.text = String(calculatedValueObj.calculatedValue)
                 case .powerOne:
                     self.powerOneStack.inputField.text = String(calculatedValueObj.calculatedValue)

@@ -1,10 +1,3 @@
-//
-//  LegalScreen.swift
-//  RadioEquationsApp
-//
-//  Created by Robert J. Sarvis Jr on 7/17/23.
-//
-
 import UIKit
 
 class LegalScreen: UIViewController {

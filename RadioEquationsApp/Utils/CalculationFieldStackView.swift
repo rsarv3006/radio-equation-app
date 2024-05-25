@@ -1,10 +1,3 @@
-//
-//  CalculationFieldStack.swift
-//  RadioEquationsApp
-//
-//  Created by Robert J. Sarvis Jr on 5/28/23.
-//
-
 import UIKit
 
 class CalculationFieldStackView: UIView {

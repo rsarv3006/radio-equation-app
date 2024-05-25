@@ -1,10 +1,3 @@
-//
-//  PowerFieldTag.swift
-//  RadioEquationsApp
-//
-//  Created by Robert J. Sarvis Jr on 5/24/23.
-//
-
 import Foundation
 
 enum PowerVoltageCurrentFieldTag: Int {

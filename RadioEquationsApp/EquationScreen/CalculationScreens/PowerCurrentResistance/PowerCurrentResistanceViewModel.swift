@@ -1,10 +1,3 @@
-//
-//  PowerCurrentResistanceViewModel.swift
-//  RadioEquationsApp
-//
-//  Created by Robert J. Sarvis Jr on 7/12/23.
-//
-
 import Foundation
 import Combine
 

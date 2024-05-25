@@ -1,9 +1,5 @@
-//
-// Created by Robert J. Sarvis Jr on 5/15/23.
-//
-
-import UIKit
 import RichTextView
+import UIKit
 
 class HomeScreenEquationCell: UITableViewCell {
     var viewModel: HomeScreenEquationCellViewModel? {
@@ -11,12 +7,12 @@ class HomeScreenEquationCell: UITableViewCell {
     }
 
     private lazy var equationLabel: RichTextView = {
-        
         let richTextView = RichTextView(
             input: "",
             latexParser: LatexParser(),
             font: UIFont.systemFont(ofSize: 18),
             textColor: UIColor.Theme.textColor,
+            latexTextBaselineOffset: 6,
             frame: CGRect.zero,
             completion: nil
         )
@@ -26,18 +22,20 @@ class HomeScreenEquationCell: UITableViewCell {
 
     override init(style: CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
-        self.backgroundColor = .Theme.backgroundColor
-        
+
+        backgroundColor = .Theme.backgroundColor
+
         addSubview(equationLabel)
         equationLabel.centerY(inView: self)
-        equationLabel.anchor(left: self.leftAnchor, paddingLeft: 32)
+        equationLabel.anchor(left: leftAnchor, paddingLeft: 32, paddingBottom: 8)
     }
-    
-    required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
+
+    @available(*, unavailable)
+    required init?(coder _: NSCoder) { fatalError("init(coder:) has not been implemented") }
 }
 
 // MARK: - ViewModel handlers
+
 extension HomeScreenEquationCell {
     func onViewModelDidSet() {
         guard let viewModel = viewModel else { return }
@@ -46,7 +44,7 @@ extension HomeScreenEquationCell {
         if viewModel.isLocked {
             textColor = .systemGray
         }
-        
+
         equationLabel.update(input: viewModel.equationTitle, textColor: textColor)
     }
 }

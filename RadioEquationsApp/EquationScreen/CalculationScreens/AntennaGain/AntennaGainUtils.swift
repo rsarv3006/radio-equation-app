@@ -1,10 +1,3 @@
-//
-//  GainUtils.swift
-//  RadioEquationsApp
-//
-//  Created by Robert J. Sarvis Jr on 11/5/23.
-//
-
 import Foundation
 
 struct AntennaGainUtils {

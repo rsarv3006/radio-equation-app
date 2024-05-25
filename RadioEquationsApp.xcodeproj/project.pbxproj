@@ -60,6 +60,11 @@
 		78B3C6F42A64F365003F0FB6 /* ObfuscateSupportEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B3C6F32A64F365003F0FB6 /* ObfuscateSupportEmail.swift */; };
 		78B3C6F72A65F251003F0FB6 /* LegalScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B3C6F62A65F251003F0FB6 /* LegalScreen.swift */; };
 		78B3C6F92A65F2C8003F0FB6 /* LegalScreenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B3C6F82A65F2C8003F0FB6 /* LegalScreenVM.swift */; };
+		78D07F542BFFF2CB0078DD8A /* ImpedanceScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D07F502BFFF2CB0078DD8A /* ImpedanceScreen.swift */; };
+		78D07F552BFFF2CB0078DD8A /* ImpedanceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D07F512BFFF2CB0078DD8A /* ImpedanceUtils.swift */; };
+		78D07F562BFFF2CB0078DD8A /* ImpedanceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D07F522BFFF2CB0078DD8A /* ImpedanceViewModel.swift */; };
+		78D07F582C017C340078DD8A /* ImpedanceUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D07F572C017C340078DD8A /* ImpedanceUtilsTests.swift */; };
+		78D07F592C017C3F0078DD8A /* ImpedanceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D07F512BFFF2CB0078DD8A /* ImpedanceUtils.swift */; };
 		78E6B2592A13257800581D06 /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 78E6B2582A13257800581D06 /* JGProgressHUD */; };
 /* End PBXBuildFile section */
 
@@ -136,6 +141,10 @@
 		78B3C6F32A64F365003F0FB6 /* ObfuscateSupportEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObfuscateSupportEmail.swift; sourceTree = "<group>"; };
 		78B3C6F62A65F251003F0FB6 /* LegalScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalScreen.swift; sourceTree = "<group>"; };
 		78B3C6F82A65F2C8003F0FB6 /* LegalScreenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalScreenVM.swift; sourceTree = "<group>"; };
+		78D07F502BFFF2CB0078DD8A /* ImpedanceScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImpedanceScreen.swift; sourceTree = "<group>"; };
+		78D07F512BFFF2CB0078DD8A /* ImpedanceUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImpedanceUtils.swift; sourceTree = "<group>"; };
+		78D07F522BFFF2CB0078DD8A /* ImpedanceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImpedanceViewModel.swift; sourceTree = "<group>"; };
+		78D07F572C017C340078DD8A /* ImpedanceUtilsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpedanceUtilsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,6 +268,7 @@
 				7801EC372A11F672008DE671 /* RadioEquationsAppTests.swift */,
 				7896CFC62AF7DDBF00B40370 /* RoundingTests.swift */,
 				7896CFD22AF8949E00B40370 /* AntennaGainUtilsTestSuite.swift */,
+				78D07F572C017C340078DD8A /* ImpedanceUtilsTests.swift */,
 			);
 			path = RadioEquationsAppTests;
 			sourceTree = "<group>";
@@ -288,6 +298,7 @@
 		7831032D2A196B1F006EE253 /* CalculationScreens */ = {
 			isa = PBXGroup;
 			children = (
+				78D07F532BFFF2CB0078DD8A /* Impedance */,
 				7896CFCA2AF81C7B00B40370 /* AntennaGain */,
 				78B3C6E92A5F5D93003F0FB6 /* VoltagePowerResistance */,
 				78B3C6E42A5E7BC6003F0FB6 /* PowerCurrentResistance */,
@@ -377,6 +388,16 @@
 				78B3C6F82A65F2C8003F0FB6 /* LegalScreenVM.swift */,
 			);
 			path = Subscreens;
+			sourceTree = "<group>";
+		};
+		78D07F532BFFF2CB0078DD8A /* Impedance */ = {
+			isa = PBXGroup;
+			children = (
+				78D07F502BFFF2CB0078DD8A /* ImpedanceScreen.swift */,
+				78D07F512BFFF2CB0078DD8A /* ImpedanceUtils.swift */,
+				78D07F522BFFF2CB0078DD8A /* ImpedanceViewModel.swift */,
+			);
+			path = Impedance;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -534,6 +555,7 @@
 				783103242A15D39D006EE253 /* DescriptionTab.swift in Sources */,
 				7896CFCE2AF81CAD00B40370 /* AntennaGainViewModel.swift in Sources */,
 				7801EC232A11F671008DE671 /* SceneDelegate.swift in Sources */,
+				78D07F562BFFF2CB0078DD8A /* ImpedanceViewModel.swift in Sources */,
 				78B3C6E62A5E7C54003F0FB6 /* PowerCurrentResistanceViewModel.swift in Sources */,
 				789FD7C42A1B9D56001E2DB8 /* ResistanceCurrentVoltageViewModel.swift in Sources */,
 				783103312A1970E5006EE253 /* EquationId.swift in Sources */,
@@ -554,10 +576,12 @@
 				78B3C6F92A65F2C8003F0FB6 /* LegalScreenVM.swift in Sources */,
 				78B3C6E82A5F55D7003F0FB6 /* PowerCurrentResistanceScreen.swift in Sources */,
 				78B3C6F72A65F251003F0FB6 /* LegalScreen.swift in Sources */,
+				78D07F542BFFF2CB0078DD8A /* ImpedanceScreen.swift in Sources */,
 				1B93BC490273194FBFD51A3B /* Equation.swift in Sources */,
 				1B93BECFBF3400790B3A3302 /* CalculationFunctionProtocol.swift in Sources */,
 				7831032C2A1966A1006EE253 /* DescriptionTabViewModel.swift in Sources */,
 				78B3C6F02A649DD9003F0FB6 /* SettingsScreen.swift in Sources */,
+				78D07F552BFFF2CB0078DD8A /* ImpedanceUtils.swift in Sources */,
 				78A43CCA2A244EFC00293045 /* CalculationFieldStackView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -567,7 +591,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7801EC382A11F672008DE671 /* RadioEquationsAppTests.swift in Sources */,
+				78D07F592C017C3F0078DD8A /* ImpedanceUtils.swift in Sources */,
 				7896CFD42AF894A900B40370 /* AntennaGainUtils.swift in Sources */,
+				78D07F582C017C340078DD8A /* ImpedanceUtilsTests.swift in Sources */,
 				7896CFC92AF7E2FA00B40370 /* Double.swift in Sources */,
 				7896CFD32AF8949E00B40370 /* AntennaGainUtilsTestSuite.swift in Sources */,
 				7896CFC72AF7DDBF00B40370 /* RoundingTests.swift in Sources */,
@@ -751,7 +777,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.1;
+				MARKETING_VERSION = 1.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = rjs.app.dev.RadioEquationsApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -779,7 +805,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.1;
+				MARKETING_VERSION = 1.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = rjs.app.dev.RadioEquationsApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

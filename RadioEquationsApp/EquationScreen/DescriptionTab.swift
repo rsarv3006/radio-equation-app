@@ -1,10 +1,3 @@
-//
-//  DescriptionTab.swift
-//  RadioEquationsApp
-//
-//  Created by Robert J. Sarvis Jr on 5/17/23.
-//
-
 import UIKit
 import RichTextView
 

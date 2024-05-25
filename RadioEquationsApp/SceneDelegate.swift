@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  RadioEquationsApp
-//
-//  Created by Robert J. Sarvis Jr on 5/15/23.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {

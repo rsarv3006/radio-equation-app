@@ -1,10 +1,3 @@
-//
-//  CalculationTextField.swift
-//  RadioEquationsApp
-//
-//  Created by Robert J. Sarvis Jr on 5/26/23.
-//
-
 import UIKit
 
 class CalculationTextField: UITextField {
