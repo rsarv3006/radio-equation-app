@@ -109,10 +109,28 @@ class EquationScreenTabBar: UITabBarController {
                 let screen = AntennaGainScreen()
                 screen.viewModel = vm
                 return screen
+            case .impedance1:
+                let vm = ImpedanceViewModel(equation: equation, calculateFor: .impedance)
+                let screen = ImpedanceScreen()
+                screen.viewModel = vm
+                return screen
+            case .impedance2:
+                let vm = ImpedanceViewModel(equation: equation, calculateFor: .resistance)
+                let screen = ImpedanceScreen()
+                screen.viewModel = vm
+                return screen
+            case .impedance3:
+                let vm = ImpedanceViewModel(equation: equation, calculateFor: .inductiveReactance)
+                let screen = ImpedanceScreen()
+                screen.viewModel = vm
+                return screen
+            case .impedance4:
+                let vm = ImpedanceViewModel(equation: equation, calculateFor: .capacitiveReactance)
+                let screen = ImpedanceScreen()
+                screen.viewModel = vm
+                return screen
             default:
                 return EquationTab()
-            
-            
             }
         } else {
             return EquationTab()

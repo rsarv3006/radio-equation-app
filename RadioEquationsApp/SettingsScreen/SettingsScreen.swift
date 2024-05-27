@@ -50,7 +50,15 @@ class SettingsScreen: UIViewController {
         button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
         button.setTitleColor(.Theme.altColor, for: .normal)
         return button
+    }()
 
+    private lazy var purchaseAlternatingCurrentEquationsButton: UIButton = {
+        let button = UIButton(type: .roundedRect)
+        button.setTitle("Purchase Alternating Current Equations", for: .normal)
+        button.addTarget(self, action: #selector(onPurchaseAlternatingCurrentEquationsButtonTapped), for: .touchUpInside)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
+        button.setTitleColor(.Theme.altColor, for: .normal)
+        return button
     }()
 
     private lazy var restorePurchasesButton: UIButton = {
@@ -99,9 +107,13 @@ class SettingsScreen: UIViewController {
         purchaseAdvancedEquationsButton.centerX(inView: view)
         purchaseAdvancedEquationsButton.anchor(top: legalButton.bottomAnchor, paddingBottom: 20)
 
+        view.addSubview(purchaseAlternatingCurrentEquationsButton)
+        purchaseAlternatingCurrentEquationsButton.centerX(inView: view)
+        purchaseAlternatingCurrentEquationsButton.anchor(top: purchaseAdvancedEquationsButton.bottomAnchor, paddingBottom: 20)
+
         view.addSubview(restorePurchasesButton)
         restorePurchasesButton.centerX(inView: view)
-        restorePurchasesButton.anchor(top: purchaseAdvancedEquationsButton.bottomAnchor, paddingBottom: 20)
+        restorePurchasesButton.anchor(top: purchaseAlternatingCurrentEquationsButton.bottomAnchor, paddingBottom: 20)
 
         view.addSubview(shinerButton)
         shinerButton.centerX(inView: view)
@@ -132,11 +144,22 @@ class SettingsScreen: UIViewController {
 
     @objc func onPurchaseAdvancedEquationsButtonTapped() {
         Task {
-            print(store.hasPurchasedUnlockAdvancedEquations)
-
             await store.requestProducts()
 
             guard let product = store.unlockAdvancedEquationsPurchase else {
+                print("product is nil")
+                return
+            }
+
+            let _ = try? await store.purchase(product)
+        }
+    }
+
+    @objc func onPurchaseAlternatingCurrentEquationsButtonTapped() {
+        Task {
+            await store.requestProducts()
+
+            guard let product = store.unlockAlternatingCurrentEquations else {
                 print("product is nil")
                 return
             }

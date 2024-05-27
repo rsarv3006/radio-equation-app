@@ -28,5 +28,6 @@ enum EquationId: String, CaseIterable, Codable {
     case impedance1 = "impedance-1"
     case impedance2 = "impedance-2"
     case impedance3 = "impedance-3"
+    case impedance4 = "impedance-4"
 }
 

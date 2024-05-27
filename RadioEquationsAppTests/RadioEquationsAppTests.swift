@@ -1,10 +1,3 @@
-//
-//  RadioEquationsAppTests.swift
-//  RadioEquationsAppTests
-//
-//  Created by Robert J. Sarvis Jr on 5/15/23.
-//
-
 import XCTest
 @testable import RadioEquationsApp
 

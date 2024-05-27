@@ -85,34 +85,40 @@ So in summary, this formula takes the ratio of output to input power, takes the 
 """
 
 let ImpedanceResistanceReactanceDescriptionString = """
-TODO: Add the description
+The impedance of an electrical circuit is a measure of the opposition to the flow of alternating current (AC) through the circuit.
+
+It consists of two components: resistance (R) and reactance (X), which can be inductive (X_L) or capacitive (X_C).
+
+The total impedance (Z) is the vector sum of the resistance and reactance components.
+
+Note due to the nature of this equation, it is possible to have a result of 'nan' (not a number) if the reactance components are equal. This is because the square root of a negative number is not a real number.
 """
 
 let EquationsTableInfo = [
     EquationsTableSectionModel(title: "Voltage", equations: [
         Equation(title: "[math]$E = I \\times R$[/math]", description: VoltageCurrentResistanceDescriptionString, id: .voltage1, filters: []),
         Equation(title: "[math]$E = P / I$[/math]", description: PowerVoltageCurrentDescriptionString, id: .voltage2, filters: []),
-        Equation(title: "[math]$E = \\sqrt{P \\times R}$[/math]", description: PowerVoltageResistanceDescriptionString, id: .voltage3, filters: [.advancedFunctions])
+        Equation(title: "[math]$E = \\sqrt{P \\times R}$[/math]", description: PowerVoltageResistanceDescriptionString, id: .voltage3, filters: [.advancedFunctions]),
     ]),
-    
+
     EquationsTableSectionModel(title: "Resistance", equations: [
         Equation(title: "[math]$R = E / I$[/math]", description: VoltageCurrentResistanceDescriptionString, id: .resistance1, filters: []),
         Equation(title: "[math]$R = P / I^2$[/math]", description: PowerCurrentResistanceDescriptionString, id: .resistance2, filters: [.advancedFunctions]),
-        Equation(title: "[math]$R = E^2 / P $[/math]", description: PowerVoltageResistanceDescriptionString, id: .resistance3, filters: [.advancedFunctions])
+        Equation(title: "[math]$R = E^2 / P $[/math]", description: PowerVoltageResistanceDescriptionString, id: .resistance3, filters: [.advancedFunctions]),
     ]),
-    
+
     EquationsTableSectionModel(title: "Current", equations: [
         Equation(title: "[math]$I = E / R$[/math]", description: VoltageCurrentResistanceDescriptionString, id: .current1, filters: []),
         Equation(title: "[math]$I = P / E$[/math]", description: PowerVoltageCurrentDescriptionString, id: .current2, filters: []),
-        Equation(title: "[math]$I = \\sqrt{P / R}$[/math]", description: PowerCurrentResistanceDescriptionString, id: .current3, filters: [.advancedFunctions])
+        Equation(title: "[math]$I = \\sqrt{P / R}$[/math]", description: PowerCurrentResistanceDescriptionString, id: .current3, filters: [.advancedFunctions]),
     ]),
-    
+
     EquationsTableSectionModel(title: "Power", equations: [
         Equation(title: "[math]$P = E \\times I$[/math]", description: PowerVoltageCurrentDescriptionString, id: .power1, filters: []),
         Equation(title: "[math]$P = E^2 / R$[/math]", description: PowerVoltageResistanceDescriptionString, id: .power2, filters: [.advancedFunctions]),
-        Equation(title: "[math]$P = I^2 \\times R$[/math]", description: PowerCurrentResistanceDescriptionString, id: .power3, filters: [.advancedFunctions])
+        Equation(title: "[math]$P = I^2 \\times R$[/math]", description: PowerCurrentResistanceDescriptionString, id: .power3, filters: [.advancedFunctions]),
     ]),
-    
+
     EquationsTableSectionModel(title: "Antenna Gain", equations: [
         Equation(title: "[math]$db = 10 \\times log_1_0(P2 / P1)$[/math]", description: AntennaGainDescriptionString, id: .antennaGain1, filters: []),
         Equation(title: "[math]$P1 = P2 / 10^(^d^b^/^1^0^)$[/math]", description: AntennaGainDescriptionString, id: .antennaGain2, filters: [.advancedFunctions]),
@@ -120,9 +126,9 @@ let EquationsTableInfo = [
     ]),
 
     EquationsTableSectionModel(title: "AC Impedance", equations: [
-    Equation(title: "[math]$Z = \\sqrt{R^2 + (X_L - X_C)^2}$[/math]", description: ImpedanceResistanceReactanceDescriptionString, id: .impedance1, filters: [.alternatingCurrentFunctions]),
-    Equation(title: "[math]$Z = \\sqrt{R^2 + (X_L - X_C)^2}$[/math]", description: ImpedanceResistanceReactanceDescriptionString, id: .impedance2, filters: [.alternatingCurrentFunctions]),
-    Equation(title: "[math]$Z = \\sqrt{R^2 + (X_L - X_C)^2}$[/math]", description: ImpedanceResistanceReactanceDescriptionString, id: .impedance3, filters: [.alternatingCurrentFunctions]),
-
+        Equation(title: "[math]$Z = \\sqrt{R^2 + (X_L - X_C)^2}$[/math]", description: ImpedanceResistanceReactanceDescriptionString, id: .impedance1, filters: []),
+        Equation(title: "[math]$R = \\sqrt{Z^2 + (X_L - X_C)^2}$[/math]", description: ImpedanceResistanceReactanceDescriptionString, id: .impedance2, filters: [.alternatingCurrentFunctions]),
+        Equation(title: "[math]$X_L = \\sqrt{Z^2 - R^2} + X_C$[/math]", description: ImpedanceResistanceReactanceDescriptionString, id: .impedance3, filters: [.alternatingCurrentFunctions]),
+        Equation(title: "[math]$X_C = X_L - \\sqrt{Z^2 - R^2}$[/math]", description: ImpedanceResistanceReactanceDescriptionString, id: .impedance4, filters: [.alternatingCurrentFunctions]),
     ]),
 ]

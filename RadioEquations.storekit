@@ -7,6 +7,21 @@
     {
       "displayPrice" : "0.99",
       "familyShareable" : false,
+      "internalID" : "6503224123",
+      "localizations" : [
+        {
+          "description" : "Alternating Current Functions",
+          "displayName" : "Unlock AC Functions",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "re.unlock.ac.equations",
+      "referenceName" : "re.unlock.ac.equations",
+      "type" : "NonConsumable"
+    },
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
       "internalID" : "6451350136",
       "localizations" : [
         {
@@ -23,13 +38,61 @@
   "settings" : {
     "_applicationInternalID" : "6451230870",
     "_developerTeamID" : "4QGR522B9M",
-    "_lastSynchronizedDate" : 711612354.86154604
+    "_failTransactionsEnabled" : false,
+    "_lastSynchronizedDate" : 738467101.08767605,
+    "_storeKitErrors" : [
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Load Products"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Purchase"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Verification"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Store Sync"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Subscription Status"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Transaction"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Manage Subscriptions Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Refund Request Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Offer Code Redeem Sheet"
+      }
+    ]
   },
   "subscriptionGroups" : [
 
   ],
   "version" : {
-    "major" : 2,
+    "major" : 3,
     "minor" : 0
   }
 }

@@ -39,6 +39,7 @@ class ImpedanceScreen: UIViewController {
             }
 
             equationLabel.update(input: viewModel.equationTitle)
+            nanAnswerNote.text = viewModel.impedanceNanNote
         }
     }
 
@@ -48,6 +49,7 @@ class ImpedanceScreen: UIViewController {
             latexParser: LatexParser(),
             font: UIFont.systemFont(ofSize: 18),
             textColor: UIColor.Theme.textColor,
+            latexTextBaselineOffset: 6,
             frame: CGRect.zero,
             completion: nil
         )
@@ -64,20 +66,14 @@ class ImpedanceScreen: UIViewController {
         return label
     }()
 
-    private lazy var resistanceStack: CalculationFieldStackView = {
-        let stack = CalculationFieldStackView(fieldTag: ImpedanceFieldTag.resistance.rawValue, fieldLabelText: "Resistance (R):")
-        stack.inputField.addTarget(self, action: #selector(didFieldUpdate), for: .editingChanged)
-        return stack
-    }()
-
     private lazy var impedanceStack: CalculationFieldStackView = {
         let stack = CalculationFieldStackView(fieldTag: ImpedanceFieldTag.impedance.rawValue, fieldLabelText: "Impedance (Z):")
         stack.inputField.addTarget(self, action: #selector(didFieldUpdate), for: .editingChanged)
         return stack
     }()
 
-    private lazy var capacitiveReactanceStack: CalculationFieldStackView = {
-        let stack = CalculationFieldStackView(fieldTag: ImpedanceFieldTag.capacitiveReactance.rawValue, fieldLabelText: "Capacitive Reactance (X_C):")
+    private lazy var resistanceStack: CalculationFieldStackView = {
+        let stack = CalculationFieldStackView(fieldTag: ImpedanceFieldTag.resistance.rawValue, fieldLabelText: "Resistance (R):")
         stack.inputField.addTarget(self, action: #selector(didFieldUpdate), for: .editingChanged)
         return stack
     }()
@@ -88,12 +84,25 @@ class ImpedanceScreen: UIViewController {
         return stack
     }()
 
+    private lazy var capacitiveReactanceStack: CalculationFieldStackView = {
+        let stack = CalculationFieldStackView(fieldTag: ImpedanceFieldTag.capacitiveReactance.rawValue, fieldLabelText: "Capacitive Reactance (X_C):")
+        stack.inputField.addTarget(self, action: #selector(didFieldUpdate), for: .editingChanged)
+        return stack
+    }()
+
     private lazy var calculateForSegmentedControl: UISegmentedControl = {
         let control = UISegmentedControl(items: calculateForPickerOptions)
         control.selectedSegmentIndex = 0
         control.addTarget(self, action: #selector(didCalculateForSegmentedControlChange), for: .valueChanged)
 
         return control
+    }()
+
+    private lazy var nanAnswerNote: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 0
+        label.lineBreakMode = .byWordWrapping
+        return label
     }()
 
     override func viewDidLoad() {
@@ -121,19 +130,23 @@ class ImpedanceScreen: UIViewController {
 
         resistanceStack.anchor(top: impedanceStack.bottomAnchor, left: view.safeAreaLayoutGuide.leftAnchor, right: view.safeAreaLayoutGuide.rightAnchor, paddingTop: 12, paddingLeft: 12, paddingRight: 12)
 
-        view.addSubview(capacitiveReactanceStack)
-
-        capacitiveReactanceStack.anchor(top: resistanceStack.bottomAnchor, left: view.safeAreaLayoutGuide.leftAnchor, right: view.safeAreaLayoutGuide.rightAnchor, paddingTop: 12, paddingLeft: 12, paddingRight: 12)
-
         view.addSubview(inductiveReactanceStack)
         inductiveReactanceStack.anchor(
-            top: capacitiveReactanceStack.bottomAnchor,
+            top: resistanceStack.bottomAnchor,
             left: view.safeAreaLayoutGuide.leftAnchor,
             right: view.safeAreaLayoutGuide.rightAnchor,
             paddingTop: 12,
             paddingLeft: 12,
             paddingRight: 12
         )
+
+        view.addSubview(capacitiveReactanceStack)
+
+        capacitiveReactanceStack.anchor(top: inductiveReactanceStack.bottomAnchor, left: view.safeAreaLayoutGuide.leftAnchor, right: view.safeAreaLayoutGuide.rightAnchor, paddingTop: 12, paddingLeft: 12, paddingRight: 12)
+
+        view.addSubview(nanAnswerNote)
+        nanAnswerNote.centerX(inView: view, topAnchor: capacitiveReactanceStack.bottomAnchor, paddingTop: 24)
+        nanAnswerNote.anchor(left: view.safeAreaLayoutGuide.leftAnchor, right: view.safeAreaLayoutGuide.rightAnchor, paddingLeft: 12, paddingRight: 12) 
     }
 }
 
@@ -164,20 +177,23 @@ extension ImpedanceScreen {
 
     private func makeImpedanceFieldAnswerBox() {
         impedanceStack.inputField.isAnswerField = true
-        capacitiveReactanceStack.inputField.isAnswerField = false
         resistanceStack.inputField.isAnswerField = false
+        inductiveReactanceStack.inputField.isAnswerField = false
+        capacitiveReactanceStack.inputField.isAnswerField = false
     }
 
     private func makeResistanceFieldAnswerBox() {
         impedanceStack.inputField.isAnswerField = false
-        capacitiveReactanceStack.inputField.isAnswerField = true
-        resistanceStack.inputField.isAnswerField = false
+        resistanceStack.inputField.isAnswerField = true
+        inductiveReactanceStack.inputField.isAnswerField = false
+        capacitiveReactanceStack.inputField.isAnswerField = false
     }
 
     private func makeInductiveReactanceFieldAnswerBox() {
         impedanceStack.inputField.isAnswerField = false
+        resistanceStack.inputField.isAnswerField = false
+        inductiveReactanceStack.inputField.isAnswerField = true
         capacitiveReactanceStack.inputField.isAnswerField = false
-        resistanceStack.inputField.isAnswerField = true
     }
 
     private func makeCapacitiveReactanceFieldAnswerBox() {

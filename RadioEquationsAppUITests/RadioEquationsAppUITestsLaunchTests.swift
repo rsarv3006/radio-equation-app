@@ -1,10 +1,3 @@
-//
-//  RadioEquationsAppUITestsLaunchTests.swift
-//  RadioEquationsAppUITests
-//
-//  Created by Robert J. Sarvis Jr on 5/15/23.
-//
-
 import XCTest
 
 final class RadioEquationsAppUITestsLaunchTests: XCTestCase {
