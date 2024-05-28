@@ -1,5 +1,6 @@
 import Foundation
 import Combine
+import RadioEquationsData
 
 enum PowerCurrentResistanceFieldTag: Int {
     case resistance = 2

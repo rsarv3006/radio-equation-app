@@ -1,5 +1,6 @@
 import Foundation
 import Combine
+import RadioEquationsData
 
 struct ResistanceCurrentVoltageCalculatedPassthroughModel {
     let fieldTag: ResistanceCurrentVoltageFieldTag

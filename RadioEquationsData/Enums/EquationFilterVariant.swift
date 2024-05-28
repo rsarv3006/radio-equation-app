@@ -1,6 +1,6 @@
 import Foundation
 
-enum EquationFilterVariant: String, Codable {
+public enum EquationFilterVariant: String, Codable {
     case advancedFunctions = "advancedFunctions"
     case alternatingCurrentFunctions = "alternatingCurrentFunctions"
 }

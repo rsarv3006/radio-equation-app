@@ -11,9 +11,7 @@
 		1B93B46466E160C3B17C6FFF /* HomeScreenEquationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B93BDFED1FDDD406181D6C0 /* HomeScreenEquationCell.swift */; };
 		1B93B5C7072429215CD47FE7 /* HomeScreenEquationCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B93B58FA920392051E231F4 /* HomeScreenEquationCellViewModel.swift */; };
 		1B93B903FA4AFCAC0064DACA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B93B20034F3B54D044532E8 /* Extensions.swift */; };
-		1B93BC490273194FBFD51A3B /* Equation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B93B30864EC4E50C2DB00FC /* Equation.swift */; };
 		1B93BCFC5F388BA92C30F708 /* FieldValidInvalidProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B93B83DE18BB6502E396EA1 /* FieldValidInvalidProtocol.swift */; };
-		1B93BECFBF3400790B3A3302 /* CalculationFunctionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B93BC9FE5E3E64F87EB6324 /* CalculationFunctionProtocol.swift */; };
 		7801EC212A11F671008DE671 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7801EC202A11F671008DE671 /* AppDelegate.swift */; };
 		7801EC232A11F671008DE671 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7801EC222A11F671008DE671 /* SceneDelegate.swift */; };
 		7801EC252A11F671008DE671 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7801EC242A11F671008DE671 /* ViewController.swift */; };
@@ -27,23 +25,35 @@
 		783103242A15D39D006EE253 /* DescriptionTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783103232A15D39D006EE253 /* DescriptionTab.swift */; };
 		783103262A15D3C0006EE253 /* EquationTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783103252A15D3C0006EE253 /* EquationTab.swift */; };
 		783103282A17E9B8006EE253 /* EquationScreenTabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783103272A17E9B8006EE253 /* EquationScreenTabBarViewModel.swift */; };
-		7831032A2A17EC9E006EE253 /* EquationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783103292A17EC9E006EE253 /* EquationList.swift */; };
 		7831032C2A1966A1006EE253 /* DescriptionTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7831032B2A1966A1006EE253 /* DescriptionTabViewModel.swift */; };
 		7831032F2A196B44006EE253 /* ResistanceCurrentVoltageScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7831032E2A196B44006EE253 /* ResistanceCurrentVoltageScreen.swift */; };
-		783103312A1970E5006EE253 /* EquationId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783103302A1970E5006EE253 /* EquationId.swift */; };
+		7833B82D2C0522CE00F27B33 /* ApparentPowerCurrentVoltageScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7833B82C2C0522CE00F27B33 /* ApparentPowerCurrentVoltageScreen.swift */; };
+		7833B8312C05230900F27B33 /* ApparentPowerVoltageCurrentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7833B8302C05230900F27B33 /* ApparentPowerVoltageCurrentViewModel.swift */; };
 		785B3C802A67416E000C3529 /* UIColor.extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785B3C7F2A67416E000C3529 /* UIColor.extensions.swift */; };
 		785B3C832A6A5784000C3529 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 785B3C822A6A5784000C3529 /* StoreKit.framework */; };
 		785B3C852A6A57C3000C3529 /* RadioEquations.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 785B3C842A6A57C0000C3529 /* RadioEquations.storekit */; };
 		785B3C872A6B3AAD000C3529 /* StoreKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785B3C862A6B3AAD000C3529 /* StoreKit.swift */; };
-		785B3C892A6CCDDA000C3529 /* EquationFilterVariant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785B3C882A6CCDDA000C3529 /* EquationFilterVariant.swift */; };
-		7896CFC52AF767B000B40370 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7896CFC42AF767B000B40370 /* Double.swift */; };
-		7896CFC72AF7DDBF00B40370 /* RoundingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7896CFC62AF7DDBF00B40370 /* RoundingTests.swift */; };
-		7896CFC92AF7E2FA00B40370 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7896CFC42AF767B000B40370 /* Double.swift */; };
+		7895216E2C05F6C60059F64A /* RadioEquationsDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7895216D2C05F6C60059F64A /* RadioEquationsDataTests.swift */; };
+		7895216F2C05F6C60059F64A /* RadioEquationsData.h in Headers */ = {isa = PBXBuildFile; fileRef = 789521612C05F6C60059F64A /* RadioEquationsData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		789521722C05F6C60059F64A /* RadioEquationsData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7895215F2C05F6C60059F64A /* RadioEquationsData.framework */; };
+		789521732C05F6C60059F64A /* RadioEquationsData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7895215F2C05F6C60059F64A /* RadioEquationsData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7895217C2C05F6E00059F64A /* CalculationUtilsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7895217B2C05F6E00059F64A /* CalculationUtilsProtocol.swift */; };
+		7895217D2C05F6FF0059F64A /* EquationId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783103302A1970E5006EE253 /* EquationId.swift */; };
+		7895217E2C05F6FF0059F64A /* Equation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B93B30864EC4E50C2DB00FC /* Equation.swift */; };
+		7895217F2C05F6FF0059F64A /* EquationFilterVariant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785B3C882A6CCDDA000C3529 /* EquationFilterVariant.swift */; };
+		789521802C05F6FF0059F64A /* EquationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783103292A17EC9E006EE253 /* EquationList.swift */; };
+		789521822C05F7130059F64A /* EquationDescriptionStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789521812C05F7130059F64A /* EquationDescriptionStrings.swift */; };
+		789521852C05F7620059F64A /* EquationTableSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789521842C05F7620059F64A /* EquationTableSectionModel.swift */; };
+		7895218A2C05FAAC0059F64A /* ImpedanceUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D07F572C017C340078DD8A /* ImpedanceUtilsTests.swift */; };
+		7895218B2C05FAAC0059F64A /* AntennaGainUtilsTestSuite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7896CFD22AF8949E00B40370 /* AntennaGainUtilsTestSuite.swift */; };
+		7895218C2C05FAAC0059F64A /* RoundingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7896CFC62AF7DDBF00B40370 /* RoundingTests.swift */; };
+		789521902C0621F00059F64A /* RadioEquationsData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7895215F2C05F6C60059F64A /* RadioEquationsData.framework */; };
+		789521932C0622510059F64A /* AntennaGainUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7896CFCF2AF8935000B40370 /* AntennaGainUtils.swift */; };
+		789521942C0622560059F64A /* ImpedanceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D07F512BFFF2CB0078DD8A /* ImpedanceUtils.swift */; };
+		789521952C0622590059F64A /* ApparentPowerCurrentVoltageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7833B82E2C0522F000F27B33 /* ApparentPowerCurrentVoltageUtils.swift */; };
+		789521962C06225E0059F64A /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7896CFC42AF767B000B40370 /* Double.swift */; };
 		7896CFCC2AF81CA000B40370 /* AntennaGainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7896CFCB2AF81CA000B40370 /* AntennaGainScreen.swift */; };
 		7896CFCE2AF81CAD00B40370 /* AntennaGainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7896CFCD2AF81CAD00B40370 /* AntennaGainViewModel.swift */; };
-		7896CFD02AF8935100B40370 /* AntennaGainUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7896CFCF2AF8935000B40370 /* AntennaGainUtils.swift */; };
-		7896CFD32AF8949E00B40370 /* AntennaGainUtilsTestSuite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7896CFD22AF8949E00B40370 /* AntennaGainUtilsTestSuite.swift */; };
-		7896CFD42AF894A900B40370 /* AntennaGainUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7896CFCF2AF8935000B40370 /* AntennaGainUtils.swift */; };
 		789FD7C42A1B9D56001E2DB8 /* ResistanceCurrentVoltageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789FD7C32A1B9D56001E2DB8 /* ResistanceCurrentVoltageViewModel.swift */; };
 		78A43CC22A1EA88800293045 /* PowerVoltageCurrentScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A43CC12A1EA88800293045 /* PowerVoltageCurrentScreen.swift */; };
 		78A43CC42A1EA9A700293045 /* PowerVoltageCurrentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A43CC32A1EA9A700293045 /* PowerVoltageCurrentViewModel.swift */; };
@@ -61,10 +71,7 @@
 		78B3C6F72A65F251003F0FB6 /* LegalScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B3C6F62A65F251003F0FB6 /* LegalScreen.swift */; };
 		78B3C6F92A65F2C8003F0FB6 /* LegalScreenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B3C6F82A65F2C8003F0FB6 /* LegalScreenVM.swift */; };
 		78D07F542BFFF2CB0078DD8A /* ImpedanceScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D07F502BFFF2CB0078DD8A /* ImpedanceScreen.swift */; };
-		78D07F552BFFF2CB0078DD8A /* ImpedanceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D07F512BFFF2CB0078DD8A /* ImpedanceUtils.swift */; };
 		78D07F562BFFF2CB0078DD8A /* ImpedanceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D07F522BFFF2CB0078DD8A /* ImpedanceViewModel.swift */; };
-		78D07F582C017C340078DD8A /* ImpedanceUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D07F572C017C340078DD8A /* ImpedanceUtilsTests.swift */; };
-		78D07F592C017C3F0078DD8A /* ImpedanceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D07F512BFFF2CB0078DD8A /* ImpedanceUtils.swift */; };
 		78E6B2592A13257800581D06 /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 78E6B2582A13257800581D06 /* JGProgressHUD */; };
 /* End PBXBuildFile section */
 
@@ -83,7 +90,42 @@
 			remoteGlobalIDString = 7801EC1C2A11F671008DE671;
 			remoteInfo = RadioEquationsApp;
 		};
+		789521682C05F6C60059F64A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7801EC152A11F671008DE671 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7895215E2C05F6C60059F64A;
+			remoteInfo = RadioEquationsData;
+		};
+		7895216A2C05F6C60059F64A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7801EC152A11F671008DE671 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7801EC1C2A11F671008DE671;
+			remoteInfo = RadioEquationsApp;
+		};
+		789521702C05F6C60059F64A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7801EC152A11F671008DE671 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7895215E2C05F6C60059F64A;
+			remoteInfo = RadioEquationsData;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		789521742C05F6C60059F64A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				789521732C05F6C60059F64A /* RadioEquationsData.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1B93B20034F3B54D044532E8 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -91,7 +133,6 @@
 		1B93B32761510EE9EAE476B3 /* InputTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputTextView.swift; sourceTree = "<group>"; };
 		1B93B58FA920392051E231F4 /* HomeScreenEquationCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenEquationCellViewModel.swift; sourceTree = "<group>"; };
 		1B93B83DE18BB6502E396EA1 /* FieldValidInvalidProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldValidInvalidProtocol.swift; sourceTree = "<group>"; };
-		1B93BC9FE5E3E64F87EB6324 /* CalculationFunctionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculationFunctionProtocol.swift; sourceTree = "<group>"; };
 		1B93BDFED1FDDD406181D6C0 /* HomeScreenEquationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenEquationCell.swift; sourceTree = "<group>"; };
 		7801EC1D2A11F671008DE671 /* RadioEquationsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RadioEquationsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7801EC202A11F671008DE671 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -114,11 +155,21 @@
 		7831032B2A1966A1006EE253 /* DescriptionTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTabViewModel.swift; sourceTree = "<group>"; };
 		7831032E2A196B44006EE253 /* ResistanceCurrentVoltageScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResistanceCurrentVoltageScreen.swift; sourceTree = "<group>"; };
 		783103302A1970E5006EE253 /* EquationId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquationId.swift; sourceTree = "<group>"; };
+		7833B82C2C0522CE00F27B33 /* ApparentPowerCurrentVoltageScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApparentPowerCurrentVoltageScreen.swift; path = RadioEquationsApp/EquationScreen/CalculationScreens/ApparentPowerVoltageCurrent/ApparentPowerCurrentVoltageScreen.swift; sourceTree = SOURCE_ROOT; };
+		7833B82E2C0522F000F27B33 /* ApparentPowerCurrentVoltageUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApparentPowerCurrentVoltageUtils.swift; path = RadioEquationsData/Utils/ApparentPowerCurrentVoltageUtils.swift; sourceTree = SOURCE_ROOT; };
+		7833B8302C05230900F27B33 /* ApparentPowerVoltageCurrentViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApparentPowerVoltageCurrentViewModel.swift; sourceTree = "<group>"; };
 		785B3C7F2A67416E000C3529 /* UIColor.extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.extensions.swift; sourceTree = "<group>"; };
 		785B3C822A6A5784000C3529 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		785B3C842A6A57C0000C3529 /* RadioEquations.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = RadioEquations.storekit; sourceTree = "<group>"; };
 		785B3C862A6B3AAD000C3529 /* StoreKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKit.swift; sourceTree = "<group>"; };
 		785B3C882A6CCDDA000C3529 /* EquationFilterVariant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquationFilterVariant.swift; sourceTree = "<group>"; };
+		7895215F2C05F6C60059F64A /* RadioEquationsData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RadioEquationsData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		789521612C05F6C60059F64A /* RadioEquationsData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RadioEquationsData.h; sourceTree = "<group>"; };
+		789521662C05F6C60059F64A /* RadioEquationsDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RadioEquationsDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7895216D2C05F6C60059F64A /* RadioEquationsDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioEquationsDataTests.swift; sourceTree = "<group>"; };
+		7895217B2C05F6E00059F64A /* CalculationUtilsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationUtilsProtocol.swift; sourceTree = "<group>"; };
+		789521812C05F7130059F64A /* EquationDescriptionStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquationDescriptionStrings.swift; sourceTree = "<group>"; };
+		789521842C05F7620059F64A /* EquationTableSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquationTableSectionModel.swift; sourceTree = "<group>"; };
 		7896CFC42AF767B000B40370 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		7896CFC62AF7DDBF00B40370 /* RoundingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundingTests.swift; sourceTree = "<group>"; };
 		7896CFC82AF7E27000B40370 /* RadioEquationsApp.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = RadioEquationsApp.xctestplan; sourceTree = "<group>"; };
@@ -154,6 +205,7 @@
 			files = (
 				785B3C832A6A5784000C3529 /* StoreKit.framework in Frameworks */,
 				78B3C6E12A5E0848003F0FB6 /* RichTextView in Frameworks */,
+				789521722C05F6C60059F64A /* RadioEquationsData.framework in Frameworks */,
 				78E6B2592A13257800581D06 /* JGProgressHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -172,6 +224,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7895215C2C05F6C60059F64A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		789521632C05F6C60059F64A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				789521902C0621F00059F64A /* RadioEquationsData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -187,11 +254,7 @@
 		1B93BB91AA052624D305900B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				783103292A17EC9E006EE253 /* EquationList.swift */,
-				1B93B30864EC4E50C2DB00FC /* Equation.swift */,
-				783103302A1970E5006EE253 /* EquationId.swift */,
 				78A43CC52A1EBFEE00293045 /* PowerVoltageCurrentFieldTag.swift */,
-				785B3C882A6CCDDA000C3529 /* EquationFilterVariant.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -213,7 +276,6 @@
 			isa = PBXGroup;
 			children = (
 				1B93B83DE18BB6502E396EA1 /* FieldValidInvalidProtocol.swift */,
-				1B93BC9FE5E3E64F87EB6324 /* CalculationFunctionProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -227,6 +289,8 @@
 				7801EC1F2A11F671008DE671 /* RadioEquationsApp */,
 				7801EC362A11F672008DE671 /* RadioEquationsAppTests */,
 				7801EC402A11F672008DE671 /* RadioEquationsAppUITests */,
+				789521602C05F6C60059F64A /* RadioEquationsData */,
+				7895216C2C05F6C60059F64A /* RadioEquationsDataTests */,
 				7801EC1E2A11F671008DE671 /* Products */,
 				785B3C812A6A5784000C3529 /* Frameworks */,
 			);
@@ -238,6 +302,8 @@
 				7801EC1D2A11F671008DE671 /* RadioEquationsApp.app */,
 				7801EC332A11F672008DE671 /* RadioEquationsAppTests.xctest */,
 				7801EC3D2A11F672008DE671 /* RadioEquationsAppUITests.xctest */,
+				7895215F2C05F6C60059F64A /* RadioEquationsData.framework */,
+				789521662C05F6C60059F64A /* RadioEquationsDataTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -245,7 +311,6 @@
 		7801EC1F2A11F671008DE671 /* RadioEquationsApp */ = {
 			isa = PBXGroup;
 			children = (
-				7896CFC32AF767A100B40370 /* Extensions */,
 				78B3C6EE2A649DC8003F0FB6 /* SettingsScreen */,
 				783103202A15293A006EE253 /* EquationScreen */,
 				7801EC202A11F671008DE671 /* AppDelegate.swift */,
@@ -266,9 +331,6 @@
 			isa = PBXGroup;
 			children = (
 				7801EC372A11F672008DE671 /* RadioEquationsAppTests.swift */,
-				7896CFC62AF7DDBF00B40370 /* RoundingTests.swift */,
-				7896CFD22AF8949E00B40370 /* AntennaGainUtilsTestSuite.swift */,
-				78D07F572C017C340078DD8A /* ImpedanceUtilsTests.swift */,
 			);
 			path = RadioEquationsAppTests;
 			sourceTree = "<group>";
@@ -298,6 +360,7 @@
 		7831032D2A196B1F006EE253 /* CalculationScreens */ = {
 			isa = PBXGroup;
 			children = (
+				7833B82B2C0522B400F27B33 /* ApparentPowerVoltageCurrent */,
 				78D07F532BFFF2CB0078DD8A /* Impedance */,
 				7896CFCA2AF81C7B00B40370 /* AntennaGain */,
 				78B3C6E92A5F5D93003F0FB6 /* VoltagePowerResistance */,
@@ -308,12 +371,91 @@
 			path = CalculationScreens;
 			sourceTree = "<group>";
 		};
+		7833B82B2C0522B400F27B33 /* ApparentPowerVoltageCurrent */ = {
+			isa = PBXGroup;
+			children = (
+				7833B8302C05230900F27B33 /* ApparentPowerVoltageCurrentViewModel.swift */,
+				7833B82C2C0522CE00F27B33 /* ApparentPowerCurrentVoltageScreen.swift */,
+			);
+			path = ApparentPowerVoltageCurrent;
+			sourceTree = "<group>";
+		};
 		785B3C812A6A5784000C3529 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				785B3C822A6A5784000C3529 /* StoreKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		789521602C05F6C60059F64A /* RadioEquationsData */ = {
+			isa = PBXGroup;
+			children = (
+				7896CFC32AF767A100B40370 /* Extensions */,
+				789521892C05FA3F0059F64A /* Utils */,
+				789521882C05F9DE0059F64A /* Protocols */,
+				789521872C05F9C20059F64A /* Enums */,
+				789521862C05F9A40059F64A /* EquationData */,
+				789521832C05F7420059F64A /* Models */,
+				789521612C05F6C60059F64A /* RadioEquationsData.h */,
+			);
+			path = RadioEquationsData;
+			sourceTree = "<group>";
+		};
+		7895216C2C05F6C60059F64A /* RadioEquationsDataTests */ = {
+			isa = PBXGroup;
+			children = (
+				7896CFC62AF7DDBF00B40370 /* RoundingTests.swift */,
+				7896CFD22AF8949E00B40370 /* AntennaGainUtilsTestSuite.swift */,
+				78D07F572C017C340078DD8A /* ImpedanceUtilsTests.swift */,
+				7895216D2C05F6C60059F64A /* RadioEquationsDataTests.swift */,
+			);
+			path = RadioEquationsDataTests;
+			sourceTree = "<group>";
+		};
+		789521832C05F7420059F64A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1B93B30864EC4E50C2DB00FC /* Equation.swift */,
+				789521842C05F7620059F64A /* EquationTableSectionModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		789521862C05F9A40059F64A /* EquationData */ = {
+			isa = PBXGroup;
+			children = (
+				789521812C05F7130059F64A /* EquationDescriptionStrings.swift */,
+				783103292A17EC9E006EE253 /* EquationList.swift */,
+			);
+			path = EquationData;
+			sourceTree = "<group>";
+		};
+		789521872C05F9C20059F64A /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				783103302A1970E5006EE253 /* EquationId.swift */,
+				785B3C882A6CCDDA000C3529 /* EquationFilterVariant.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		789521882C05F9DE0059F64A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				7895217B2C05F6E00059F64A /* CalculationUtilsProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		789521892C05FA3F0059F64A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7896CFCF2AF8935000B40370 /* AntennaGainUtils.swift */,
+				78D07F512BFFF2CB0078DD8A /* ImpedanceUtils.swift */,
+				7833B82E2C0522F000F27B33 /* ApparentPowerCurrentVoltageUtils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		7896CFC32AF767A100B40370 /* Extensions */ = {
@@ -329,7 +471,6 @@
 			children = (
 				7896CFCB2AF81CA000B40370 /* AntennaGainScreen.swift */,
 				7896CFCD2AF81CAD00B40370 /* AntennaGainViewModel.swift */,
-				7896CFCF2AF8935000B40370 /* AntennaGainUtils.swift */,
 			);
 			path = AntennaGain;
 			sourceTree = "<group>";
@@ -394,13 +535,23 @@
 			isa = PBXGroup;
 			children = (
 				78D07F502BFFF2CB0078DD8A /* ImpedanceScreen.swift */,
-				78D07F512BFFF2CB0078DD8A /* ImpedanceUtils.swift */,
 				78D07F522BFFF2CB0078DD8A /* ImpedanceViewModel.swift */,
 			);
 			path = Impedance;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		7895215A2C05F6C60059F64A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7895216F2C05F6C60059F64A /* RadioEquationsData.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		7801EC1C2A11F671008DE671 /* RadioEquationsApp */ = {
@@ -410,10 +561,12 @@
 				7801EC192A11F671008DE671 /* Sources */,
 				7801EC1A2A11F671008DE671 /* Frameworks */,
 				7801EC1B2A11F671008DE671 /* Resources */,
+				789521742C05F6C60059F64A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				789521712C05F6C60059F64A /* PBXTargetDependency */,
 			);
 			name = RadioEquationsApp;
 			packageProductDependencies = (
@@ -460,6 +613,43 @@
 			productReference = 7801EC3D2A11F672008DE671 /* RadioEquationsAppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		7895215E2C05F6C60059F64A /* RadioEquationsData */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 789521792C05F6C60059F64A /* Build configuration list for PBXNativeTarget "RadioEquationsData" */;
+			buildPhases = (
+				7895215A2C05F6C60059F64A /* Headers */,
+				7895215B2C05F6C60059F64A /* Sources */,
+				7895215C2C05F6C60059F64A /* Frameworks */,
+				7895215D2C05F6C60059F64A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RadioEquationsData;
+			productName = RadioEquationsData;
+			productReference = 7895215F2C05F6C60059F64A /* RadioEquationsData.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		789521652C05F6C60059F64A /* RadioEquationsDataTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7895217A2C05F6C60059F64A /* Build configuration list for PBXNativeTarget "RadioEquationsDataTests" */;
+			buildPhases = (
+				789521622C05F6C60059F64A /* Sources */,
+				789521632C05F6C60059F64A /* Frameworks */,
+				789521642C05F6C60059F64A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				789521692C05F6C60059F64A /* PBXTargetDependency */,
+				7895216B2C05F6C60059F64A /* PBXTargetDependency */,
+			);
+			name = RadioEquationsDataTests;
+			productName = RadioEquationsDataTests;
+			productReference = 789521662C05F6C60059F64A /* RadioEquationsDataTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -467,7 +657,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1430;
+				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					7801EC1C2A11F671008DE671 = {
@@ -479,6 +669,14 @@
 					};
 					7801EC3C2A11F672008DE671 = {
 						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 7801EC1C2A11F671008DE671;
+					};
+					7895215E2C05F6C60059F64A = {
+						CreatedOnToolsVersion = 15.4;
+						LastSwiftMigration = 1540;
+					};
+					789521652C05F6C60059F64A = {
+						CreatedOnToolsVersion = 15.4;
 						TestTargetID = 7801EC1C2A11F671008DE671;
 					};
 				};
@@ -503,6 +701,8 @@
 				7801EC1C2A11F671008DE671 /* RadioEquationsApp */,
 				7801EC322A11F672008DE671 /* RadioEquationsAppTests */,
 				7801EC3C2A11F672008DE671 /* RadioEquationsAppUITests */,
+				7895215E2C05F6C60059F64A /* RadioEquationsData */,
+				789521652C05F6C60059F64A /* RadioEquationsDataTests */,
 			);
 		};
 /* End PBXProject section */
@@ -533,6 +733,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7895215D2C05F6C60059F64A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		789521642C05F6C60059F64A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -540,7 +754,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7896CFC52AF767B000B40370 /* Double.swift in Sources */,
 				785B3C802A67416E000C3529 /* UIColor.extensions.swift in Sources */,
 				78B3C6EB2A5FA751003F0FB6 /* VoltagePowerResistanceViewModel.swift in Sources */,
 				7831032F2A196B44006EE253 /* ResistanceCurrentVoltageScreen.swift in Sources */,
@@ -549,17 +762,14 @@
 				7801EC212A11F671008DE671 /* AppDelegate.swift in Sources */,
 				78A43CC22A1EA88800293045 /* PowerVoltageCurrentScreen.swift in Sources */,
 				783103282A17E9B8006EE253 /* EquationScreenTabBarViewModel.swift in Sources */,
-				7831032A2A17EC9E006EE253 /* EquationList.swift in Sources */,
-				7896CFD02AF8935100B40370 /* AntennaGainUtils.swift in Sources */,
 				78A43CC42A1EA9A700293045 /* PowerVoltageCurrentViewModel.swift in Sources */,
+				7833B82D2C0522CE00F27B33 /* ApparentPowerCurrentVoltageScreen.swift in Sources */,
 				783103242A15D39D006EE253 /* DescriptionTab.swift in Sources */,
 				7896CFCE2AF81CAD00B40370 /* AntennaGainViewModel.swift in Sources */,
 				7801EC232A11F671008DE671 /* SceneDelegate.swift in Sources */,
 				78D07F562BFFF2CB0078DD8A /* ImpedanceViewModel.swift in Sources */,
 				78B3C6E62A5E7C54003F0FB6 /* PowerCurrentResistanceViewModel.swift in Sources */,
 				789FD7C42A1B9D56001E2DB8 /* ResistanceCurrentVoltageViewModel.swift in Sources */,
-				783103312A1970E5006EE253 /* EquationId.swift in Sources */,
-				785B3C892A6CCDDA000C3529 /* EquationFilterVariant.swift in Sources */,
 				783103262A15D3C0006EE253 /* EquationTab.swift in Sources */,
 				1B93B903FA4AFCAC0064DACA /* Extensions.swift in Sources */,
 				1B93B385364D75D7AB95B4BE /* InputTextView.swift in Sources */,
@@ -577,11 +787,9 @@
 				78B3C6E82A5F55D7003F0FB6 /* PowerCurrentResistanceScreen.swift in Sources */,
 				78B3C6F72A65F251003F0FB6 /* LegalScreen.swift in Sources */,
 				78D07F542BFFF2CB0078DD8A /* ImpedanceScreen.swift in Sources */,
-				1B93BC490273194FBFD51A3B /* Equation.swift in Sources */,
-				1B93BECFBF3400790B3A3302 /* CalculationFunctionProtocol.swift in Sources */,
 				7831032C2A1966A1006EE253 /* DescriptionTabViewModel.swift in Sources */,
 				78B3C6F02A649DD9003F0FB6 /* SettingsScreen.swift in Sources */,
-				78D07F552BFFF2CB0078DD8A /* ImpedanceUtils.swift in Sources */,
+				7833B8312C05230900F27B33 /* ApparentPowerVoltageCurrentViewModel.swift in Sources */,
 				78A43CCA2A244EFC00293045 /* CalculationFieldStackView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -591,12 +799,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7801EC382A11F672008DE671 /* RadioEquationsAppTests.swift in Sources */,
-				78D07F592C017C3F0078DD8A /* ImpedanceUtils.swift in Sources */,
-				7896CFD42AF894A900B40370 /* AntennaGainUtils.swift in Sources */,
-				78D07F582C017C340078DD8A /* ImpedanceUtilsTests.swift in Sources */,
-				7896CFC92AF7E2FA00B40370 /* Double.swift in Sources */,
-				7896CFD32AF8949E00B40370 /* AntennaGainUtilsTestSuite.swift in Sources */,
-				7896CFC72AF7DDBF00B40370 /* RoundingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -606,6 +808,35 @@
 			files = (
 				7801EC442A11F672008DE671 /* RadioEquationsAppUITestsLaunchTests.swift in Sources */,
 				7801EC422A11F672008DE671 /* RadioEquationsAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7895215B2C05F6C60059F64A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7895217D2C05F6FF0059F64A /* EquationId.swift in Sources */,
+				7895217C2C05F6E00059F64A /* CalculationUtilsProtocol.swift in Sources */,
+				789521822C05F7130059F64A /* EquationDescriptionStrings.swift in Sources */,
+				789521942C0622560059F64A /* ImpedanceUtils.swift in Sources */,
+				7895217E2C05F6FF0059F64A /* Equation.swift in Sources */,
+				789521802C05F6FF0059F64A /* EquationList.swift in Sources */,
+				7895217F2C05F6FF0059F64A /* EquationFilterVariant.swift in Sources */,
+				789521932C0622510059F64A /* AntennaGainUtils.swift in Sources */,
+				789521852C05F7620059F64A /* EquationTableSectionModel.swift in Sources */,
+				789521962C06225E0059F64A /* Double.swift in Sources */,
+				789521952C0622590059F64A /* ApparentPowerCurrentVoltageUtils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		789521622C05F6C60059F64A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7895218A2C05FAAC0059F64A /* ImpedanceUtilsTests.swift in Sources */,
+				7895218B2C05FAAC0059F64A /* AntennaGainUtilsTestSuite.swift in Sources */,
+				7895216E2C05F6C60059F64A /* RadioEquationsDataTests.swift in Sources */,
+				7895218C2C05FAAC0059F64A /* RoundingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,6 +852,21 @@
 			isa = PBXTargetDependency;
 			target = 7801EC1C2A11F671008DE671 /* RadioEquationsApp */;
 			targetProxy = 7801EC3E2A11F672008DE671 /* PBXContainerItemProxy */;
+		};
+		789521692C05F6C60059F64A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7895215E2C05F6C60059F64A /* RadioEquationsData */;
+			targetProxy = 789521682C05F6C60059F64A /* PBXContainerItemProxy */;
+		};
+		7895216B2C05F6C60059F64A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7801EC1C2A11F671008DE671 /* RadioEquationsApp */;
+			targetProxy = 7895216A2C05F6C60059F64A /* PBXContainerItemProxy */;
+		};
+		789521712C05F6C60059F64A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7895215E2C05F6C60059F64A /* RadioEquationsData */;
+			targetProxy = 789521702C05F6C60059F64A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -761,6 +1007,7 @@
 		7801EC482A11F672008DE671 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -789,6 +1036,7 @@
 		7801EC492A11F672008DE671 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -890,6 +1138,137 @@
 			};
 			name = Release;
 		};
+		789521752C05F6C60059F64A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 4QGR522B9M;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = rjs.app.dev.RadioEquationsData;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		789521762C05F6C60059F64A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 4QGR522B9M;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = rjs.app.dev.RadioEquationsData;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		789521772C05F6C60059F64A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4QGR522B9M;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = rjs.app.dev.RadioEquationsDataTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RadioEquationsApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RadioEquationsApp";
+			};
+			name = Debug;
+		};
+		789521782C05F6C60059F64A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4QGR522B9M;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = rjs.app.dev.RadioEquationsDataTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RadioEquationsApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RadioEquationsApp";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -925,6 +1304,24 @@
 			buildConfigurations = (
 				7801EC4E2A11F672008DE671 /* Debug */,
 				7801EC4F2A11F672008DE671 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		789521792C05F6C60059F64A /* Build configuration list for PBXNativeTarget "RadioEquationsData" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				789521752C05F6C60059F64A /* Debug */,
+				789521762C05F6C60059F64A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7895217A2C05F6C60059F64A /* Build configuration list for PBXNativeTarget "RadioEquationsDataTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				789521772C05F6C60059F64A /* Debug */,
+				789521782C05F6C60059F64A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

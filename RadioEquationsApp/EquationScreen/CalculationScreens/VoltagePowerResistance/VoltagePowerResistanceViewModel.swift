@@ -1,5 +1,6 @@
 import Foundation
 import Combine
+import RadioEquationsData
 
 enum VoltagePowerResistanceFieldTag: Int {
     case voltage = 1

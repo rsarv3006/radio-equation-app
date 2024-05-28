@@ -1,11 +1,7 @@
 import Foundation
 
-struct EquationsTableSectionModel {
-    let title: String
-    let equations: [Equation]
-}
-
-let VoltageCurrentResistanceDescriptionString = """
+public struct DescriptionStrings {
+    static let VoltageCurrentResistance = """
 The equation [math]$E = I \\times R$[/math] represents the relationship between electrical energy (E), current (I), and resistance (R) in an electrical circuit.
 
 Here's a breakdown of each component:
@@ -17,8 +13,8 @@ According to Ohm's Law, the equation [math]$E = I \\times R$[/math] expresses th
 
 In practical terms, this equation can be used to calculate the energy consumption or dissipation in a circuit when the current and resistance values are known. Alternatively, it can be rearranged to solve for other variables. For example, if you know the energy and resistance, you can calculate the current by rearranging the equation as [math]$I = E / R$[/math].
 """
-
-let PowerVoltageCurrentDescriptionString = """
+    
+    static let PowerVoltageCurrent = """
 The equation [math]$P = E \\times I$[/math] represents the relationship between power (P), electrical energy (E), and current (I) in an electrical circuit.
 
 Here's a breakdown of each component:
@@ -32,8 +28,8 @@ This equation is derived from the definition of power, which is the rate at whic
 
 In practical terms, this equation is commonly used to calculate the power consumption or dissipation in a circuit when the energy and current values are known. It can also be rearranged to solve for other variables. For example, if you know the power and current, you can calculate the energy by rearranging the equation as [math]$E = P / I$[/math].
 """
-
-let PowerCurrentResistanceDescriptionString = """
+    
+    static let PowerCurrentResistance = """
 The equation [math]$P = I^2 \\times R$[/math] represents the relationship between power (P), current (I), and resistance (R) in an electrical circuit.
 
 Here's a breakdown of each component:
@@ -47,8 +43,8 @@ This equation is derived from Ohm's Law, which states that the current flowing t
 
 In practical terms, this equation is commonly used to calculate the power dissipation in a circuit when the current and resistance values are known. It illustrates that power is directly proportional to the square of the current and the resistance. Therefore, a circuit with higher current or higher resistance will dissipate more power. Conversely, decreasing either the current or resistance will result in lower power dissipation.
 """
-
-let PowerVoltageResistanceDescriptionString = """
+    
+    static let PowerVoltageResistance = """
 The equation [math]$P = E^2 / R$[/math] represents the relationship between power (P), electrical energy (E), and resistance (R) in an electrical circuit.
 
 Here's a breakdown of each component:
@@ -62,8 +58,8 @@ This equation can be derived by combining Ohm's Law [math]$(I = V / R)$[/math] w
 
 In practical terms, this equation is commonly used to calculate the power dissipation in a circuit when the electrical energy and resistance values are known. It shows that power is inversely proportional to the resistance and that doubling the resistance will halve the power dissipation. Similarly, increasing the electrical energy will result in higher power, assuming the resistance remains constant.
 """
-
-let AntennaGainDescriptionString = """
+    
+    static let AntennaGain = """
 The antenna gain equation calculates the gain of an antenna in decibels (dB). The gain represents how much an antenna concentrates radio frequency energy in a particular direction, if the antenna is a non-omnidirectional antenna.  If it is an omni-directional antenna, then the gain or main-lobe of the radio frequency energy is assumed to radiate in a 360-degree pattern, as in a sphere-shaped pattern.
 
 The formula is:
@@ -83,8 +79,8 @@ The ratio of output power to input power gives the power gain of the antenna. Ta
 
 So in summary, this formula takes the ratio of output to input power, takes the logarithm to get the absolute gain, and then converts to decibels to calculate the total antenna gain. The higher the gain in dB, the more intense the antenna radiation is in a particular direction (if a non-omnidirectional antenna) or not (if an omnidirectional antenna.)
 """
-
-let ImpedanceResistanceReactanceDescriptionString = """
+    
+    static let ImpedanceResistanceReactance = """
 The impedance of an electrical circuit is a measure of the opposition to the flow of alternating current (AC) through the circuit.
 
 It consists of two components: resistance (R) and reactance (X), which can be inductive (X_L) or capacitive (X_C).
@@ -93,42 +89,21 @@ The total impedance (Z) is the vector sum of the resistance and reactance compon
 
 Note due to the nature of this equation, it is possible to have a result of 'nan' (not a number) if the reactance components are equal. This is because the square root of a negative number is not a real number.
 """
-
-let EquationsTableInfo = [
-    EquationsTableSectionModel(title: "Voltage", equations: [
-        Equation(title: "[math]$E = I \\times R$[/math]", description: VoltageCurrentResistanceDescriptionString, id: .voltage1, filters: []),
-        Equation(title: "[math]$E = P / I$[/math]", description: PowerVoltageCurrentDescriptionString, id: .voltage2, filters: []),
-        Equation(title: "[math]$E = \\sqrt{P \\times R}$[/math]", description: PowerVoltageResistanceDescriptionString, id: .voltage3, filters: [.advancedFunctions]),
-    ]),
-
-    EquationsTableSectionModel(title: "Resistance", equations: [
-        Equation(title: "[math]$R = E / I$[/math]", description: VoltageCurrentResistanceDescriptionString, id: .resistance1, filters: []),
-        Equation(title: "[math]$R = P / I^2$[/math]", description: PowerCurrentResistanceDescriptionString, id: .resistance2, filters: [.advancedFunctions]),
-        Equation(title: "[math]$R = E^2 / P $[/math]", description: PowerVoltageResistanceDescriptionString, id: .resistance3, filters: [.advancedFunctions]),
-    ]),
-
-    EquationsTableSectionModel(title: "Current", equations: [
-        Equation(title: "[math]$I = E / R$[/math]", description: VoltageCurrentResistanceDescriptionString, id: .current1, filters: []),
-        Equation(title: "[math]$I = P / E$[/math]", description: PowerVoltageCurrentDescriptionString, id: .current2, filters: []),
-        Equation(title: "[math]$I = \\sqrt{P / R}$[/math]", description: PowerCurrentResistanceDescriptionString, id: .current3, filters: [.advancedFunctions]),
-    ]),
-
-    EquationsTableSectionModel(title: "Power", equations: [
-        Equation(title: "[math]$P = E \\times I$[/math]", description: PowerVoltageCurrentDescriptionString, id: .power1, filters: []),
-        Equation(title: "[math]$P = E^2 / R$[/math]", description: PowerVoltageResistanceDescriptionString, id: .power2, filters: [.advancedFunctions]),
-        Equation(title: "[math]$P = I^2 \\times R$[/math]", description: PowerCurrentResistanceDescriptionString, id: .power3, filters: [.advancedFunctions]),
-    ]),
-
-    EquationsTableSectionModel(title: "Antenna Gain", equations: [
-        Equation(title: "[math]$db = 10 \\times log_1_0(P2 / P1)$[/math]", description: AntennaGainDescriptionString, id: .antennaGain1, filters: []),
-        Equation(title: "[math]$P1 = P2 / 10^(^d^b^/^1^0^)$[/math]", description: AntennaGainDescriptionString, id: .antennaGain2, filters: [.advancedFunctions]),
-        Equation(title: "[math]$P2 = P1 \\times 10^(^1^0 ^\\times ^d^b^)$[/math]", description: AntennaGainDescriptionString, id: .antennaGain3, filters: [.advancedFunctions]),
-    ]),
-
-    EquationsTableSectionModel(title: "AC Impedance", equations: [
-        Equation(title: "[math]$Z = \\sqrt{R^2 + (X_L - X_C)^2}$[/math]", description: ImpedanceResistanceReactanceDescriptionString, id: .impedance1, filters: []),
-        Equation(title: "[math]$R = \\sqrt{Z^2 + (X_L - X_C)^2}$[/math]", description: ImpedanceResistanceReactanceDescriptionString, id: .impedance2, filters: [.alternatingCurrentFunctions]),
-        Equation(title: "[math]$X_L = \\sqrt{Z^2 - R^2} + X_C$[/math]", description: ImpedanceResistanceReactanceDescriptionString, id: .impedance3, filters: [.alternatingCurrentFunctions]),
-        Equation(title: "[math]$X_C = X_L - \\sqrt{Z^2 - R^2}$[/math]", description: ImpedanceResistanceReactanceDescriptionString, id: .impedance4, filters: [.alternatingCurrentFunctions]),
-    ]),
-]
+    
+    static let ApparentPowerVoltageCurrent = """
+// TODO: add description string
+"""
+    
+    static let ApparentPowerVoltageImpedance = """
+"""
+    
+    static let ApparentPowerCurrentImpedance = """
+"""
+    
+    static let VoltageCurrentImpedance = """
+"""
+    
+    static let Impedance = """
+"""
+    
+}

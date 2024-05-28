@@ -1,4 +1,5 @@
 import XCTest
+@testable import RadioEquationsData
 
 final class RoundingTests: XCTestCase {
     func testRounding() throws {

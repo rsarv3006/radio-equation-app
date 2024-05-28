@@ -1,6 +1,6 @@
 import Foundation
 
-enum EquationId: String, CaseIterable, Codable {
+public enum EquationId: String, CaseIterable, Codable {
     case ohmsLaw = "ohms-law"
     case powerEquation = "power-equation"
     case test = "test"
@@ -29,5 +29,21 @@ enum EquationId: String, CaseIterable, Codable {
     case impedance2 = "impedance-2"
     case impedance3 = "impedance-3"
     case impedance4 = "impedance-4"
+
+    case apparentPower1 = "apparent-power-1"
+    case apparentPower2 = "apparent-power-2"
+    case apparentPower3 = "apparent-power-3"
+
+    case voltageAC1 = "voltage-ac-1"
+    case voltageAC2 = "voltage-ac-2"
+    case voltageAC3 = "voltage-ac-3"
+
+    case impedance5 = "impedance-5"
+    case impedance6 = "impedance-6"
+    case impedance7 = "impedance-7"
+
+    case currentAC1 = "current-ac-1"
+    case currentAC2 = "current-ac-2"
+    case currentAC3 = "current-ac-3"
 }
 

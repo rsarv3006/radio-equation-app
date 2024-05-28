@@ -1,4 +1,5 @@
 import XCTest
+@testable import RadioEquationsData
 
 final class ImpedanceUtilsTests: XCTestCase {
     func testCalculateImpedance() throws {

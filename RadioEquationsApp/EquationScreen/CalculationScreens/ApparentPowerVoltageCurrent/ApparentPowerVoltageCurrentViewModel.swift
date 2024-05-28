@@ -2,21 +2,21 @@ import Combine
 import Foundation
 import RadioEquationsData
 
-enum ImpedanceFieldTag: Int {
+enum ApparentPowerVoltageCurrentFieldTag: Int {
     case impedance = 0
     case resistance = 1
     case inductiveReactance = 2
     case capacitiveReactance = 3
 
-    static func getFieldTagFromInt(fieldTagInt: Int) -> ImpedanceFieldTag? {
+    static func getFieldTagFromInt(fieldTagInt: Int) -> ApparentPowerVoltageCurrentFieldTag? {
         switch fieldTagInt {
-        case ImpedanceFieldTag.impedance.rawValue:
+        case ApparentPowerVoltageCurrentFieldTag.impedance.rawValue:
             return .impedance
-        case ImpedanceFieldTag.resistance.rawValue:
+        case ApparentPowerVoltageCurrentFieldTag.resistance.rawValue:
             return .resistance
-        case ImpedanceFieldTag.inductiveReactance.rawValue:
+        case ApparentPowerVoltageCurrentFieldTag.inductiveReactance.rawValue:
             return .inductiveReactance
-        case ImpedanceFieldTag.capacitiveReactance.rawValue:
+        case ApparentPowerVoltageCurrentFieldTag.capacitiveReactance.rawValue:
             return .capacitiveReactance
         default:
             return nil
@@ -24,18 +24,17 @@ enum ImpedanceFieldTag: Int {
     }
 }
 
-struct ImpedanceFieldTagCalculatedPassthroughModel {
-    let fieldTag: ImpedanceFieldTag
+struct ApparentPowerFieldTagCalculatedPassthroughModel {
+    let fieldTag: ApparentPowerVoltageCurrentFieldTag
     let calculatedValue: Double
 }
 
-class ImpedanceViewModel {
-    private(set) var selectedCalculateFor: ImpedanceFieldTag
+class ApparentPowerVoltageCurrentViewModel {
+    private(set) var selectedCalculateFor: ApparentPowerVoltageCurrentFieldTag
 
     let equationTitle: String
-    let impedanceNanNote = "NOTE: 'nan' indicates a non real answer. Please see the description screen for more information."
 
-    init(equation: Equation, calculateFor: ImpedanceFieldTag = .impedance) {
+    init(equation: Equation, calculateFor: ApparentPowerVoltageCurrentFieldTag = .impedance) {
         selectedCalculateFor = calculateFor
         equationTitle = equation.title
     }
@@ -47,9 +46,9 @@ class ImpedanceViewModel {
 
     // MARK: - Properties
 
-    private(set) var calculatedValue = PassthroughSubject<ImpedanceFieldTagCalculatedPassthroughModel, Never>()
+    private(set) var calculatedValue = PassthroughSubject<ApparentPowerFieldTagCalculatedPassthroughModel, Never>()
 
-    func onUpdateValue(fieldTag: ImpedanceFieldTag, updatedValue: String) {
+    func onUpdateValue(fieldTag: ApparentPowerVoltageCurrentFieldTag, updatedValue: String) {
         guard let value = Double(updatedValue) else {
             return
         }
@@ -69,7 +68,7 @@ class ImpedanceViewModel {
     }
 
     func onUpdatedCalculateFor(selectedIndex: Int) {
-        selectedCalculateFor = ImpedanceFieldTag(rawValue: selectedIndex) ?? .impedance
+        selectedCalculateFor = ApparentPowerVoltageCurrentFieldTag(rawValue: selectedIndex) ?? .impedance
     }
 
     private func attemptCalculation() {
@@ -92,7 +91,7 @@ class ImpedanceViewModel {
               let capacitiveReactance
         else { return }
 
-        let calculatedImpedance = ImpedanceUtils.calculateImpedance(resistance: resistance, inductiveReactance: inductiveReactance, capacitiveReactance: capacitiveReactance)
+        let calculatedImpedance = ApparentPowerCurrentVoltageUtils.calculateImpedance(resistance: resistance, inductiveReactance: inductiveReactance, capacitiveReactance: capacitiveReactance)
         impedance = calculatedImpedance
 
         sendCalculatedValue(fieldTag: .impedance, value: calculatedImpedance)
@@ -103,7 +102,7 @@ class ImpedanceViewModel {
         else {
             return
         }
-        let calculatedResistance = ImpedanceUtils.calculateResistance(impedance: impedance, inductiveReactance: inductiveReactance, capacitiveReactance: capacitiveReactance)
+        let calculatedResistance = ApparentPowerCurrentVoltageUtils.calculateResistance(impedance: impedance, inductiveReactance: inductiveReactance, capacitiveReactance: capacitiveReactance)
 
         resistance = calculatedResistance
 
@@ -113,7 +112,7 @@ class ImpedanceViewModel {
     private func calculateInductiveReactance() {
         guard let impedance, let resistance, let capacitiveReactance
         else { return }
-        let calculatedInductiveReactance = ImpedanceUtils.calculateInductiveReactance(impedance: impedance, resistance: resistance, capacitiveReactance: capacitiveReactance)
+        let calculatedInductiveReactance = ApparentPowerCurrentVoltageUtils.calculateInductiveReactance(impedance: impedance, resistance: resistance, capacitiveReactance: capacitiveReactance)
 
         inductiveReactance = calculatedInductiveReactance
 
@@ -122,7 +121,7 @@ class ImpedanceViewModel {
 
     private func calculateCapacitiveReactance() {}
 
-    private func clearValueForTag(fieldTag: ImpedanceFieldTag) {
+    private func clearValueForTag(fieldTag: ApparentPowerVoltageCurrentFieldTag) {
         switch fieldTag {
         case .impedance:
             impedance = nil
@@ -135,7 +134,7 @@ class ImpedanceViewModel {
         }
     }
 
-    private func sendCalculatedValue(fieldTag: ImpedanceFieldTag, value: Double) {
-        calculatedValue.send(ImpedanceFieldTagCalculatedPassthroughModel(fieldTag: fieldTag, calculatedValue: value))
+    private func sendCalculatedValue(fieldTag: ApparentPowerVoltageCurrentFieldTag, value: Double) {
+        calculatedValue.send(ApparentPowerFieldTagCalculatedPassthroughModel(fieldTag: fieldTag, calculatedValue: value))
     }
 }

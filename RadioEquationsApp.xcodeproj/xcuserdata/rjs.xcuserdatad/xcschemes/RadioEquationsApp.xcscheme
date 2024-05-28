@@ -32,6 +32,30 @@
             default = "YES">
          </TestPlanReference>
       </TestPlans>
+      <Testables>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "789521652C05F6C60059F64A"
+               BuildableName = "RadioEquationsDataTests.xctest"
+               BlueprintName = "RadioEquationsDataTests"
+               ReferencedContainer = "container:RadioEquationsApp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "7801EC3C2A11F672008DE671"
+               BuildableName = "RadioEquationsAppUITests.xctest"
+               BlueprintName = "RadioEquationsAppUITests"
+               ReferencedContainer = "container:RadioEquationsApp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"

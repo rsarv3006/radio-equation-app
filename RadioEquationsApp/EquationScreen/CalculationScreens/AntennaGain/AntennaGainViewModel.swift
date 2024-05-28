@@ -1,5 +1,6 @@
 import Foundation
 import Combine
+import RadioEquationsData
 
 enum AntennaGainFieldTag: Int {
     case antennaGain = 0

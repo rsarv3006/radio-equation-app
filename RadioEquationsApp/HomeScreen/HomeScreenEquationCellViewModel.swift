@@ -1,4 +1,5 @@
 import Foundation
+import RadioEquationsData
 
 class HomeScreenEquationCellViewModel {
     let equationTitle: String

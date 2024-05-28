@@ -1,5 +1,6 @@
 import Combine
 import UIKit
+import RadioEquationsData
 
 class ViewController: UIViewController {
     private var subscriptions = Set<AnyCancellable>()
