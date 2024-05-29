@@ -21,7 +21,7 @@
     {
       "identity" : "jgprogresshud",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/JonasGessner/JGProgressHUD.git",
+      "location" : "https://github.com/JonasGessner/JGProgressHUD",
       "state" : {
         "revision" : "78d7cd35f1d90ff74fd82e486f2cbe4b24be8cf9",
         "version" : "2.2.0"
@@ -32,8 +32,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/rsarv3006/RichTextView",
       "state" : {
-        "branch" : "master",
-        "revision" : "63de55849cbc3454c3022a146c3cc876213ba451"
+        "revision" : "536d0851868e25da91abc586cc9fda6a032d37a6",
+        "version" : "3.3.3"
       }
     },
     {
@@ -41,8 +41,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/SnapKit/SnapKit",
       "state" : {
-        "revision" : "f222cbdf325885926566172f6f5f06af95473158",
-        "version" : "5.6.0"
+        "revision" : "2842e6e84e82eb9a8dac0100ca90d9444b0307f4",
+        "version" : "5.7.1"
       }
     },
     {
@@ -50,8 +50,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/tophatmonocle/SwiftRichString",
       "state" : {
-        "branch" : "master",
-        "revision" : "fa126095c626354e1c4ffdf75bc7ad54aedd6b67"
+        "revision" : "fa126095c626354e1c4ffdf75bc7ad54aedd6b67",
+        "version" : "3.7.7"
       }
     }
   ],
