@@ -1,150 +1,24 @@
-Resolving Package Graph
-Resolved source packages
-iosMath - https://github.com/tophatmonocle/iosMath @ 1.1.2
-SnapKit - https://github.com/SnapKit/SnapKit @ 5.6.0
-Down - https://github.com/johnxnguyen/Down @ 0.11.0
-JGProgressHUD - https://github.com/JonasGessner/JGProgressHUD.git @ 2.2.0
 [!]  --- xcodebuild: Using the first of multiple matching destinations:
-{ platform:iOS Simulator, id:19092651-E761-42EF-AF4C-F1F4888966A8, OS:17.2, name:iPhone 15 }
-{ platform:iOS Simulator, id:19092651-E761-42EF-AF4C-F1F4888966A8, OS:17.2, name:iPhone 15 }
-[iosMath_iosMath] Copying xits-math.plist
-[iosMath_iosMath] Copying texgyretermes-math.plist
-[iosMath_iosMath] Copying xits-math.otf
-[iosMath_iosMath] Copying latinmodern-math.plist
-[iosMath_iosMath] Copying texgyretermes-math.otf
-[iosMath_iosMath] Copying latinmodern-math.otf
-[Down_Down] Copying DownView.bundle
-[Down_Down] Copying DownView\ (macOS).bundle
-[iosMath_iosMath] Processing empty-iosMath_iosMath.plist
-[Down_Down] Processing empty-Down_Down.plist
-Signing Down_Down.bundle (in target 'Down_Down' from project 'Down')
-Signing iosMath_iosMath.bundle (in target 'iosMath_iosMath' from project 'iosMath')
-[Down_Down] Touching Down_Down.bundle
-[iosMath_iosMath] Touching iosMath_iosMath.bundle
-[iosMath] Compiling resource_bundle_accessor.m
-[iosMath] Compiling UIColor+HexString.m
-[iosMath] Compiling NSView+backgroundColor.m
-[iosMath] Compiling NSColor+HexString.m
-[iosMath] Compiling NSBezierPath+addLineToPoint.m
-[iosMath] Compiling MTUnicode.m
-[iosMath] Compiling MTTypesetter.m
-[iosMath] Compiling MTMathUILabel.m
-[libcmark] Compiling xml.c
-[libcmark] Compiling utf8.c
-[libcmark] Compiling scanners.c
-[libcmark] Compiling render.c
-[libcmark] Compiling references.c
-[libcmark] Compiling node.c
-[libcmark] Compiling man.c
-[libcmark] Compiling latex.c
-[libcmark] Compiling iterator.c
-[libcmark] Compiling inlines.c
-[libcmark] Compiling html.c
-[libcmark] Compiling houdini_html_u.c
-[libcmark] Compiling houdini_html_e.c
-[libcmark] Compiling houdini_href_e.c
-[libcmark] Compiling commonmark.c
-[libcmark] Compiling cmark_ctype.c
-[libcmark] Compiling cmark.c
-[libcmark] Compiling buffer.c
-[libcmark] Compiling blocks.c
-[libcmark] Compiling xml.c
-[libcmark] Compiling utf8.c
-[libcmark] Compiling scanners.c
-[libcmark] Linking libcmark.o
-[libcmark] Compiling render.c
-[libcmark] Compiling references.c
-[libcmark] Compiling node.c
-[libcmark] Compiling man.c
-[libcmark] Compiling latex.c
-[libcmark] Compiling iterator.c
-[libcmark] Compiling inlines.c
-[libcmark] Compiling html.c
-[libcmark] Compiling houdini_html_u.c
-[libcmark] Compiling houdini_html_e.c
-[libcmark] Compiling houdini_href_e.c
-[libcmark] Compiling commonmark.c
-[libcmark] Compiling cmark_ctype.c
-[libcmark] Compiling cmark.c
-[libcmark] Compiling buffer.c
-[libcmark] Compiling blocks.c
-[iosMath] Compiling MTMathListIndex.m
-[iosMath] Compiling MTMathListDisplay.m
-[iosMath] Compiling MTMathListBuilder.m
-[iosMath] Compiling MTMathList.m
-[iosMath] Compiling MTMathAtomFactory.m
-[libcmark] Linking libcmark.o
-[iosMath] Compiling MTLabel.m
-[iosMath] Compiling MTFontMathTable.m
-[iosMath] Compiling MTFontManager.m
-[iosMath] Compiling MTFont.m
-[iosMath] Compiling resource_bundle_accessor.m
-[iosMath] Compiling UIColor+HexString.m
-[iosMath] Compiling NSView+backgroundColor.m
-[iosMath] Compiling NSColor+HexString.m
-[iosMath] Linking iosMath.o
-[iosMath] Compiling NSBezierPath+addLineToPoint.m
-[iosMath] Compiling MTUnicode.m
-[iosMath] Compiling MTTypesetter.m
-[iosMath] Compiling MTMathUILabel.m
-[iosMath] Compiling MTMathListIndex.m
-[iosMath] Compiling MTMathListDisplay.m
-[iosMath] Compiling MTMathListBuilder.m
-[iosMath] Compiling MTMathList.m
-[iosMath] Compiling MTMathAtomFactory.m
-[iosMath] Compiling MTLabel.m
-[iosMath] Compiling MTFontMathTable.m
-[iosMath] Compiling MTFontManager.m
-[iosMath] Compiling MTFont.m
-[JGProgressHUD] Compiling JGProgressHUDSuccessIndicatorView.m
-[JGProgressHUD] Compiling JGProgressHUDShadow.m
-[JGProgressHUD] Compiling JGProgressHUDRingIndicatorView.m
-[JGProgressHUD] Compiling JGProgressHUDPieIndicatorView.m
-[JGProgressHUD] Compiling JGProgressHUDIndicatorView.m
-[JGProgressHUD] Compiling JGProgressHUDIndeterminateIndicatorView.m
-[JGProgressHUD] Compiling JGProgressHUDImageIndicatorView.m
-[iosMath] Linking iosMath.o
-[JGProgressHUD] Compiling JGProgressHUDFadeZoomAnimation.m
-[JGProgressHUD] Compiling JGProgressHUDFadeAnimation.m
-[JGProgressHUD] Compiling JGProgressHUDErrorIndicatorView.m
-[JGProgressHUD] Compiling JGProgressHUDAnimation.m
-[JGProgressHUD] Compiling JGProgressHUD.m
-[JGProgressHUD] Compiling JGProgressHUDSuccessIndicatorView.m
-[JGProgressHUD] Compiling JGProgressHUDShadow.m
-[JGProgressHUD] Compiling JGProgressHUDRingIndicatorView.m
-[JGProgressHUD] Compiling JGProgressHUDPieIndicatorView.m
-[JGProgressHUD] Compiling JGProgressHUDIndicatorView.m
-[JGProgressHUD] Compiling JGProgressHUDIndeterminateIndicatorView.m
-[JGProgressHUD] Compiling JGProgressHUDImageIndicatorView.m
-[JGProgressHUD] Compiling JGProgressHUDFadeZoomAnimation.m
-[JGProgressHUD] Compiling JGProgressHUDFadeAnimation.m
-[JGProgressHUD] Compiling JGProgressHUDErrorIndicatorView.m
-[JGProgressHUD] Compiling JGProgressHUDAnimation.m
-[JGProgressHUD] Compiling JGProgressHUD.m
-[SnapKit] Linking SnapKit.o
-[SnapKit] Linking SnapKit.o
-[Down] Linking Down.o
-[Down] Linking Down.o
-[JGProgressHUD] Linking JGProgressHUD.o
-[JGProgressHUD] Linking JGProgressHUD.o
-[SwiftRichString] Linking SwiftRichString.o
-[SwiftRichString] Linking SwiftRichString.o
-[RichTextView] Linking RichTextView.o
-[RichTextView] Linking RichTextView.o
-[RadioEquationsApp] Copying RadioEquations.storekit
-[RadioEquationsApp] Compiling Main.storyboard
-[RadioEquationsApp] Compiling LaunchScreen.storyboard
-[RadioEquationsApp] Processing Info.plist
-[RadioEquationsApp] Linking RadioEquationsApp
-[RadioEquationsApp] Linking RadioEquationsApp
-[RadioEquationsApp] Generating RadioEquationsApp.app.dSYM
-Signing RadioEquationsApp.app (in target 'RadioEquationsApp' from project 'RadioEquationsApp')
-[RadioEquationsApp] Touching RadioEquationsApp.app
-Build Succeeded
+{ platform:iOS Simulator, id:3F069954-90E0-4096-89E8-D4CCED518004, OS:17.4, name:iPhone 15 Plus }
+{ platform:iOS Simulator, id:3F069954-90E0-4096-89E8-D4CCED518004, OS:17.4, name:iPhone 15 Plus }
+[RadioEquationsData] Compiling EquationList.swift
+[RadioEquationsData] Compiling ApparentPowerCurrentVoltageUtils.swift
+Signing RadioEquationsData.framework (in target 'RadioEquationsData' from project 'RadioEquationsApp')
+[RadioEquationsApp] Compiling EquationScreenTabBar.swift
+[x] /Users/rjs/dev/RadioEquationsApp/RadioEquationsApp/Sources/EquationScreen/EquationScreenTabBar.swift:134:116: cannot find 'ApparentPowerCurrentVoltageUtils' in scope
+                let vm = SharedCalculationViewModel(equation: equation, calculateFor: .fieldOne, calculationUtils: ApparentPowerCurrentVoltageUtils())
+                                                                                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[RadioEquationsApp] Compiling SharedCalculationScreen.swift
 
 -----------------------------
 -- xcodebuild.nvim summary --
 -----------------------------
 
-  ✔ Build Succeeded
+Errors:
+  ✖ /Users/rjs/dev/RadioEquationsApp/RadioEquationsApp/Sources/EquationScreen/EquationScreenTabBar.swift:134:116
+    cannot find 'ApparentPowerCurrentVoltageUtils' in scope
+                    let vm = SharedCalculationViewModel(equation: equation, calculateFor: .fieldOne, calculationUtils: ApparentPowerCurrentVoltageUtils())
+                                                                                                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Build Failed
 

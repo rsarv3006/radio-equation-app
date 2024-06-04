@@ -1,37 +1,37 @@
-import UIKit
 import RadioEquationsData
+import UIKit
 
 class EquationScreenTabBar: UITabBarController {
-    
     private var viewModel: EquationScreenTabBarViewModel?
-    
+
     init(viewModel: EquationScreenTabBarViewModel? = nil) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
-    
-    required init?(coder: NSCoder) {
+
+    @available(*, unavailable)
+    required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let equation = viewModel?.equation else { return }
-        
+
         let descriptionVC = DescriptionTab()
         descriptionVC.viewModel = DescriptionTabViewModel(equation: equation)
         descriptionVC.title = "Description"
         let descriptionTabBarItem = UITabBarItem(title: "Description", image: UIImage(systemName: "doc.plaintext")?.withTintColor(.Theme.altColor, renderingMode: .alwaysOriginal), tag: 0)
         descriptionVC.tabBarItem = descriptionTabBarItem
-        
+
         let equationVC = createEquationCalculationScreen()
         equationVC.title = "Equation"
         let equationTabBarItem = UITabBarItem(title: "Equation", image: UIImage(systemName: "function")?.withTintColor(.Theme.altColor, renderingMode: .alwaysOriginal), tag: 1)
         equationVC.tabBarItem = equationTabBarItem
-        
+
         viewControllers = [equationVC, descriptionVC]
     }
-    
+
     private func createEquationCalculationScreen() -> UIViewController {
         if let equation = viewModel?.equation, let equationId = viewModel?.equation.id {
             switch equationId {
@@ -130,6 +130,11 @@ class EquationScreenTabBar: UITabBarController {
                 let screen = ImpedanceScreen()
                 screen.viewModel = vm
                 return screen
+            case .apparentPower1:
+                let vm = SharedCalculationViewModel(equation: equation, calculateFor: .fieldOne, calculationUtils: ApparentPowerCurrentVoltageUtils())
+                let screen = SharedCalculationScreen()
+                screen.viewModel = vm
+                return screen
             default:
                 return EquationTab()
             }
@@ -137,5 +142,4 @@ class EquationScreenTabBar: UITabBarController {
             return EquationTab()
         }
     }
-
 }

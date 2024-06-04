@@ -12,8 +12,8 @@
 	"argv": [
 		"/opt/homebrew/bin/xcode-build-server"
 	],
-	"workspace": "/Users/rjs/dev/RadioEquationsApp/RadioEquationsApp.xcodeproj/project.xcworkspace",
-	"build_root": "/Users/rjs/Library/Developer/Xcode/DerivedData/RadioEquationsApp-ezrfbqflthsrqzfdwukwjdowqzer",
+	"workspace": "/Users/rjs/dev/RadioEquationsApp/RadioEquationsApp.xcworkspace",
+	"build_root": "/Users/rjs/Library/Developer/Xcode/DerivedData/RadioEquationsApp-ccdgripekhnhvaaiwpwgufaggulj",
 	"scheme": "RadioEquationsApp",
 	"kind": "xcode"
 }
