@@ -1,7 +1,10 @@
 import Foundation
 
-public protocol CalculationUtils {
-    func calculateField1(inputs: Double...) -> Double
-    func calculateField2(inputs: Double...) -> Double
-    func calculateField3(inputs: Double...) -> Double
+public typealias CalculationFunction = (_: Double...) -> Double
+
+public protocol CalculationUtils: Codable {
+    func calculateFieldOne(_: Double...) -> Double
+    func calculateFieldTwo(_: Double...) -> Double
+    func calculateFieldThree(_: Double...) -> Double
 }
+

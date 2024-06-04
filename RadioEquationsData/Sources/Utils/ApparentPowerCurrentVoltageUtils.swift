@@ -1,22 +1,34 @@
 import Foundation
 
-public enum ApparentPowerCurrentVoltageUtils {
-    public static func calculateImpedance(resistance r: Double, inductiveReactance xl: Double, capacitiveReactance xc: Double) -> Double {
-        let impedance = (pow(r, 2) + pow(xl - xc, 2)).squareRoot()
-        return impedance.rounded(toPlaces: 2)
+public struct ApparentPowerCurrentVoltageUtils: Codable {
+    public static func calculateApparentPower(current: Double, voltage: Double) -> Double {
+        let apparentPower = current * voltage
+        return apparentPower.rounded(toPlaces: 2)
     }
 
-    public static func calculateResistance(impedance z: Double, inductiveReactance xl: Double, capacitiveReactance xc: Double) -> Double {
-        let resistance = (pow(z, 2) - pow(xl - xc, 2)).squareRoot()
-        return resistance.rounded(toPlaces: 2)
+    public static func calculateCurrent(apparentPower: Double, voltage: Double) -> Double {
+        let current = apparentPower / voltage
+        return current.rounded(toPlaces: 2)
     }
 
-    public static func calculateCapacitiveReactance(impedance z: Double, resistance r: Double, inductiveReactance xl: Double) -> Double {
-        return xl - (pow(z, 2) - pow(r, 2)).squareRoot()
+    public static func calculateVoltage(apparentPower: Double, current: Double) -> Double {
+        let voltage = apparentPower / current
+        return voltage.rounded(toPlaces: 2)
+    }
+    
+    public init(){}
+}
+
+extension ApparentPowerCurrentVoltageUtils: CalculationUtils {
+    public func calculateFieldOne(_ inputs: Double...) -> Double {
+        return ApparentPowerCurrentVoltageUtils.calculateApparentPower(current: inputs[0], voltage: inputs[1])
+    }
+    
+    public func calculateFieldTwo(_ inputs: Double...) -> Double {
+        return ApparentPowerCurrentVoltageUtils.calculateCurrent(apparentPower: inputs[0], voltage: inputs[1])
     }
 
-    public static func calculateInductiveReactance(impedance z: Double, resistance r: Double, capacitiveReactance xc: Double) -> Double {
-        return (pow(z, 2) - pow(r, 2)).squareRoot() + xc
+    public func calculateFieldThree(_ inputs: Double...) -> Double {
+        return ApparentPowerCurrentVoltageUtils.calculateVoltage(apparentPower: inputs[0], current: inputs[1])
     }
-
 }

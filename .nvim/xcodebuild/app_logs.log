@@ -1,1 +1,3 @@
-rjs.app.dev.RadioEquationsApp: 83701
+2024-06-03 06:13:11.217 RadioEquationsApp[11088:42606383] Can't find keyplane that supports type 8 for keyboard iPhone-PortraitTruffle-DecimalPad; using 27426_PortraitTruffle_iPhone-Simple-Pad_Default
+2024-06-03 06:13:13.537 RadioEquationsApp[11088:42606383] Can't find keyplane that supports type 8 for keyboard iPhone-PortraitTruffle-DecimalPad; using 27426_PortraitTruffle_iPhone-Simple-Pad_Default
+2024-06-03 06:13:23.966 RadioEquationsApp[11088:42606383] Can't find keyplane that supports type 8 for keyboard iPhone-PortraitTruffle-DecimalPad; using 27426_PortraitTruffle_iPhone-Simple-Pad_Default

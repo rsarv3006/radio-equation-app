@@ -43,7 +43,6 @@ class ResistanceCurrentVoltageScreen: UIViewController {
     }
     
     private lazy var equationLabel: RichTextView = {
-        
         let richTextView = RichTextView(
             input: "",
             latexParser: LatexParser(),
