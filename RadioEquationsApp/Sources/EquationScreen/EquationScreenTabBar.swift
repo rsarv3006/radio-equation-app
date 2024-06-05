@@ -131,7 +131,102 @@ class EquationScreenTabBar: UITabBarController {
                 screen.viewModel = vm
                 return screen
             case .apparentPower1:
-                let vm = SharedCalculationViewModel(equation: equation, calculateFor: .fieldOne, calculationUtils: ApparentPowerCurrentVoltageUtils())
+                let vm = SharedCalculationViewModel(
+                    equation: equation,
+                    calculateFor: .fieldOne,
+                    calculationUtils: ApparentPowerCurrentVoltageUtils()
+                )
+                let screen = SharedCalculationScreen()
+                screen.viewModel = vm
+                return screen
+            case .apparentPower2:
+                let vm = SharedCalculationViewModel(
+                    equation: equation,
+                    calculateFor: .fieldOne,
+                    calculationUtils: ApparentPowerVoltageImpedanceUtils()
+                )
+                let screen = SharedCalculationScreen()
+                screen.viewModel = vm
+                return screen
+            case .apparentPower3:
+                let vm = SharedCalculationViewModel(
+                    equation: equation,
+                    calculateFor: .fieldOne,
+                    calculationUtils: ApparentPowerCurrentImpedanceUtils()
+                )
+                let screen = SharedCalculationScreen()
+                screen.viewModel = vm
+                return screen
+            case .voltageAC1:
+                let vm = SharedCalculationViewModel(
+                    equation: equation,
+                    calculateFor: .fieldTwo,
+                    calculationUtils: ApparentPowerVoltageImpedanceUtils()
+                )
+                let screen = SharedCalculationScreen()
+                screen.viewModel = vm
+                return screen
+            case .voltageAC2:
+                let vm = SharedCalculationViewModel(equation: equation, calculateFor: .fieldThree, calculationUtils: ApparentPowerCurrentVoltageUtils())
+                let screen = SharedCalculationScreen()
+                screen.viewModel = vm
+                return screen
+            case .voltageAC3:
+                let vm = SharedCalculationViewModel(
+                    equation: equation,
+                    calculateFor: .fieldOne,
+                    calculationUtils: VoltageCurrentImpedanceUtils()
+                )
+                let screen = SharedCalculationScreen()
+                screen.viewModel = vm
+                return screen
+            case .currentAC1:
+                let vm = SharedCalculationViewModel(
+                    equation: equation,
+                    calculateFor: .fieldTwo,
+                    calculationUtils: VoltageCurrentImpedanceUtils()
+                )
+                let screen = SharedCalculationScreen()
+                screen.viewModel = vm
+                return screen
+            case .currentAC2:
+                let vm = SharedCalculationViewModel(
+                    equation: equation,
+                    calculateFor: .fieldTwo,
+                    calculationUtils: ApparentPowerCurrentImpedanceUtils()
+                )
+                let screen = SharedCalculationScreen()
+                screen.viewModel = vm
+                return screen
+            case .currentAC3:
+                let vm = SharedCalculationViewModel(equation: equation, calculateFor: .fieldTwo, calculationUtils: ApparentPowerCurrentVoltageUtils())
+                let screen = SharedCalculationScreen()
+                screen.viewModel = vm
+                return screen
+            case .impedance5:
+                let vm = SharedCalculationViewModel(
+                    equation: equation,
+                    calculateFor: .fieldThree,
+                    calculationUtils: VoltageCurrentImpedanceUtils()
+                )
+                let screen = SharedCalculationScreen()
+                screen.viewModel = vm
+                return screen
+            case .impedance6:
+                let vm = SharedCalculationViewModel(
+                    equation: equation,
+                    calculateFor: .fieldThree,
+                    calculationUtils: ApparentPowerVoltageImpedanceUtils()
+                )
+                let screen = SharedCalculationScreen()
+                screen.viewModel = vm
+                return screen
+            case .impedance7:
+                let vm = SharedCalculationViewModel(
+                    equation: equation,
+                    calculateFor: .fieldThree,
+                    calculationUtils: ApparentPowerCurrentImpedanceUtils()
+                )
                 let screen = SharedCalculationScreen()
                 screen.viewModel = vm
                 return screen

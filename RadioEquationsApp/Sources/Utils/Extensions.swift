@@ -1,5 +1,5 @@
-import UIKit
 import JGProgressHUD
+import UIKit
 
 extension UIViewController {
     static let hud = JGProgressHUD(style: .dark)
@@ -54,8 +54,8 @@ extension UIView {
                 paddingBottom: CGFloat = 0,
                 paddingRight: CGFloat = 0,
                 width: CGFloat? = nil,
-                height: CGFloat? = nil) {
-
+                height: CGFloat? = nil)
+    {
         translatesAutoresizingMaskIntoConstraints = false
 
         if let top = top {
@@ -99,8 +99,8 @@ extension UIView {
     }
 
     func centerY(inView view: UIView, leftAnchor: NSLayoutXAxisAnchor? = nil,
-                 paddingLeft: CGFloat = 0, constant: CGFloat = 0) {
-
+                 paddingLeft: CGFloat = 0, constant: CGFloat = 0)
+    {
         translatesAutoresizingMaskIntoConstraints = false
         centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: constant).isActive = true
 
@@ -129,32 +129,31 @@ extension UIView {
         translatesAutoresizingMaskIntoConstraints = false
         guard let view = superview else { return }
         anchor(top: view.topAnchor, left: view.leftAnchor,
-                bottom: view.bottomAnchor, right: view.rightAnchor)
+               bottom: view.bottomAnchor, right: view.rightAnchor)
     }
 }
 
 extension UITextView {
     func centerAlignVerticalText() {
-        var topCorrect = (self.bounds.size.height - self.contentSize.height * self.zoomScale) / 2
+        var topCorrect = (bounds.size.height - contentSize.height * zoomScale) / 2
         topCorrect = topCorrect < 0.0 ? 0.0 : topCorrect
-        self.contentInset.top = topCorrect
+        contentInset.top = topCorrect
     }
 
     func bottomAlignVerticalText() {
-        var topCorrect = (self.bounds.size.height - self.contentSize.height * self.zoomScale)
+        var topCorrect = (bounds.size.height - contentSize.height * zoomScale)
         topCorrect = topCorrect < 0.0 ? 0.0 : topCorrect
-        self.contentInset.top = topCorrect
+        contentInset.top = topCorrect
     }
 
     func topAlignVerticalText() {
-        self.contentInset.top = 0
+        contentInset.top = 0
     }
 }
 
 extension UIColor {
     static let tomato = UIColor(red: 1.00, green: 0.39, blue: 0.28, alpha: 1.00)
 }
-
 
 extension UICollectionViewCell {
     static var cellId: String {
@@ -168,21 +167,20 @@ extension UICollectionViewCell {
 
 extension UITextField: FieldValidInvalidHandlers {
     func valid() {
-        self.layer.borderColor = UIColor.systemGreen.cgColor
+        layer.borderColor = UIColor.systemGreen.cgColor
     }
 
     func invalid() {
-        self.layer.borderColor = UIColor.systemRed.cgColor
+        layer.borderColor = UIColor.systemRed.cgColor
     }
 }
 
 extension InputTextView: FieldValidInvalidHandlers {
     func valid() {
-        self.layer.borderColor = UIColor.systemGreen.cgColor
+        layer.borderColor = UIColor.systemGreen.cgColor
     }
 
     func invalid() {
-        self.layer.borderColor = UIColor.systemRed.cgColor
+        layer.borderColor = UIColor.systemRed.cgColor
     }
 }
-
