@@ -2,7 +2,7 @@ import Foundation
 
 enum PickerOptions {
     static let ApparentPowerCurrentImpedance = ["Apparent Power (AP)", "Current (I)", "Impedance (Z)"]
-    static let ApparentPowerVoltageCurrent = ["Apparent Power (AP)", "Voltage (V)", "Current (I)"]
+    static let ApparentPowerVoltageCurrent = ["Apparent Power (AP)", "Current (I)", "Voltage (V)"]
     static let ApparentPowerVoltageImpedance = ["Apparent Power (AP)", "Voltage (V)", "Impedance (Z)"]
     static let VoltageCurrentImpedance = ["Voltage (V)", "Current (I)", "Impedance (Z)"]
 }
@@ -168,7 +168,7 @@ public let EquationsTableInfo = [
             pickerOptions: PickerOptions.ApparentPowerVoltageCurrent
         ),
         Equation(
-            title: "[math]$AP = E^2 \\times Z$[/math]",
+            title: "[math]$AP = E^2 / Z$[/math]",
             description: DescriptionStrings.ApparentPowerVoltageImpedance,
             id: .apparentPower2,
             filters: [.alternatingCurrentFunctions],
@@ -200,10 +200,10 @@ public let EquationsTableInfo = [
         ),
         Equation(
             title: "[math]$E = I \\times Z$[/math]",
-            description: DescriptionStrings.ApparentPowerCurrentImpedance,
+            description: DescriptionStrings.VoltageCurrentImpedance,
             id: .voltageAC3,
             filters: [.alternatingCurrentFunctions],
-            pickerOptions: PickerOptions.ApparentPowerCurrentImpedance
+            pickerOptions: PickerOptions.VoltageCurrentImpedance
         ),
     ]),
 
