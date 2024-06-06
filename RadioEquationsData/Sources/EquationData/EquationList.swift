@@ -2,9 +2,9 @@ import Foundation
 
 enum PickerOptions {
     static let ApparentPowerCurrentImpedance = ["Apparent Power (AP)", "Current (I)", "Impedance (Z)"]
-    static let ApparentPowerVoltageCurrent = ["Apparent Power (AP)", "Current (I)", "Voltage (V)"]
-    static let ApparentPowerVoltageImpedance = ["Apparent Power (AP)", "Voltage (V)", "Impedance (Z)"]
-    static let VoltageCurrentImpedance = ["Voltage (V)", "Current (I)", "Impedance (Z)"]
+    static let ApparentPowerVoltageCurrent = ["Apparent Power (AP)", "Current (I)", "Voltage (E)"]
+    static let ApparentPowerVoltageImpedance = ["Apparent Power (AP)", "Voltage (E)", "Impedance (Z)"]
+    static let VoltageCurrentImpedance = ["Voltage (E)", "Current (I)", "Impedance (Z)"]
 }
 
 public let EquationsTableInfo = [

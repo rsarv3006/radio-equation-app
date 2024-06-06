@@ -47,18 +47,12 @@ final class ApparentPowerCurrentImpedanceUtilsTests: XCTestCase {
             apparentPower: 200.0,
             current: 10.0
         )
-        XCTAssertEqual(impedance, 200.0)
+        XCTAssertEqual(impedance, 2.0)
 
         impedance = ApparentPowerCurrentImpedanceUtils.calculateImpedance(
-            apparentPower: 250.0,
-            current: 50.0
+            apparentPower: 16.0,
+            current: 2.0
         )
-        XCTAssertEqual(impedance, 250.0)
-
-        impedance = ApparentPowerCurrentImpedanceUtils.calculateImpedance(
-            apparentPower: 250.0,
-            current: 8.0
-        )
-        XCTAssertEqual(impedance, 250.0)
+        XCTAssertEqual(impedance, 4.0)
     }
 }

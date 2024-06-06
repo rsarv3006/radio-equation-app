@@ -12,7 +12,7 @@ public struct ApparentPowerCurrentImpedanceUtils: Codable {
     }
 
     public static func calculateImpedance(apparentPower: Double, current: Double) -> Double {
-        let impedance = apparentPower / current * current
+        let impedance = apparentPower / (current * current)
         return impedance.rounded(toPlaces: 2)
     }
     

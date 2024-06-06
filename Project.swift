@@ -4,8 +4,8 @@ let deploymentTargetString = "16.4"
 
 extension SettingsDictionary {
     func setProjectVersions() -> SettingsDictionary {
-        let currentProjectversion = "1.3.1"
-        let markettingVersion = "1"
+        let currentProjectversion = "1"
+        let markettingVersion = "1.4.0"
         return appleGenericVersioningSystem().merging([
             // "ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME": "AccentColor",
             "CURRENT_PROJECT_VERSION": SettingValue(stringLiteral: currentProjectversion),
