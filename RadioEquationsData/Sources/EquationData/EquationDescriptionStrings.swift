@@ -83,9 +83,22 @@ public enum DescriptionStrings {
     static let ImpedanceResistanceReactance = """
     The impedance of an electrical circuit is a measure of the opposition to the flow of alternating current (AC) through the circuit.
 
-    It consists of two components: resistance (R) and reactance (X), which can be inductive (X_L) or capacitive (X_C).
+    It consists of two components: resistance (R) and reactance (X), which can be inductive [math]$X_L$[/math] or capacitive [math]$X_C$[/math].
 
     The total impedance (Z) is the vector sum of the resistance and reactance components.
+
+
+    Frequency is measured in hertz (Hz), also known as cycles per second.
+
+    Inductance is measured in henrys. 
+
+    Capacitance is measured in farads.
+
+
+    [math]$X_L$[/math] - is Inductive Reactance and is measured in ohms
+
+    [math]$X_C$[/math] - is Capacitive Reactance and is measured in ohms
+
 
     Note due to the nature of this equation, it is possible to have a result of 'nan' (not a number) if the reactance components are equal. This is because the square root of a negative number is not a real number.
     """
@@ -95,12 +108,22 @@ public enum DescriptionStrings {
 
     Here's a breakdown of each component:
 
-    AP represents apparent power and is measured in watts (W). Apparent power refers to the power that is perceived by the circuit or device, taking into account the presence of reactive components such as inductance and capacitance.
+    AP represents apparent power and is measured in watts (W), sometimes shown as volt-amps (VA). Apparent power refers to the power that is perceived by the circuit or device, taking into account the presence of reactive components such as inductance and capacitance.
     E represents electrical energy and is measured in joules (J) or sometimes in electron volts (eV). It refers to the amount of energy transferred or used by an electrical circuit or device.
     I stands for current and is measured in amperes (A). Current refers to the flow of electric charge in a circuit, specifically the rate at which charges move through a conductor.
     The equation [math]$AP = E \\times I$[/math] expresses the relationship between these variables. It states that the apparent power (AP) in a circuit is equal to the product of the electrical energy (E) and the current (I) flowing through the circuit.
 
     In practical terms, this equation is commonly used to calculate the apparent power in a circuit when the energy and current values are known. It can also be rearranged to solve for other variables. For example, if you know the apparent power and current, you can calculate the energy by rearranging the equation as [math]$E = AP / I$[/math].
+
+    E is electrical voltage potential in volts. 
+
+    I is the flow of electrons in amperes. Current flows from the point of highest potential (negative) to the point of lowest potential (positive) 
+
+    R is resistance to the flow of current in ohms. 
+
+    Z is impedance to the flow of alternating current in ohms. 
+
+    P is electrical power to do work in watts 
     """
 
     static let ApparentPowerVoltageImpedance = """
@@ -108,12 +131,22 @@ public enum DescriptionStrings {
 
     Here's a breakdown of each component:
 
-    AP represents apparent power and is measured in watts (W). Apparent power refers to the power that is perceived by the circuit or device, taking into account the presence of reactive components such as inductance and capacitance.
+    AP represents apparent power and is measured in watts (W), sometimes shown as volt-amps (VA). Apparent power refers to the power that is perceived by the circuit or device, taking into account the presence of reactive components such as inductance and capacitance.
     E represents electrical energy and is measured in joules (J) or sometimes in electron volts (eV). It refers to the amount of energy transferred or used by an electrical circuit or device.
     Z represents impedance and is measured in ohms (Ω). Impedance is a property of a circuit element, such as a resistor or a wire, that opposes the flow of electric current.
     The equation [math]$AP = E^2 / Z$[/math] expresses the relationship between these variables. It states that the apparent power (AP) in a circuit is equal to the square of the electrical energy (E) divided by the impedance (Z) encountered by the current.
 
     In practical terms, this equation is commonly used to calculate the apparent power in a circuit when the energy and impedance values are known. It can also be rearranged to solve for other variables. For example, if you know the apparent power and impedance, you can calculate the energy by rearranging the equation as [math]$E = AP / Z$[/math].
+
+    E is electrical voltage potential in volts. 
+
+    I is the flow of electrons in amperes. Current flows from the point of highest potential (negative) to the point of lowest potential (positive) 
+
+    R is resistance to the flow of current in ohms. 
+
+    Z is impedance to the flow of alternating current in ohms. 
+
+    P is electrical power to do work in watts 
     """
 
     static let ApparentPowerCurrentImpedance = """
@@ -121,12 +154,22 @@ public enum DescriptionStrings {
 
     Here's a breakdown of each component:
 
-    AP represents apparent power and is measured in watts (W). Apparent power refers to the power that is perceived by the circuit or device, taking into account the presence of reactive components such as inductance and capacitance.
+    AP represents apparent power and is measured in watts (W), sometimes shown as volt-amps (VA). Apparent power refers to the power that is perceived by the circuit or device, taking into account the presence of reactive components such as inductance and capacitance.
     I stands for current and is measured in amperes (A). Current refers to the flow of electric charge in a circuit, specifically the rate at which charges move through a conductor.
     Z represents impedance and is measured in ohms (Ω). Impedance is a property of a circuit element, such as a resistor or a wire, that opposes the flow of electric current.
     The equation [math]$AP = I^2 \\times Z$[/math] expresses the relationship between these variables. It states that the apparent power (AP) in a circuit is equal to the square of the current (I) multiplied by the impedance (Z) encountered by the current.
 
     In practical terms, this equation is commonly used to calculate the apparent power in a circuit when the current and impedance values are known. It can also be rearranged to solve for other variables. For example, if you know the apparent power and impedance, you can calculate the current by rearranging the equation as [math]$I = AP / Z$[/math].
+
+    E is electrical voltage potential in volts. 
+
+    I is the flow of electrons in amperes. Current flows from the point of highest potential (negative) to the point of lowest potential (positive) 
+
+    R is resistance to the flow of current in ohms. 
+
+    Z is impedance to the flow of alternating current in ohms. 
+
+    P is electrical power to do work in watts 
     """
 
     static let VoltageCurrentImpedance = """
@@ -140,6 +183,18 @@ public enum DescriptionStrings {
     The equation [math]$E = I \\times Z$[/math] expresses the relationship between these variables. It states that the electrical energy (E) in a circuit is equal to the product of the current (I) flowing through the circuit and the impedance (Z) encountered by the current.
 
     In practical terms, this equation is commonly used to calculate the energy in a circuit when the current and impedance values are known. It can also be rearranged to solve for other variables. For example, if you know the energy and impedance, you can calculate the current by rearranging the equation as [math]$I = E / Z$[/math].
+
+    E is electrical voltage potential in volts. 
+
+    I is the flow of electrons in amperes. Current flows from the point of highest potential (negative) to the point of lowest potential (positive) 
+
+    R is resistance to the flow of current in ohms. 
+
+    Z is impedance to the flow of alternating current in ohms. 
+
+    P is electrical power to do work in watts 
+
+    AP is Apparent Power and is measured in units of Volt-Amps (VA).
     """
 
     static let Impedance = """
@@ -153,5 +208,17 @@ public enum DescriptionStrings {
     The equation [math]$Z = E / I$[/math] expresses the relationship between these variables. It states that the impedance (Z) in a circuit is equal to the product of the electrical energy (E) and the current (I) flowing through the circuit.
 
     In practical terms, this equation is commonly used to calculate the impedance in a circuit when the energy and current values are known. It can also be rearranged to solve for other variables. For example, if you know the impedance and current, you can calculate the energy by rearranging the equation as [math]$E = Z * I$[/math].
+
+    E is electrical voltage potential in volts. 
+
+    I is the flow of electrons in amperes. Current flows from the point of highest potential (negative) to the point of lowest potential (positive) 
+
+    R is resistance to the flow of current in ohms. 
+
+    Z is impedance to the flow of alternating current in ohms. 
+
+    P is electrical power to do work in watts 
+
+    AP is Apparent Power and is measured in units of Volt-Amps (VA).
     """
 }
