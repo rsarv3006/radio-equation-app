@@ -6,7 +6,7 @@ class EquationTab: UIViewController {
         view.backgroundColor = .Theme.backgroundColor
         
         let label = UILabel()
-        label.text = "Equation Tab"
+        label.text = NSLocalizedString("Equation Tab", comment: "Label for Equation Tab")
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 24)
         label.translatesAutoresizingMaskIntoConstraints = false

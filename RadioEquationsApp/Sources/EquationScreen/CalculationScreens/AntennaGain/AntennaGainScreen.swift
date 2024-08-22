@@ -50,29 +50,42 @@ class AntennaGainScreen: UIViewController {
         return richTextView
     }()
     
-    private lazy var calculateForPickerOptions = ["Antenna Gain", "Power 1", "Power 2"]
+    private lazy var calculateForPickerOptions = [
+        NSLocalizedString("Antenna Gain", comment: "calculate for antenna gain picker label"),
+        NSLocalizedString("Power 1", comment: "calculate for power 1 picker label"),
+        NSLocalizedString("Power 2", comment: "calculate for power 2 picker label"),
+    ]
     
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Calculate for:"
+        label.text = NSLocalizedString("Calculate for:", comment: "Label for Equation Tab")
         label.textColor = .Theme.textColor
         return label
     }()
     
     private lazy var powerTwoStack: CalculationFieldStackView = {
-        let stack = CalculationFieldStackView(fieldTag: AntennaGainFieldTag.powerTwo.rawValue, fieldLabelText: "Output Power (P2):")
+        let stack = CalculationFieldStackView(
+            fieldTag: AntennaGainFieldTag.powerTwo.rawValue,
+            fieldLabelText: NSLocalizedString("Output Power (P2):", comment: "field label for output power P2 option")
+        )
         stack.inputField.addTarget(self, action: #selector(didFieldUpdate), for: .editingChanged)
         return stack
     }()
     
     private lazy var antennaGainStack: CalculationFieldStackView = {
-        let stack = CalculationFieldStackView(fieldTag: AntennaGainFieldTag.antennaGain.rawValue, fieldLabelText: "Antenna Gain (Db):")
+        let stack = CalculationFieldStackView(
+            fieldTag: AntennaGainFieldTag.antennaGain.rawValue,
+            fieldLabelText: NSLocalizedString("Antenna Gain (Db):", comment: "field label for antenna gain option")
+        )
         stack.inputField.addTarget(self, action: #selector(didFieldUpdate), for: .editingChanged)
         return stack
     }()
     
     private lazy var powerOneStack: CalculationFieldStackView = {
-        let stack = CalculationFieldStackView(fieldTag: AntennaGainFieldTag.powerOne.rawValue, fieldLabelText: "Input Power (P1):")
+        let stack = CalculationFieldStackView(
+            fieldTag: AntennaGainFieldTag.powerOne.rawValue,
+            fieldLabelText: NSLocalizedString("Input Power (P1):", comment: "field label for input power option")
+        )
         stack.inputField.addTarget(self, action: #selector(didFieldUpdate), for: .editingChanged)
         return stack
     }()

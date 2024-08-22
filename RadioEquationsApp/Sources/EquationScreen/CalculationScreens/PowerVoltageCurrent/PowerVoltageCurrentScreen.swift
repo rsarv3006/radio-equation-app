@@ -50,29 +50,33 @@ class PowerVoltageCurrentScreen: UIViewController {
         return richTextView
     }()
     
-    private lazy var calculateForPickerOptions = ["Power", "Current", "Voltage"]
-    
+    private lazy var calculateForPickerOptions = [
+        NSLocalizedString("Power", comment: "Option for power calculation"),
+        NSLocalizedString("Current", comment: "Option for current calculation"),
+        NSLocalizedString("Voltage", comment: "Option for voltage calculation")
+    ]
+
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Calculate for:"
+        label.text = NSLocalizedString("Calculate for:", comment: "Label for calculation type selection")
         label.textColor = .Theme.textColor
         return label
     }()
-    
+
     private lazy var voltageStack: CalculationFieldStackView = {
-        let stack = CalculationFieldStackView(fieldTag: PowerVoltageCurrentFieldTag.voltage.rawValue, fieldLabelText: "Voltage (E):")
+        let stack = CalculationFieldStackView(fieldTag: PowerVoltageCurrentFieldTag.voltage.rawValue, fieldLabelText: NSLocalizedString("Voltage (E):", comment: "Label for voltage input field"))
         stack.inputField.addTarget(self, action: #selector(didFieldUpdate), for: .editingChanged)
         return stack
     }()
-    
+
     private lazy var currentStack: CalculationFieldStackView = {
-        let stack = CalculationFieldStackView(fieldTag: PowerVoltageCurrentFieldTag.current.rawValue, fieldLabelText: "Current (I):")
+        let stack = CalculationFieldStackView(fieldTag: PowerVoltageCurrentFieldTag.current.rawValue, fieldLabelText: NSLocalizedString("Current (I):", comment: "Label for current input field"))
         stack.inputField.addTarget(self, action: #selector(didFieldUpdate), for: .editingChanged)
         return stack
     }()
-    
+
     private lazy var powerStack: CalculationFieldStackView = {
-        let stack = CalculationFieldStackView(fieldTag: PowerVoltageCurrentFieldTag.power.rawValue, fieldLabelText: "Power (P):")
+        let stack = CalculationFieldStackView(fieldTag: PowerVoltageCurrentFieldTag.power.rawValue, fieldLabelText: NSLocalizedString("Power (P):", comment: "Label for power input field"))
         stack.inputField.addTarget(self, action: #selector(didFieldUpdate), for: .editingChanged)
         return stack
     }()

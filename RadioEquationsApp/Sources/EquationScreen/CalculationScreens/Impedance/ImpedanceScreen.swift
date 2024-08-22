@@ -57,7 +57,12 @@ class ImpedanceScreen: UIViewController {
         return richTextView
     }()
 
-    private lazy var calculateForPickerOptions = ["Impedance", "Resistance", "Inductive Reactance", "Capacitive Reactance"]
+    private lazy var calculateForPickerOptions = [
+        NSLocalizedString("Impedance", comment: "Option for impedance calculation"),
+        NSLocalizedString("Resistance", comment: "Option for resistance calculation"),
+        NSLocalizedString("Inductive Reactance", comment: "Option for inductive reactance calculation"),
+        NSLocalizedString("Capacitive Reactance", comment: "Option for capacitive reactance calculation")
+    ]
 
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
@@ -67,25 +72,25 @@ class ImpedanceScreen: UIViewController {
     }()
 
     private lazy var impedanceStack: CalculationFieldStackView = {
-        let stack = CalculationFieldStackView(fieldTag: ImpedanceFieldTag.impedance.rawValue, fieldLabelText: "Impedance (Z):")
+        let stack = CalculationFieldStackView(fieldTag: ImpedanceFieldTag.impedance.rawValue, fieldLabelText: NSLocalizedString("Impedance (Z):", comment: "Label for impedance input field"))
         stack.inputField.addTarget(self, action: #selector(didFieldUpdate), for: .editingChanged)
         return stack
     }()
 
     private lazy var resistanceStack: CalculationFieldStackView = {
-        let stack = CalculationFieldStackView(fieldTag: ImpedanceFieldTag.resistance.rawValue, fieldLabelText: "Resistance (R):")
+        let stack = CalculationFieldStackView(fieldTag: ImpedanceFieldTag.resistance.rawValue, fieldLabelText: NSLocalizedString("Resistance (R):", comment: "Label for resistance input field"))
         stack.inputField.addTarget(self, action: #selector(didFieldUpdate), for: .editingChanged)
         return stack
     }()
 
     private lazy var inductiveReactanceStack: CalculationFieldStackView = {
-        let stack = CalculationFieldStackView(fieldTag: ImpedanceFieldTag.inductiveReactance.rawValue, fieldLabelText: "Inductive Reactance (X_L):")
+        let stack = CalculationFieldStackView(fieldTag: ImpedanceFieldTag.inductiveReactance.rawValue, fieldLabelText: NSLocalizedString("Inductive Reactance (X_L):", comment: "Label for inductive reactance input field"))
         stack.inputField.addTarget(self, action: #selector(didFieldUpdate), for: .editingChanged)
         return stack
     }()
 
     private lazy var capacitiveReactanceStack: CalculationFieldStackView = {
-        let stack = CalculationFieldStackView(fieldTag: ImpedanceFieldTag.capacitiveReactance.rawValue, fieldLabelText: "Capacitive Reactance (X_C):")
+        let stack = CalculationFieldStackView(fieldTag: ImpedanceFieldTag.capacitiveReactance.rawValue, fieldLabelText: NSLocalizedString("Capacitive Reactance (X_C):", comment: "Label for capacitive reactance input field"))
         stack.inputField.addTarget(self, action: #selector(didFieldUpdate), for: .editingChanged)
         return stack
     }()

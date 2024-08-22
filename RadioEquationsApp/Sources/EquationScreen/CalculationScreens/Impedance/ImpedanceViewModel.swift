@@ -33,7 +33,7 @@ class ImpedanceViewModel {
     private(set) var selectedCalculateFor: ImpedanceFieldTag
 
     let equationTitle: String
-    let impedanceNanNote = "NOTE: 'nan' indicates a non real answer. Please see the description screen for more information."
+    let impedanceNanNote = NSLocalizedString("NOTE: 'nan' indicates a non real answer. Please see the description screen for more information.", comment: "Explanation for 'nan' result in impedance calculations")
 
     init(equation: Equation, calculateFor: ImpedanceFieldTag = .impedance) {
         selectedCalculateFor = calculateFor

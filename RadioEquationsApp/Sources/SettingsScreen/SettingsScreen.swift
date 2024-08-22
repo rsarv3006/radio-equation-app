@@ -12,7 +12,7 @@ class SettingsScreen: UIViewController {
 
     private lazy var contactSupportButton: UIButton = {
         let button = UIButton(type: .roundedRect)
-        button.setTitle("Contact Support", for: .normal)
+        button.setTitle(NSLocalizedString("Contact Support", comment: "Button title to contact support"), for: .normal)
         button.addTarget(self, action: #selector(onContactSupportTapped), for: .touchUpInside)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
         button.setTitleColor(.Theme.altColor, for: .normal)
@@ -21,7 +21,7 @@ class SettingsScreen: UIViewController {
 
     private lazy var openRequestNewEquationsButton: UIButton = {
         let button = UIButton(type: .roundedRect)
-        button.setTitle("Request New Equations", for: .normal)
+        button.setTitle(NSLocalizedString("Request New Equations", comment: "Button title to request new equations"), for: .normal)
         button.addTarget(self, action: #selector(onRequestNewEquationsButtonTapped), for: .touchUpInside)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
         button.setTitleColor(.Theme.altColor, for: .normal)
@@ -36,7 +36,7 @@ class SettingsScreen: UIViewController {
 
     private lazy var legalButton: UIButton = {
         let button = UIButton(type: .roundedRect)
-        button.setTitle("Legal", for: .normal)
+        button.setTitle(NSLocalizedString("Legal", comment: "Button title for legal information"), for: .normal)
         button.addTarget(self, action: #selector(onLegalButtonTapped), for: .touchUpInside)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
         button.setTitleColor(.Theme.altColor, for: .normal)
@@ -45,7 +45,7 @@ class SettingsScreen: UIViewController {
 
     private lazy var purchaseAdvancedEquationsButton: UIButton = {
         let button = UIButton(type: .roundedRect)
-        button.setTitle("Purchase Advanced Equations", for: .normal)
+        button.setTitle(NSLocalizedString("Purchase Advanced Equations", comment: "Button title to purchase advanced equations"), for: .normal)
         button.addTarget(self, action: #selector(onPurchaseAdvancedEquationsButtonTapped), for: .touchUpInside)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
         button.setTitleColor(.Theme.altColor, for: .normal)
@@ -54,7 +54,7 @@ class SettingsScreen: UIViewController {
 
     private lazy var purchaseAlternatingCurrentEquationsButton: UIButton = {
         let button = UIButton(type: .roundedRect)
-        button.setTitle("Purchase Alternating Current Equations", for: .normal)
+        button.setTitle(NSLocalizedString("Purchase Alternating Current Equations", comment: "Button title to purchase alternating current equations"), for: .normal)
         button.addTarget(self, action: #selector(onPurchaseAlternatingCurrentEquationsButtonTapped), for: .touchUpInside)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
         button.setTitleColor(.Theme.altColor, for: .normal)
@@ -63,7 +63,7 @@ class SettingsScreen: UIViewController {
 
     private lazy var restorePurchasesButton: UIButton = {
         let button = UIButton(type: .roundedRect)
-        button.setTitle("Restore Purchases", for: .normal)
+        button.setTitle(NSLocalizedString("Restore Purchases", comment: "Button title to restore previous purchases"), for: .normal)
         button.addTarget(self, action: #selector(onRestorePurchasesButtonTapped), for: .touchUpInside)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
         button.setTitleColor(.Theme.altColor, for: .normal)

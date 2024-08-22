@@ -55,36 +55,40 @@ class ResistanceCurrentVoltageScreen: UIViewController {
         return richTextView
     }()
     
-    private lazy var calculateForPickerOptions = ["Voltage", "Resistance", "Current"]
-    
+    private lazy var calculateForPickerOptions = [
+        NSLocalizedString("Voltage", comment: "Option for voltage calculation"),
+        NSLocalizedString("Resistance", comment: "Option for resistance calculation"),
+        NSLocalizedString("Current", comment: "Option for current calculation")
+    ]
+
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Calculate for:"
+        label.text = NSLocalizedString("Calculate for:", comment: "Label for calculation type selection")
         label.textColor = .Theme.textColor
         return label
     }()
-    
+
     private lazy var calculateForSegmentedControl: UISegmentedControl = {
         let control = UISegmentedControl(items: calculateForPickerOptions)
         control.selectedSegmentIndex = 0
         control.addTarget(self, action: #selector(didCalculateForSegmentedControlChange), for: .valueChanged)
         return control
     }()
-    
+
     private lazy var voltageStack: CalculationFieldStackView = {
-        let stackView = CalculationFieldStackView(fieldTag: ResistanceCurrentVoltageFieldTag.voltage.rawValue, fieldLabelText: "Voltage (E):")
+        let stackView = CalculationFieldStackView(fieldTag: ResistanceCurrentVoltageFieldTag.voltage.rawValue, fieldLabelText: NSLocalizedString("Voltage (E):", comment: "Label for voltage input field"))
         stackView.inputField.addTarget(self, action: #selector(didFieldUpdate), for: .editingChanged)
         return stackView
     }()
-    
+
     private lazy var currentStack: CalculationFieldStackView = {
-        let stackView = CalculationFieldStackView(fieldTag: ResistanceCurrentVoltageFieldTag.current.rawValue, fieldLabelText: "Current (I):")
+        let stackView = CalculationFieldStackView(fieldTag: ResistanceCurrentVoltageFieldTag.current.rawValue, fieldLabelText: NSLocalizedString("Current (I):", comment: "Label for current input field"))
         stackView.inputField.addTarget(self, action: #selector(didFieldUpdate), for: .editingChanged)
         return stackView
     }()
-    
+
     private lazy var resistanceStack: CalculationFieldStackView = {
-        let stackView = CalculationFieldStackView(fieldTag: ResistanceCurrentVoltageFieldTag.resistance.rawValue, fieldLabelText: "Resistance (R):")
+        let stackView = CalculationFieldStackView(fieldTag: ResistanceCurrentVoltageFieldTag.resistance.rawValue, fieldLabelText: NSLocalizedString("Resistance (R):", comment: "Label for resistance input field"))
         stackView.inputField.addTarget(self, action: #selector(didFieldUpdate), for: .editingChanged)
         return stackView
     }()

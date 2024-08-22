@@ -20,13 +20,13 @@ class EquationScreenTabBar: UITabBarController {
 
         let descriptionVC = DescriptionTab()
         descriptionVC.viewModel = DescriptionTabViewModel(equation: equation)
-        descriptionVC.title = "Description"
-        let descriptionTabBarItem = UITabBarItem(title: "Description", image: UIImage(systemName: "doc.plaintext")?.withTintColor(.Theme.altColor, renderingMode: .alwaysOriginal), tag: 0)
+        descriptionVC.title = NSLocalizedString("Description", comment: "Title for Description tab")
+        let descriptionTabBarItem = UITabBarItem(title: NSLocalizedString("Description", comment: "Title for Description tab in tab bar"), image: UIImage(systemName: "doc.plaintext")?.withTintColor(.Theme.altColor, renderingMode: .alwaysOriginal), tag: 0)
         descriptionVC.tabBarItem = descriptionTabBarItem
 
         let equationVC = createEquationCalculationScreen()
-        equationVC.title = "Equation"
-        let equationTabBarItem = UITabBarItem(title: "Equation", image: UIImage(systemName: "function")?.withTintColor(.Theme.altColor, renderingMode: .alwaysOriginal), tag: 1)
+        equationVC.title = NSLocalizedString("Equation", comment: "Title for Equation tab")
+        let equationTabBarItem = UITabBarItem(title: NSLocalizedString("Equation", comment: "Title for Equation tab in tab bar"), image: UIImage(systemName: "function")?.withTintColor(.Theme.altColor, renderingMode: .alwaysOriginal), tag: 1)
         equationVC.tabBarItem = equationTabBarItem
 
         viewControllers = [equationVC, descriptionVC]

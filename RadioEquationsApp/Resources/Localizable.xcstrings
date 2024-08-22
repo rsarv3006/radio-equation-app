@@ -1,0 +1,270 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "[math]$AP = E \\times I$[/math]" : {
+      "comment" : "Apparent Power equation: AP = E * I"
+    },
+    "[math]$AP = E^2 / Z$[/math]" : {
+      "comment" : "Apparent Power equation: AP = E^2 / Z"
+    },
+    "[math]$AP = I^2 \\times Z$[/math]" : {
+      "comment" : "Apparent Power equation: AP = I^2 * Z"
+    },
+    "[math]$db = 10 \\times log_1_0(P2 / P1)$[/math]" : {
+      "comment" : "Antenna Gain equation: db = 10 * log10(P2 / P1)"
+    },
+    "[math]$E = \\sqrt{AP \\times Z}$[/math]" : {
+      "comment" : "Voltage equation: E = sqrt(AP * Z)"
+    },
+    "[math]$E = \\sqrt{P \\times R}$[/math]" : {
+      "comment" : "Voltage equation: E = sqrt(P * R)"
+    },
+    "[math]$E = AP / I$[/math]" : {
+      "comment" : "Voltage equation: E = AP / I"
+    },
+    "[math]$E = I \\times R$[/math]" : {
+      "comment" : "Voltage equation: E = I * R"
+    },
+    "[math]$E = I \\times Z$[/math]" : {
+      "comment" : "Voltage equation: E = I * Z"
+    },
+    "[math]$E = P / I$[/math]" : {
+      "comment" : "Voltage equation: E = P / I"
+    },
+    "[math]$I = \\sqrt{AP / Z}$[/math]" : {
+      "comment" : "Current equation: I = sqrt(AP / Z)"
+    },
+    "[math]$I = \\sqrt{P / R}$[/math]" : {
+      "comment" : "Current equation: I = sqrt(P / R)"
+    },
+    "[math]$I = AP / E$[/math]" : {
+      "comment" : "Current equation: I = AP / E"
+    },
+    "[math]$I = E / R$[/math]" : {
+      "comment" : "Current equation: I = E / R"
+    },
+    "[math]$I = E / Z$[/math]" : {
+      "comment" : "Current equation: I = E / Z"
+    },
+    "[math]$I = P / E$[/math]" : {
+      "comment" : "Current equation: I = P / E"
+    },
+    "[math]$P = E \\times I$[/math]" : {
+      "comment" : "Power equation: P = E * I"
+    },
+    "[math]$P = E^2 / R$[/math]" : {
+      "comment" : "Power equation: P = E^2 / R"
+    },
+    "[math]$P = I^2 \\times R$[/math]" : {
+      "comment" : "Power equation: P = I^2 * R"
+    },
+    "[math]$P1 = P2 / 10^(^d^b^/^1^0^)$[/math]" : {
+      "comment" : "Antenna Gain equation: P1 = P2 / 10^(db/10)"
+    },
+    "[math]$P2 = P1 \\times 10^(^1^0 ^\\times ^d^b^)$[/math]" : {
+      "comment" : "Antenna Gain equation: P2 = P1 * 10^(10 * db)"
+    },
+    "[math]$R = \\sqrt{Z^2 + (X_L - X_C)^2}$[/math]" : {
+      "comment" : "Impedance equation: R = sqrt(Z^2 + (XL - XC)^2)"
+    },
+    "[math]$R = E / I$[/math]" : {
+      "comment" : "Resistance equation: R = E / I"
+    },
+    "[math]$R = E^2 / P $[/math]" : {
+      "comment" : "Resistance equation: R = E^2 / P"
+    },
+    "[math]$R = P / I^2$[/math]" : {
+      "comment" : "Resistance equation: R = P / I^2"
+    },
+    "[math]$X_C = X_L - \\sqrt{Z^2 - R^2}$[/math]" : {
+      "comment" : "Impedance equation: XC = XL - sqrt(Z^2 - R^2)"
+    },
+    "[math]$X_L = \\sqrt{Z^2 - R^2} + X_C$[/math]" : {
+      "comment" : "Impedance equation: XL = sqrt(Z^2 - R^2) + XC"
+    },
+    "[math]$Z = \\sqrt{R^2 + (X_L - X_C)^2}$[/math]" : {
+      "comment" : "Impedance equation: Z = sqrt(R^2 + (XL - XC)^2)"
+    },
+    "[math]$Z = AP / I^2$[/math]" : {
+      "comment" : "Impedance equation: Z = AP / I^2"
+    },
+    "[math]$Z = E / I$[/math]" : {
+      "comment" : "Impedance equation: Z = E / I"
+    },
+    "[math]$Z = E^2 / AP$[/math]" : {
+      "comment" : "Impedance equation: Z = E^2 / AP"
+    },
+    "Antenna Gain" : {
+      "comment" : "Title for the Antenna Gain section\ncalculate for antenna gain picker label"
+    },
+    "Antenna Gain (Db):" : {
+      "comment" : "field label for antenna gain option"
+    },
+    "App Version: %@" : {
+      "comment" : "App version display string"
+    },
+    "Apparent Power (AC) - Ohm's Law" : {
+      "comment" : "Title for the Apparent Power (AC) - Ohm's Law section"
+    },
+    "Apparent Power (AP)" : {
+      "comment" : "Picker option for Apparent Power"
+    },
+    "Calculate for:" : {
+      "comment" : "Label for Equation Tab\nLabel for calculation type selection"
+    },
+    "Capacitive Reactance" : {
+      "comment" : "Option for capacitive reactance calculation"
+    },
+    "Capacitive Reactance (X_C):" : {
+      "comment" : "Label for capacitive reactance input field"
+    },
+    "Contact Support" : {
+      "comment" : "Button title to contact support"
+    },
+    "Current" : {
+      "comment" : "Option for current calculation\nTitle for the Current section"
+    },
+    "Current (AC) - Ohm's Law" : {
+      "comment" : "Title for the Current (AC) - Ohm's Law section"
+    },
+    "Current (I)" : {
+      "comment" : "Picker option for Current"
+    },
+    "Current (I):" : {
+      "comment" : "Label for current input field"
+    },
+    "Description" : {
+      "comment" : "Title for Description tab\n   Title for Description tab in tab bar"
+    },
+    "Effective Date: June 18, 2023\n\nThis Privacy Policy (\"Policy\") outlines the practices followed by RadioEquations (\"we,\" \"us,\" or \"our\") regarding the collection, use, and disclosure of personal information from users (\"you\" or \"users\") of our mobile application (\"App\"). We are committed to protecting your privacy and maintaining the confidentiality of your personal information. This Policy explains how we ensure that your information remains secure while using our App.\n\nInformation We Collect:\nWe want to emphasize that we do not collect any personal information or track any user activity within our App. We have designed our App to function without the need for personal data collection or tracking features. Therefore, we do not collect any of the following information:\n\n1.1 Personal Information:\nWe do not collect any personally identifiable information (PII) such as your name, address, email address, phone number, or any other information that can be used to directly identify you.\n\n1.2 Usage Information:\nWe do not track or collect any information regarding how you use our App, including the actions you perform within the App or the duration of your usage.\n\n1.3 Device Information:\nWe do not collect any information about your device, such as your unique device identifier (UDID), IP address, operating system, or browser information.\n\nInformation Sharing:\nAs we do not collect any personal information or track your activities within the App, we do not share any data with third parties. Your privacy is of utmost importance to us, and we have implemented strict measures to ensure your information remains secure and private.\n\nSecurity:\nWe take the security of your information seriously. Although we do not collect any personal information, we have implemented reasonable and appropriate security measures to protect the App and its users from unauthorized access, disclosure, alteration, or destruction of data. These security measures include encryption, secure communication protocols, and regular security assessments.\n\nLinks to Third-Party Websites:\nOur App may contain links to third-party websites or services that are not owned or controlled by us. Please note that this Privacy Policy does not apply to any third-party websites or services. We encourage you to review the privacy policies of those third parties before interacting with them or providing any personal information.\n\nChildren's Privacy:\nOur App does not knowingly collect any personal information from children under the age of 13. If you are a parent or guardian and believe that your child has provided us with personal information, please contact us immediately. We will promptly remove any such information from our records.\n\nChanges to This Privacy Policy:\nWe reserve the right to modify or update this Privacy Policy at any time. Any changes we make will be posted within the App, and the \"Effective Date\" at the top of this Policy will be revised accordingly. We encourage you to review this Policy periodically to stay informed about how we are protecting your privacy.\n\nContact Us:\nIf you have any questions, concerns, or requests regarding this Privacy Policy or our privacy practices, please contact us using the support request link in the settings page of the app.\n\nBy using our App, you acknowledge that you have read and understood this Privacy Policy and agree to the collection, use, and disclosure of your information as described herein." : {
+      "comment" : "privacy policy"
+    },
+    "End User License Agreement" : {
+      "comment" : "EULA title"
+    },
+    "Equation" : {
+      "comment" : "Title for Equation tab\n   Title for Equation tab in tab bar"
+    },
+    "Equation Tab" : {
+      "comment" : "Label for Equation Tab"
+    },
+    "Impedance" : {
+      "comment" : "Option for impedance calculation"
+    },
+    "Impedance (AC) - Ohm's Law" : {
+      "comment" : "Title for the Impedance (AC) - Ohm's Law section"
+    },
+    "Impedance (AC) - Reactance" : {
+      "comment" : "Title for the Impedance (AC) - Reactance section"
+    },
+    "Impedance (Z)" : {
+      "comment" : "Picker option for Impedance"
+    },
+    "Impedance (Z):" : {
+      "comment" : "Label for impedance input field"
+    },
+    "Inductive Reactance" : {
+      "comment" : "Option for inductive reactance calculation"
+    },
+    "Inductive Reactance (X_L):" : {
+      "comment" : "Label for inductive reactance input field"
+    },
+    "Input Power (P1):" : {
+      "comment" : "field label for input power option"
+    },
+    "Legal" : {
+      "comment" : "Button title for legal information\nButton title for navigating to legal information\nTitle for the legal screen"
+    },
+    "NOTE: 'nan' indicates a non real answer. Please see the description screen for more information." : {
+      "comment" : "Explanation for 'nan' result in impedance calculations"
+    },
+    "Output Power (P2):" : {
+      "comment" : "field label for output power P2 option"
+    },
+    "Please read this End-User License Agreement (\"Agreement\") carefully before using RadioEquations (\"App\"). This Agreement sets forth the terms and conditions for your use of the App.\n\nBy downloading, installing, or using the App, you agree to be bound by the terms and conditions of this Agreement. If you do not agree with any of these terms, do not download, install, or use the App.\n\nGrant of License:\nWe grant you a non-exclusive, non-transferable, revocable license to use the App solely for personal, non-commercial purposes, subject to the terms and conditions of this Agreement. You may install and use the App on compatible devices that you own or control.\n\nIntellectual Property:\nThe App and all associated intellectual property rights, including but not limited to copyrights, trademarks, and trade secrets, are owned by Robert J Sarvis Jr. You acknowledge and agree that all rights, title, and interest in and to the App, including any updates, modifications, or enhancements, remain the exclusive property of Robert J Sarvis Jr.\n\nData Collection and Privacy:\nThe App does not collect any personal information or track user activities. We are committed to respecting your privacy, and we do not store, transmit, or disclose any personally identifiable information or usage data.\n\nRestrictions on Use:\nYou agree not to:\n\n4.1 Modify, adapt, translate, or create derivative works based on the App;\n\n4.2 Reverse engineer, decompile, disassemble, or attempt to derive the source code of the App;\n\n4.3 Remove, alter, or obscure any copyright, trademark, or other proprietary notices from the App;\n\n4.4 Use the App for any illegal, unauthorized, or prohibited purposes;\n\n4.5 Interfere with or disrupt the operation of the App or any servers or networks connected to the App;\n\n4.6 Attempt to gain unauthorized access to the App, user accounts, or any computer systems or networks associated with the App.\n\nDisclaimer of Warranty:\nThe App is provided \"as is\" without warranty of any kind. To the fullest extent permitted by applicable law, we disclaim all warranties, whether express, implied, or statutory, including but not limited to warranties of merchantability, fitness for a particular purpose, and non-infringement. We do not warrant that the App will be error-free or uninterrupted, or that any defects or errors in the App will be corrected.\n\nLimitation of Liability:\nTo the maximum extent permitted by applicable law, in no event shall we be liable for any indirect, incidental, consequential, special, or punitive damages arising out of or in connection with the use or inability to use the App, even if we have been advised of the possibility of such damages. Our total liability to you for all claims arising out of or relating to this Agreement or the use of the App shall not exceed the amount paid by you, if any, for the App.\n\nIndemnification:\nYou agree to indemnify, defend, and hold harmless Robert J Sarvis Jr and its officers, directors, employees, and agents from and against any and all claims, liabilities, damages, losses, costs, or expenses, including reasonable attorneys' fees, arising out of or in connection with your use of the App, your breach of this Agreement, or your violation of any applicable laws or regulations.\n\nGoverning Law:\nThis Agreement shall be governed by and construed in accordance with the laws of Texas. Any disputes arising under or in connection with this Agreement shall be subject to the exclusive jurisdiction of the courts located in [Your Jurisdiction].\n\nSeverability:\nIf any provision of this Agreement is held to be invalid, illegal, or unenforceable, the validity, legality, or enforceability of the remaining provisions shall not in any way be affected or impaired.\n\nEntire Agreement:\nThis Agreement constitutes the entire agreement between you and Robert J Sarvis Jr regarding the subject matter herein and supersedes all prior or contemporaneous communications, whether oral or written.\n\nIf you have any questions or concerns regarding this Agreement, please contact us using the support request button located in the app or by email at [email address].\n\nBy using the App, you acknowledge that you have read, understood, and agreed to be bound by this Agreement." : {
+      "comment" : "eula agreement"
+    },
+    "Power" : {
+      "comment" : "Option for power calculation\nTitle for the Power section"
+    },
+    "Power (P):" : {
+      "comment" : "Label for power input field"
+    },
+    "Power 1" : {
+      "comment" : "calculate for power 1 picker label"
+    },
+    "Power 2" : {
+      "comment" : "calculate for power 2 picker label"
+    },
+    "Privacy Policy" : {
+      "comment" : "Title for the privacy policy section"
+    },
+    "Purchase Advanced Equations" : {
+      "comment" : "Button title to purchase advanced equations"
+    },
+    "Purchase Alternating Current Equations" : {
+      "comment" : "Button title to purchase alternating current equations"
+    },
+    "Request New Equations" : {
+      "comment" : "Button title to request new equations"
+    },
+    "Resistance" : {
+      "comment" : "Option for resistance calculation\nTitle for the Resistance section"
+    },
+    "Resistance (R):" : {
+      "comment" : "Label for resistance input field"
+    },
+    "Restore Purchases" : {
+      "comment" : "Button title to restore previous purchases"
+    },
+    "Settings" : {
+      "comment" : "Title for the settings screen"
+    },
+    "The antenna gain equation calculates the gain of an antenna in decibels (dB). The gain represents how much an antenna concentrates radio frequency energy in a particular direction, if the antenna is a non-omnidirectional antenna.  If it is an omni-directional antenna, then the gain or main-lobe of the radio frequency energy is assumed to radiate in a 360-degree pattern, as in a sphere-shaped pattern.\n\nThe formula is:\n\n[math]$antenna gain (in db)[/math]\n\n\n[math]= 10 \\times log_1_0(P2 / P1)$[/math]\n\nWhere:\n\nOutput power is the power radiated by the antenna in the direction of peak radiation intensity. This is measured in watts (W).\nInput power is the power supplied to the antenna at its input terminals. This is also measured in watts.\nlog10 is the base-10 logarithm function.\n10 is a constant factor to convert the logarithmic value to decibels.\nThe ratio of output power to input power gives the power gain of the antenna. Taking the logarithm of this ratio gives the gain in absolute units. Multiplying by 10 converts this to decibels, which is the standard unit used to express antenna gain.\n\nSo in summary, this formula takes the ratio of output to input power, takes the logarithm to get the absolute gain, and then converts to decibels to calculate the total antenna gain. The higher the gain in dB, the more intense the antenna radiation is in a particular direction (if a non-omnidirectional antenna) or not (if an omnidirectional antenna.)" : {
+      "comment" : "equation description"
+    },
+    "The equation [math]$AP = E \\times I$[/math] represents the relationship between apparent power (AP), electrical energy (E), and current (I) in an electrical circuit.\n\nHere's a breakdown of each component:\n\nAP represents apparent power and is measured in watts (W), sometimes shown as volt-amps (VA). Apparent power refers to the power that is perceived by the circuit or device, taking into account the presence of reactive components such as inductance and capacitance.\nE represents electrical energy and is measured in joules (J) or sometimes in electron volts (eV). It refers to the amount of energy transferred or used by an electrical circuit or device.\nI stands for current and is measured in amperes (A). Current refers to the flow of electric charge in a circuit, specifically the rate at which charges move through a conductor.\nThe equation [math]$AP = E \\times I$[/math] expresses the relationship between these variables. It states that the apparent power (AP) in a circuit is equal to the product of the electrical energy (E) and the current (I) flowing through the circuit.\n\nIn practical terms, this equation is commonly used to calculate the apparent power in a circuit when the energy and current values are known. It can also be rearranged to solve for other variables. For example, if you know the apparent power and current, you can calculate the energy by rearranging the equation as [math]$E = AP / I$[/math].\n\nE is electrical voltage potential in volts. \n\nI is the flow of electrons in amperes. Current flows from the point of highest potential (negative) to the point of lowest potential (positive) \n\nR is resistance to the flow of current in ohms. \n\nZ is impedance to the flow of alternating current in ohms. \n\nP is electrical power to do work in watts " : {
+      "comment" : "equation description"
+    },
+    "The equation [math]$AP = E^2 / Z$[/math] represents the relationship between apparent power (AP), electrical energy (E), and impedance (Z) in an electrical circuit.\n\nHere's a breakdown of each component:\n\nAP represents apparent power and is measured in watts (W), sometimes shown as volt-amps (VA). Apparent power refers to the power that is perceived by the circuit or device, taking into account the presence of reactive components such as inductance and capacitance.\nE represents electrical energy and is measured in joules (J) or sometimes in electron volts (eV). It refers to the amount of energy transferred or used by an electrical circuit or device.\nZ represents impedance and is measured in ohms (Ω). Impedance is a property of a circuit element, such as a resistor or a wire, that opposes the flow of electric current.\nThe equation [math]$AP = E^2 / Z$[/math] expresses the relationship between these variables. It states that the apparent power (AP) in a circuit is equal to the square of the electrical energy (E) divided by the impedance (Z) encountered by the current.\n\nIn practical terms, this equation is commonly used to calculate the apparent power in a circuit when the energy and impedance values are known. It can also be rearranged to solve for other variables. For example, if you know the apparent power and impedance, you can calculate the energy by rearranging the equation as [math]$E = AP / Z$[/math].\n\nE is electrical voltage potential in volts. \n\nI is the flow of electrons in amperes. Current flows from the point of highest potential (negative) to the point of lowest potential (positive) \n\nR is resistance to the flow of current in ohms. \n\nZ is impedance to the flow of alternating current in ohms. \n\nP is electrical power to do work in watts " : {
+      "comment" : "equation description"
+    },
+    "The equation [math]$AP = I^2 \\times Z$[/math] represents the relationship between apparent power (AP), current (I), and impedance (Z) in an electrical circuit.\n\nHere's a breakdown of each component:\n\nAP represents apparent power and is measured in watts (W), sometimes shown as volt-amps (VA). Apparent power refers to the power that is perceived by the circuit or device, taking into account the presence of reactive components such as inductance and capacitance.\nI stands for current and is measured in amperes (A). Current refers to the flow of electric charge in a circuit, specifically the rate at which charges move through a conductor.\nZ represents impedance and is measured in ohms (Ω). Impedance is a property of a circuit element, such as a resistor or a wire, that opposes the flow of electric current.\nThe equation [math]$AP = I^2 \\times Z$[/math] expresses the relationship between these variables. It states that the apparent power (AP) in a circuit is equal to the square of the current (I) multiplied by the impedance (Z) encountered by the current.\n\nIn practical terms, this equation is commonly used to calculate the apparent power in a circuit when the current and impedance values are known. It can also be rearranged to solve for other variables. For example, if you know the apparent power and impedance, you can calculate the current by rearranging the equation as [math]$I = AP / Z$[/math].\n\nE is electrical voltage potential in volts. \n\nI is the flow of electrons in amperes. Current flows from the point of highest potential (negative) to the point of lowest potential (positive) \n\nR is resistance to the flow of current in ohms. \n\nZ is impedance to the flow of alternating current in ohms. \n\nP is electrical power to do work in watts " : {
+      "comment" : "equation description"
+    },
+    "The equation [math]$E = I \\times R$[/math] represents the relationship between electrical energy (E), current (I), and resistance (R) in an electrical circuit.\n\nHere's a breakdown of each component:\n\nE represents electrical energy and is measured in joules (J) or sometimes in electron volts (eV). It refers to the amount of energy transferred or used by an electrical circuit or device.\nI stands for current and is measured in amperes (A). Current refers to the flow of electric charge in a circuit, specifically the rate at which charges move through a conductor.\nR represents resistance and is measured in ohms (Ω). Resistance is a property of a circuit element, such as a resistor or a wire, that opposes the flow of electric current.\nAccording to Ohm's Law, the equation [math]$E = I \\times R$[/math] expresses the relationship between these three variables. It states that the electrical energy (E) dissipated or consumed in a circuit is equal to the product of the current (I) flowing through the circuit and the resistance (R) encountered by the current.\n\nIn practical terms, this equation can be used to calculate the energy consumption or dissipation in a circuit when the current and resistance values are known. Alternatively, it can be rearranged to solve for other variables. For example, if you know the energy and resistance, you can calculate the current by rearranging the equation as [math]$I = E / R$[/math]." : {
+      "comment" : "VoltageCurrentResistance description"
+    },
+    "The equation [math]$E = I \\times Z$[/math] represents the relationship between electrical energy (E), current (I), and impedance (Z) in an electrical circuit.\n\nHere's a breakdown of each component:\n\nE represents electrical energy and is measured in joules (J) or sometimes in electron volts (eV). It refers to the amount of energy transferred or used by an electrical circuit or device.\nI stands for current and is measured in amperes (A). Current refers to the flow of electric charge in a circuit, specifically the rate at which charges move through a conductor.\nZ represents impedance and is measured in ohms (Ω). Impedance is a property of a circuit element, such as a resistor or a wire, that opposes the flow of electric current.\nThe equation [math]$E = I \\times Z$[/math] expresses the relationship between these variables. It states that the electrical energy (E) in a circuit is equal to the product of the current (I) flowing through the circuit and the impedance (Z) encountered by the current.\n\nIn practical terms, this equation is commonly used to calculate the energy in a circuit when the current and impedance values are known. It can also be rearranged to solve for other variables. For example, if you know the energy and impedance, you can calculate the current by rearranging the equation as [math]$I = E / Z$[/math].\n\nE is electrical voltage potential in volts. \n\nI is the flow of electrons in amperes. Current flows from the point of highest potential (negative) to the point of lowest potential (positive) \n\nR is resistance to the flow of current in ohms. \n\nZ is impedance to the flow of alternating current in ohms. \n\nP is electrical power to do work in watts \n\nAP is Apparent Power and is measured in units of Volt-Amps (VA)." : {
+      "comment" : "equation description"
+    },
+    "The equation [math]$P = E \\times I$[/math] represents the relationship between power (P), electrical energy (E), and current (I) in an electrical circuit.\n\nHere's a breakdown of each component:\n\nP represents power and is measured in watts (W). Power refers to the rate at which energy is transferred, used, or consumed in a circuit or device.\nE represents electrical energy and is measured in joules (J) or sometimes in electron volts (eV). It refers to the amount of energy transferred or used by an electrical circuit or device.\nI stands for current and is measured in amperes (A). Current refers to the flow of electric charge in a circuit, specifically the rate at which charges move through a conductor.\nThe equation [math]$P = E \\times I$[/math] expresses the relationship between these variables. It states that the power (P) in a circuit is equal to the product of the electrical energy (E) and the current (I) flowing through the circuit.\n\nThis equation is derived from the definition of power, which is the rate at which energy is transferred. By multiplying the energy transferred (E) by the rate at which it is transferred (I), we obtain the power.\n\nIn practical terms, this equation is commonly used to calculate the power consumption or dissipation in a circuit when the energy and current values are known. It can also be rearranged to solve for other variables. For example, if you know the power and current, you can calculate the energy by rearranging the equation as [math]$E = P / I$[/math]." : {
+      "comment" : "equation description"
+    },
+    "The equation [math]$P = E^2 / R$[/math] represents the relationship between power (P), electrical energy (E), and resistance (R) in an electrical circuit.\n\nHere's a breakdown of each component:\n\nP represents power and is measured in watts (W). Power refers to the rate at which energy is transferred, used, or consumed in a circuit or device.\nE represents electrical energy and is measured in joules (J) or sometimes in electron volts (eV). It refers to the amount of energy transferred or used by an electrical circuit or device.\nR represents resistance and is measured in ohms (Ω). Resistance is a property of a circuit element, such as a resistor or a wire, that opposes the flow of electric current.\nThe equation [math]$P = E^2 / R$[/math] expresses the relationship between these variables. It states that the power (P) in a circuit is equal to the square of the electrical energy (E) divided by the resistance (R) encountered by the current.\n\nThis equation can be derived by combining Ohm's Law [math]$(I = V / R)$[/math] with the power formula [math]$(P = V \\times I)$[/math]. Since voltage (V) can be expressed as [math]$V = E / Q$[/math] (where Q is the charge), and current (I) can be expressed as [math]$I = Q / t$[/math] (where t is time), we can substitute these expressions into the power formula and rearrange to obtain [math]$P = E^2 / R$[/math].\n\nIn practical terms, this equation is commonly used to calculate the power dissipation in a circuit when the electrical energy and resistance values are known. It shows that power is inversely proportional to the resistance and that doubling the resistance will halve the power dissipation. Similarly, increasing the electrical energy will result in higher power, assuming the resistance remains constant." : {
+      "comment" : "equation description"
+    },
+    "The equation [math]$P = I^2 \\times R$[/math] represents the relationship between power (P), current (I), and resistance (R) in an electrical circuit.\n\nHere's a breakdown of each component:\n\nP represents power and is measured in watts (W). Power refers to the rate at which energy is transferred, used, or consumed in a circuit or device.\nI stands for current and is measured in amperes (A). Current refers to the flow of electric charge in a circuit, specifically the rate at which charges move through a conductor.\nR represents resistance and is measured in ohms (Ω). Resistance is a property of a circuit element, such as a resistor or a wire, that opposes the flow of electric current.\nThe equation [math]$P = I^2 \\times R$[/math] expresses the relationship between these variables. It states that the power (P) in a circuit is equal to the square of the current (I) multiplied by the resistance (R) encountered by the current.\n\nThis equation is derived from Ohm's Law, which states that the current flowing through a conductor is directly proportional to the voltage across it and inversely proportional to the resistance. By substituting the expression for current from Ohm's Law [math]$(I = V / R)$[/math] into the equation [math]$P = I^2 \\times R$[/math], we can derive the power formula.\n\nIn practical terms, this equation is commonly used to calculate the power dissipation in a circuit when the current and resistance values are known. It illustrates that power is directly proportional to the square of the current and the resistance. Therefore, a circuit with higher current or higher resistance will dissipate more power. Conversely, decreasing either the current or resistance will result in lower power dissipation." : {
+      "comment" : "equation description"
+    },
+    "The equation [math]$Z = E / I$[/math] represents the relationship between impedance (Z), electrical energy (E), and current (I) in an electrical circuit.\n\nHere's a breakdown of each component:\n\nZ represents impedance and is measured in ohms (Ω). Impedance is a property of a circuit element, such as a resistor or a wire, that opposes the flow of electric current.\nE represents electrical energy and is measured in joules (J) or sometimes in electron volts (eV). It refers to the amount of energy transferred or used by an electrical circuit or device.\nI stands for current and is measured in amperes (A). Current refers to the flow of electric charge in a circuit, specifically the rate at which charges move through a conductor.\nThe equation [math]$Z = E / I$[/math] expresses the relationship between these variables. It states that the impedance (Z) in a circuit is equal to the product of the electrical energy (E) and the current (I) flowing through the circuit.\n\nIn practical terms, this equation is commonly used to calculate the impedance in a circuit when the energy and current values are known. It can also be rearranged to solve for other variables. For example, if you know the impedance and current, you can calculate the energy by rearranging the equation as [math]$E = Z * I$[/math].\n\nE is electrical voltage potential in volts. \n\nI is the flow of electrons in amperes. Current flows from the point of highest potential (negative) to the point of lowest potential (positive) \n\nR is resistance to the flow of current in ohms. \n\nZ is impedance to the flow of alternating current in ohms. \n\nP is electrical power to do work in watts \n\nAP is Apparent Power and is measured in units of Volt-Amps (VA)." : {
+      "comment" : "equation description"
+    },
+    "The impedance of an electrical circuit is a measure of the opposition to the flow of alternating current (AC) through the circuit.\n\nIt consists of two components: resistance (R) and reactance (X), which can be inductive [math]$X_L$[/math] or capacitive [math]$X_C$[/math].\n\nThe total impedance (Z) is the vector sum of the resistance and reactance components.\n\n\nFrequency is measured in hertz (Hz), also known as cycles per second.\n\nInductance is measured in henrys. \n\nCapacitance is measured in farads.\n\n\n[math]$X_L$[/math] - is Inductive Reactance and is measured in ohms\n\n[math]$X_C$[/math] - is Capacitive Reactance and is measured in ohms\n\n\nNote due to the nature of this equation, it is possible to have a result of 'nan' (not a number) if the reactance components are equal. This is because the square root of a negative number is not a real number." : {
+      "comment" : "equation description"
+    },
+    "Voltage" : {
+      "comment" : "Option for voltage calculation\nTitle for the Voltage section"
+    },
+    "Voltage (AC) - Ohm's Law" : {
+      "comment" : "Title for the Voltage (AC) - Ohm's Law section"
+    },
+    "Voltage (E)" : {
+      "comment" : "Picker option for Voltage"
+    },
+    "Voltage (E):" : {
+      "comment" : "Label for voltage input field"
+    }
+  },
+  "version" : "1.0"
+}

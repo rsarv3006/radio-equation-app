@@ -1,7 +1,7 @@
 import Foundation
 
 class SettingsViewModel {
-    let screenTitle = "Settings"
+    let screenTitle = NSLocalizedString("Settings", comment: "Title for the settings screen")
     
     let appVersion = buildAppVersionDisplayString()
     
@@ -9,11 +9,11 @@ class SettingsViewModel {
         var returnValue = ""
         
         if let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
-            returnValue = "App Version: \(appVersion)"
+            returnValue = String(format: NSLocalizedString("App Version: %@", comment: "App version display string"), appVersion)
         }
         
         return returnValue
     }
     
-    let goToLegalButtonTitle = "Legal"
+    let goToLegalButtonTitle = NSLocalizedString("Legal", comment: "Button title for navigating to legal information")
 }

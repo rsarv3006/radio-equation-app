@@ -1,10 +1,10 @@
 import Foundation
 
 struct LegalScreenVM {
-    let screenTitle = "Legal"
+    let screenTitle = NSLocalizedString("Legal", comment: "Title for the legal screen")
     
-    let privacyPolicyTitle = "Privacy Policy"
-    let privacyPolicy = """
+    let privacyPolicyTitle = NSLocalizedString("Privacy Policy", comment: "Title for the privacy policy section")
+    let privacyPolicy = NSLocalizedString("""
 Effective Date: June 18, 2023
 
 This Privacy Policy ("Policy") outlines the practices followed by RadioEquations ("we," "us," or "our") regarding the collection, use, and disclosure of personal information from users ("you" or "users") of our mobile application ("App"). We are committed to protecting your privacy and maintaining the confidentiality of your personal information. This Policy explains how we ensure that your information remains secure while using our App.
@@ -40,10 +40,10 @@ Contact Us:
 If you have any questions, concerns, or requests regarding this Privacy Policy or our privacy practices, please contact us using the support request link in the settings page of the app.
 
 By using our App, you acknowledge that you have read and understood this Privacy Policy and agree to the collection, use, and disclosure of your information as described herein.
-"""
+""", comment: "privacy policy")
     
-    let eulaTitle = "End User License Agreement"
-    let eula = """
+    let eulaTitle = NSLocalizedString("End User License Agreement", comment: "EULA title")
+    let eula = NSLocalizedString("""
 Please read this End-User License Agreement ("Agreement") carefully before using RadioEquations ("App"). This Agreement sets forth the terms and conditions for your use of the App.
 
 By downloading, installing, or using the App, you agree to be bound by the terms and conditions of this Agreement. If you do not agree with any of these terms, do not download, install, or use the App.
@@ -93,6 +93,6 @@ This Agreement constitutes the entire agreement between you and Robert J Sarvis 
 If you have any questions or concerns regarding this Agreement, please contact us using the support request button located in the app or by email at [email address].
 
 By using the App, you acknowledge that you have read, understood, and agreed to be bound by this Agreement.
-"""
+""", comment: "eula agreement")
     
 }
